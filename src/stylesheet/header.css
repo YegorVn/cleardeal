@@ -1,0 +1,10 @@
+.header__link {
+    user-select: none;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: border 0.25s;
+  }
+  
+  .header__link:hover {
+    border-bottom: 1px solid black;
+  }

@@ -1,0 +1,46 @@
+.text-xl {
+  font-size: 2.5rem;
+}
+
+.text-l {
+  font-size: 1.6rem;
+}
+
+.text-m {
+  font-size: 1.4rem;
+}
+
+.text-s {
+  font-size: 1.3rem;
+}
+
+.font-monts {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.bolder {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 5.3rem;
+}
+
+h2 {
+  font-size: 3.75rem;
+}

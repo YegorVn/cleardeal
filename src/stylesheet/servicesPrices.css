@@ -1,0 +1,16 @@
+.card {
+  border-radius: 40px;
+}
+
+.card {
+  margin-left: 2rem;
+}
+
+.card:first-child {
+  margin-left: 0;
+}
+
+.card__header, .card__price{
+  color: var(--blue);
+}
+

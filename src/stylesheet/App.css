@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "./variables.css";
+@import "./text.css";
+@import "./header.css";
+@import "./dialog.css";
+@import "./servicesPrices.css";
+@import "./slider.css";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  background-color: var(--light-grey);
+  line-height: 1.2;
+}
+
+.phone-form {
+  opacity: 0.5;
+  background-color: #fafafb;
+  border-radius: 30px;
+}
+
+/* ///inputs */
+.input:focus {
+  outline: none;
+}
+
+.btn {
+  cursor: pointer;
+  border: 3px solid var(--blue);
+  background-color: transparent;
+  color: var(--blue);
+}
+
+.btn_active {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+button:focus {
+  box-shadow: none !important;
+  outline: none;
+}
+
+.input_phone {
+  border-radius: 30px;
+  border: none;
+}
+
+.btn_contact {
+  font-weight: 600;
+  border-radius: 60px;
+}
+
+.switch__btn {
+  border-radius: 40px;
+  font-weight: 600;
+  margin-left: 2rem;
+}
+
+.switch__btn:first-child {
+  margin-left: 0;
+}
+
+.card__btn {
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.btn-slide {
+  border: none;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-color: var(--white);
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-slide-right {
+  background-position: 55% center;
+  background-image: url("../assets/icons/arrowRight.png");
+}
+
+.btn-slide-left {
+  background-position: 40% center;
+  background-image: url("../assets/icons/arrowLeft.png");
+}
+
+@keyframes btn-slide-right-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes btn-slide-left-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.btn-slide-left::after, .btn-slide-right::after {
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-left: 2px solid var(--blue);
+  border-top: 2px solid var(--blue);
+  content: "";
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.btn-slide-left::after{
+  animation-name: btn-slide-left-animation;
+  border-left: 2px solid var(--blue);
+  border-top: 2px solid var(--blue);
+}
+
+.btn-slide-right::after{
+  animation-name: btn-slide-right-animation;
+  border-left: 2px solid var(--blue);
+}
+
+/* ///how-we-work */
+.how-we-work__body {
+  height: 30rem;
+}
+/* /// */
