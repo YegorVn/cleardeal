@@ -1,3 +1,4 @@
+/* ///можно сделать в js типо каждый второй с такими то классами */
 .dialog .bubble:nth-child(n) .bubble__body {
   background-color: var(--white);
   margin-left: 1rem;

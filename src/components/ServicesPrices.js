@@ -1,59 +1,60 @@
-export const ServicesPrices = () => {
-  const cards = [
-    {
-      header: "Юридическое сопровождение",
-      text: "Найдём покупателя и проведём безопасную сделку. ",
-      price: "19 900 ₽",
-      annotation:
-        "Займёмся рекламой квартиры и договоримся о просмотрах. Когда покупатель будет найден, проверим его надёжность, подготовим документы для сделки и проведём безопасный расчёт.",
-    },
-    {
-      header: "Юридическое сопровождение",
-      text: "Найдём покупателя и проведём безопасную сделку. ",
-      price: "19 900 ₽",
-      annotation:
-        "Займёмся рекламой квартиры и договоримся о просмотрах. Когда покупатель будет найден, проверим его надёжность, подготовим документы для сделки и проведём безопасный расчёт.",
-    },
-    {
-      header: "Юридическое сопровождение",
-      text: "Найдём покупателя и проведём безопасную сделку. ",
-      price: "19 900 ₽",
-      annotation:
-        "Займёмся рекламой квартиры и договоримся о просмотрах. Когда покупатель будет найден, проверим его надёжность, подготовим документы для сделки и проведём безопасный расчёт.",
-    },
-  ];
+import { useState } from "react";
 
-  const ShowButton = ({className, ...props}) => {
+export const ServicesPrices = ({items}) => {
+  
+
+  const Card = ({ card, className }) => {
+    const [closed, setClosed] = useState(true);
+
+    const changeHandler = () => {
+      setClosed(!closed);
+    };
+
     return (
-      <div className={"btn-show " + className}>
-        <div className="btn-show__icon"></div>
-        <div className="btn-show__text">{props.children}</div>
-      </div>
-    );
-  };
-  const Card = ({ header, text, annotation, price, className
- }) => {
-    return (
-      <div className={"card d-flex flex-column align-items-start " + className}>
-        <div className="card__header text-xl">{header}</div>
-        <div className="card__text text-m mt-5 pr-4">{text}</div>
-        <ShowButton className="mt-5">Подробнее</ShowButton>
-        <div className="card__price text-xl bolder mt-5 ">{price}</div>
-        <button className="btn card__btn align-self-stretch text-m mt-5 align-self-stretch">Купить</button>
+      <div
+        className={
+          "card border-r-40 d-flex flex-column justify-content-end align-items-start background-white " + className
+        }
+      >
+        <div className="card__header color-blue bold mb-5">{card.header}</div>
+        <div className="card__text text-l mb-auto">{card.text}</div>
+        <div
+          className="btn-show d-flex align-items-center mb-5"
+          onClick={() => changeHandler()}
+        >
+          <div
+            className={
+              "btn-show__icon " + (closed ? "btn-show__icon_closed" : "btn-show__icon_shown")
+            }
+          ></div>
+          <div className="btn-show__text ml-3 text-l color-blue">Подробнее</div>
+        </div>
+        <div
+          className={
+            "card__annotation text-xs " +
+            (closed ? "card__annotation_closed" : "mt-5 card__annotation_shown")
+          }
+        >
+          {card.annotation}
+        </div>
+
+        <div className="card__price color-blue text-xl bolder mb-5">
+          {card.price}
+        </div>
+        <button className="btn card__btn align-self-stretch text-m mb-3 align-self-stretch">
+          Купить
+        </button>
       </div>
     );
   };
 
   return (
-    <div className="services d-flex mt-5 ">
-      {cards.map((card) => {
+    <div className="services d-flex justify-content-between mt-5 pt-5 flex-wrap ">
+      {items.map((card) => {
         return (
           <Card
-            className="col-4 pl-4 pt-5 pb-4"
-            header={card.header}
-            text={card.text}
-            price={card.price}
-            annotation={card.annotation}
+            className="col-md-12 col-xl-4 pl-4 pr-4 pt-5 pb-5"
+            card={card}
           />
         );
       })}

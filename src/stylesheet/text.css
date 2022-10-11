@@ -1,17 +1,25 @@
+.text-xxl {
+  font-size: 3.75rem;
+}
+
 .text-xl {
   font-size: 2.5rem;
 }
 
 .text-l {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .text-m {
-  font-size: 1.4rem;
+  font-size: 1.375rem;
 }
 
 .text-s {
   font-size: 1.3rem;
+}
+
+.text-xs {
+  font-size: 1.125rem;
 }
 
 .font-monts {

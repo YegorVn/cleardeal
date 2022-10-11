@@ -28,7 +28,7 @@ export const Slider = () => {
 
   const CardSlider = ({ changeHandler, className }) => {
     return (
-      <div className={"card-slider p-5 " + className}>
+      <div className={"card-slider background-white border-r-20 p-5 " + className}>
         <div className="card-slider__header d-flex justify-content-between">
           <button
             className="btn-slide btn-slide-left"

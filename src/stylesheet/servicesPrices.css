@@ -1,16 +1,37 @@
-.card {
-  border-radius: 40px;
+@media screen and (min-width: 1200px) {
+  .services > .col-xl-4{
+    flex: 0 0 29%;
+  }
 }
 
 .card {
-  margin-left: 2rem;
+  height: 40rem;
+  transition: height 1s;
+}
+
+.card__header {
+  font-size: 2.25rem;
+}
+
+.card__price {
+  font-size: 3.125rem;
+}
+
+.card__annotation{
+  transition: all 1s;
+}
+
+.card__annotation_closed{
+  opacity: 0;
+  height: 0;
+}
+
+.card__annotation_shown{
+  height: 100%;
 }
 
 .card:first-child {
   margin-left: 0;
 }
 
-.card__header, .card__price{
-  color: var(--blue);
-}
 

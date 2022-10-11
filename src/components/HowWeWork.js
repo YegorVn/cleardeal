@@ -27,7 +27,6 @@ export const HowWeWork = ({ className }) => {
   ];
 
   const Switch = ({ buttons, changeHandler, className, current }) => {
-    console.log(current);
     return (
       <div className={"switch d-flex justify-content-center " + className}>
         {buttons.map((btn) => {
@@ -63,7 +62,7 @@ export const HowWeWork = ({ className }) => {
           { text: "Ясная сделка", val: "communicate2" },
         ]}
         changeHandler={changeHandler}
-        className="mt-5"
+        className="mt-5 pt-5"
         current={current}
       />
       <div className="how-we-work__body d-flex mt-5 pt-5">
