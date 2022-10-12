@@ -1,0 +1,18 @@
+.footer{
+    padding-top: 20rem;
+    padding-bottom: 15rem;
+}
+
+.footer__founder{
+    color: var(--white) !important;
+    border-bottom: 3px solid var(--white);
+    width: fit-content;
+}
+
+.footer__founder:hover{
+    text-decoration: none!important;
+}
+
+/* .footer__socmedia{
+    height: fit-content;
+} */

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-
+import { CardSlider } from "./pieces/CardSlider";
 export const Slider = () => {
-  const [current, setCurrent] = useState("communicate");
   const [currentIdx, setCurrentIdx] = useState(0);
   const content = [
     {
@@ -26,35 +25,29 @@ export const Slider = () => {
     },
   ];
 
-  const CardSlider = ({ changeHandler, className }) => {
-    return (
-      <div className={"card-slider background-white border-r-20 p-5 " + className}>
-        <div className="card-slider__header d-flex justify-content-between">
-          <button
-            className="btn-slide btn-slide-left"
-            onClick={() => changeHandler("previous")}
-          >
-          </button>
-          <div className="card-slider__avatar"></div>
-          <div className="card-slider__name text-xl bold">Иван, 36 лет</div>
-          <button
-            className="btn-slide btn-slide-right"
-            onClick={() => changeHandler("next")}
-          >
-          </button>
-        </div>
-        <div className="card-slider__text mt-5 text-l">
-          Я думал, что придётся сильно снижать стоимость квартиры, потому что с
-          ней было столько проблем. Но благодаря команде «Ясной сделки», удалось
-          решить все сложности, найти покупателя и продать квартиру по рыночной
-          цене.
-        </div>
-      </div>
-    );
-  };
+  const cards = [
+    {
+      name: "Иван, 36 лет",
+      region: "Кемерово",
+      text: "Я думал, что придётся сильно снижать стоимость квартиры, потому что с ней было столько проблем. Но благодаря команде «Ясной сделки», удалось решить все сложности, найти покупателя и продать квартиру по рыночной цене",
+      avatar: "",
+    },
+    {
+      name: "Дмитрий, 26 лет",
+      region: "Красноярск",
+      text: "Я думал, что придётся сильно снижать стоимость квартиры, потому что с ней было столько проблем. Но благодаря команде «Ясной сделки», удалось решить все сложности, найти покупателя и продать квартиру по рыночной цене",
+      avatar: "",
+    },
+    {
+      name: "Николай, 41 год",
+      region: "Владивосток",
+      text: "Я думал, что придётся сильно снижать стоимость квартиры, потому что с ней было столько проблем. Но благодаря команде «Ясной сделки», удалось решить все сложности, найти покупателя и продать квартиру по рыночной цене",
+      avatar: "",
+    },
+  ];
 
   const changeHandler = (val) => {
-    if (val === "next" && currentIdx < content.length)
+    if (val === "next" && currentIdx < content.length - 1)
       setCurrentIdx((currentIdx) => (currentIdx += 1));
     if (val === "previous" && currentIdx > 0)
       setCurrentIdx((currentIdx) => (currentIdx -= 1));
@@ -64,19 +57,30 @@ export const Slider = () => {
   return (
     <div className="slider pb-5">
       <div className="slider__body d-flex mt-5 pt-5">
-        <CardSlider className="col-6" changeHandler={changeHandler} />
-        <div className="col-5 ml-5 ">
-          {content.map((block) => {
+        <CardSlider
+          className="col-6 ml-auto"
+          changeHandler={changeHandler}
+          currentIdx={currentIdx}
+          card={cards[currentIdx]}
+        />
+        <div className={"col-5 slider__block ml-auto mt-4 pl-5 "}>
+          {content.map((block, index) => {
             return (
               <>
-                {block.val === current && (
-                  <React.Fragment key={block.val}>
-                    <div className="text-xl bold">{block.header}</div>
-                    <div className="text-l mt-5 text-left col-11 pl-0">
-                      {block.annotation}
-                    </div>
-                  </React.Fragment>
-                )}
+                <div
+                  className={
+                    "slider__text " +
+                    (currentIdx === index
+                      ? "slider__text_fade_in"
+                      : "slider__text_fade_out")
+                  }
+                  key={block.val}
+                >
+                  <div className="text-xl bold pr-5 ">{block.header}</div>
+                  <div className="text-l mt-5 text-left col-11 pl-0">
+                    {block.annotation}
+                  </div>
+                </div>
               </>
             );
           })}

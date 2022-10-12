@@ -1,0 +1,26 @@
+.phone-form{
+    position: relative;
+}
+
+.phone-form__content{
+  z-index: 2;
+}
+
+.phone-form__background{
+}
+
+.phone-form__input::placeholder{
+    color: var(--blue);
+}
+
+.phone-form__background::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background-color: #fafafb;
+  border-radius: 30px;
+}

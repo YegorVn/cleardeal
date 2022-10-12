@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-export const ServicesPrices = ({items}) => {
-  
-
+export const ServicesPrices = ({ items }) => {
   const Card = ({ card, className }) => {
     const [closed, setClosed] = useState(true);
 
@@ -13,7 +11,8 @@ export const ServicesPrices = ({items}) => {
     return (
       <div
         className={
-          "card border-r-40 d-flex flex-column justify-content-end align-items-start background-white " + className
+          "card border-r-40 d-flex flex-column justify-content-end align-items-start background-white " +
+          className
         }
       >
         <div className="card__header color-blue bold mb-5">{card.header}</div>
@@ -24,7 +23,8 @@ export const ServicesPrices = ({items}) => {
         >
           <div
             className={
-              "btn-show__icon " + (closed ? "btn-show__icon_closed" : "btn-show__icon_shown")
+              "btn-show__icon " +
+              (closed ? "btn-show__icon_closed" : "btn-show__icon_shown")
             }
           ></div>
           <div className="btn-show__text ml-3 text-l color-blue">Подробнее</div>
@@ -49,15 +49,18 @@ export const ServicesPrices = ({items}) => {
   };
 
   return (
-    <div className="services d-flex justify-content-between mt-5 pt-5 flex-wrap ">
-      {items.map((card) => {
-        return (
-          <Card
-            className="col-md-12 col-xl-4 pl-4 pr-4 pt-5 pb-5"
-            card={card}
-          />
-        );
-      })}
+    <div className="services">
+      <h2 className="mt-5 mb-5 pt-5">Услуги и цены</h2>
+      <div className="services__cards d-flex justify-content-between mt-5 pt-5 flex-wrap ">
+        {items.map((card) => {
+          return (
+            <Card
+              className="col-md-12 col-xl-4 pl-4 pr-4 pt-5 pb-5"
+              card={card}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

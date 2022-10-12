@@ -1,0 +1,123 @@
+.card-slider__avatar {
+  background-image: url("../assets/images/person.png");
+  width: 78px;
+  height: 78px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.card-slider__right-card,
+.card-slider__left-card {
+  position: absolute;
+  width: 90%;
+  height: 88%;
+  padding: 1.5rem 2.1rem;
+}
+
+.slider__block {
+  height: fit-content;
+}
+
+.slider__text {
+  position: absolute;
+  transition: 1s;
+}
+
+.slider__text_fade_in {
+  opacity: 1;
+}
+.slider__text_fade_out {
+  opacity: 0;
+}
+
+.card-slider {
+  height: fit-content;
+}
+
+.card-slider__left-card {
+  left: -6%;
+}
+
+.card-slider__right-card {
+  right: -6%;
+}
+
+.card-slider__right-card-anim,
+.card-slider__left-card-anim {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  padding: 1.5rem 2.1rem;
+}
+
+@keyframes card-slider__left-card-anim_fadein {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    z-index: 1;
+  }
+  80%{
+    z-index: -1;
+  }
+  100% {
+    transform: scaleY(110%) translateX(10%);
+    opacity: 1;
+  }
+}
+
+.card-slider__left-card-anim_fadein {
+  animation: card-slider__left-card-anim_fadein;
+  animation-duration: 2s;
+}
+
+.card-slider__left-card-anim_fadeout {
+  opacity: 0;
+}
+
+@keyframes card-slider__right-card-anim_fadein {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  51% {
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card-slider__right-card-anim_fadein {
+  animation: card-slider__right-card-anim_fadein;
+  animation-duration: 2s;
+}
+
+.card-slider__right-card-anim_fadeout {
+  opacity: 0;
+}
+
+.left-card__background,
+.right-card__background {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.string {
+  background: black;
+  width: 100%;
+  height: 7%;
+}

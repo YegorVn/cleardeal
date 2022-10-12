@@ -1,5 +1,5 @@
 @media screen and (min-width: 1200px) {
-  .services > .col-xl-4{
+  .services__cards > .col-xl-4{
     flex: 0 0 29%;
   }
 }

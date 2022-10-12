@@ -37,10 +37,15 @@ export const PhoneForm = ({ className }) => {
   };
 
   return (
-    <div className={"phone-form d-flex px-5 pt-5 pb-5 col-12 " + className}>
-      <PhoneInput className="col-5" />
-      <Button className="ml-auto" text="Позвоните мне" />
-      <Button className="ml-5" text="Напишите мне" />
-    </div>
+    <>
+      <div className="phone-form">
+        <div className={"phone-form__content d-flex px-5 pt-5 pb-5 col-12 " + className}>
+          <PhoneInput className=" col-lg-4 col-xl-5 phone-form__input" />
+          <Button className="ml-auto" text="Позвоните мне" />
+          <Button className="ml-5" text="Напишите мне" />
+        </div>
+        <div className="phone-form__background"></div>
+      </div>
+    </>
   );
 };
