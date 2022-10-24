@@ -1,5 +1,123 @@
+.slider {
+}
+
+/* .slider::after{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  left: -15%;
+  top: -15%;
+  width: 500px;
+  height: 500px;
+  background-position: center;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #577bfa 0%,
+    rgba(217, 217, 217, 0) 87.5%
+  );
+} */
+
+.card-slider-small {
+  height: 320px;
+  margin-left: -1rem;
+}
+
+.kek{
+  display: grid;
+  grid-template-columns: repeat(3, 80%);
+  grid-gap: 15px;
+  width: 100vw;
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.card-slider-small__card {
+  background: var(--white);
+  border-radius: 20px;
+}
+
+.card-slider-small__card {
+}
+
+.card-slider-small__card:first-child {
+  margin-left: 0;
+}
+
+.card-slider__main {
+  border-radius: 30px;
+}
+
+.card-slider-small__text {
+  font-size: 1rem;
+}
+
+.card-slider-small__region {
+  font-size: 1.2rem;
+}
+.card-slider-small__name {
+  font-size: 1.5rem;
+}
+
+.card-slider {
+  width: 55%;
+  height: fit-content;
+  position: relative;
+  left: 2.75rem;
+}
+
+.card-slider__main-card {
+  height: 28rem;
+}
+
+.slider__body {
+  height: 100%;
+}
+
+@keyframes slider__text_animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slider__block {
+  width: 34%;
+  height: fit-content;
+  position: relative;
+}
+
+.slider__text {
+  animation-name: slider__text_animation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .card-slider {
+    width: 70%;
+    left: -3%;
+  }
+
+  .slider__block {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .slider__block {
+    width: 100%;
+  }
+}
+
+.card-slider__name {
+  white-space: nowrap;
+}
+
 .card-slider__avatar {
-  background-image: url("../assets/images/person.png");
   width: 78px;
   height: 78px;
   background-position: center;
@@ -11,99 +129,24 @@
 .card-slider__left-card {
   position: absolute;
   width: 90%;
+  top: 3%;
   height: 88%;
-  padding: 1.5rem 2.1rem;
+  padding: 3rem 2.1rem;
 }
 
-.slider__block {
-  height: fit-content;
-}
-
-.slider__text {
-  position: absolute;
-  transition: 1s;
-}
-
-.slider__text_fade_in {
-  opacity: 1;
-}
-.slider__text_fade_out {
-  opacity: 0;
-}
-
-.card-slider {
-  height: fit-content;
-}
-
-.card-slider__left-card {
-  left: -6%;
-}
-
-.card-slider__right-card {
-  right: -6%;
-}
-
-.card-slider__right-card-anim,
-.card-slider__left-card-anim {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: 1s;
-  padding: 1.5rem 2.1rem;
-}
-
-@keyframes card-slider__left-card-anim_fadein {
+/* ///card-anim */
+@keyframes main-card_animation {
   0% {
-    opacity: 1;
-  }
-  50% {
-    z-index: 1;
-  }
-  80%{
-    z-index: -1;
-  }
-  100% {
-    transform: scaleY(110%) translateX(10%);
-    opacity: 1;
-  }
-}
-
-.card-slider__left-card-anim_fadein {
-  animation: card-slider__left-card-anim_fadein;
-  animation-duration: 2s;
-}
-
-.card-slider__left-card-anim_fadeout {
-  opacity: 0;
-}
-
-@keyframes card-slider__right-card-anim_fadein {
-  0% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  50% {
-    transform: translateX(-10%);
     opacity: 0;
   }
-  51% {
-    transform: translateX(0%);
-  }
   100% {
     opacity: 1;
   }
 }
 
-.card-slider__right-card-anim_fadein {
-  animation: card-slider__right-card-anim_fadein;
-  animation-duration: 2s;
-}
-
-.card-slider__right-card-anim_fadeout {
-  opacity: 0;
+.main-card__content {
+  animation-name: main-card_animation;
+  animation-duration: 0.5s;
 }
 
 .left-card__background,
@@ -119,5 +162,59 @@
 .string {
   background: black;
   width: 100%;
-  height: 7%;
+  height: 1.5rem;
 }
+
+/* ///left-card */
+@keyframes left-card-anim {
+  0% {
+    z-index: 1;
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(120%) translateX(10%);
+    opacity: 0;
+  }
+  51% {
+    transform: scaleY(100%) translateX(0%);
+    z-index: -1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card-slider__left-card {
+  left: -6%;
+  animation: left-card-anim;
+  z-index: -1;
+  animation-duration: 2s;
+}
+
+/* ///right-card */
+.card-slider__right-card {
+  animation: card-slider__right-card-anim_fadein;
+  animation-duration: 1.5s;
+  right: -6%;
+  z-index: -1;
+}
+
+@keyframes card-slider__right-card-anim_fadein {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  51% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* /// */

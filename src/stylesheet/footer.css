@@ -1,16 +1,21 @@
 .footer{
-    padding-top: 20rem;
+    padding-top: 40rem;
     padding-bottom: 15rem;
 }
 
 .footer__founder{
-    color: var(--white) !important;
     border-bottom: 3px solid var(--white);
     width: fit-content;
 }
 
 .footer__founder:hover{
+    color: var(--white);
     text-decoration: none!important;
+}
+
+.footer__documents a{
+    color: var(--white);
+    font-family: Montserrat;
 }
 
 /* .footer__socmedia{

@@ -1,49 +1,108 @@
-import girl from "../assets/images/girl.svg";
-import arrowLong from "../assets/images/arrowLong.svg";
-import arrowDotted from "../assets/images/arrowDotted.svg";
+import manHand from "../assets/images/getService/manHand.svg";
+import handShake from "../assets/images/getService/handShake.svg";
+import arrowDown from "../assets/images/getService/arrowDown.svg";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+export const GetService = ({ className }) => {
+  const Circle = ({ num, className }) => {
+    const control = useAnimation();
+    const [ref, inView] = useInView({
+      threshold: 1,
+      rootMargin: "-15%"
+    });
+    const point_1 = {
+      visible: {
+        backgroundColor: "#577BFA",
+        borderRadius: "100%",
+        color: "#FAFAFA",
+        transition: { duration: 1 },
+      },
+      hidden: {
+        borderRadius: "100%",
+        backgroundColor: "#e5ebee",
+        color: "#577BFA",
+      },
+    };
+    useEffect(() => {
+      console.log(inView)
+      if (inView) {
+        control.start("visible");
+      } else {
+        // control.start("hidden");
+      }
+    }, [control, inView]);
+    return (
+      <motion.div
+        ref={ref}
+        variants={point_1}
+        initial="hidden"
+        animate={control}
+        className={
+          "step d-flex align-items-center border-r-100per color-blue justify-content-center text-xl bolder " +
+          className
+        }
+      >
+        {num}
+      </motion.div>
+    );
+  };
 
-export const GetService = () => {
   return (
-    <div className="get-service d-flex flex-column ">
-      <div className="get-service__first-step first-step d-flex col-10">
-        <div className="step d-flex align-items-center border-r-100per color-blue justify-content-center text-xxl bolder">
-          1
-        </div>
-        <div className="get-service__text col-5 ml-3">
-          <div className="get-service__header text-xl bold">
-            Оставьте заявку
+    <div className="service d-flex flex-column">
+      <div className="service__block service__block_first d-flex flex-wrap">
+        <div className="service__step d-lg-flex col-lg-7 col-xl-6 px-0">
+          <Circle num={1} className="mx-auto mx-lg-0" />
+          <div className="service__text col-9 px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
+            <div className="service__title text-xl bolder text-center text-lg-left">
+              Оставьте заявку
+            </div>
+            <div className="service__annotation text-l text-left mt-4 pr-lg-5 text-center text-lg-left">
+              Свяжемся с вами в течение 5 минут и бесплатно проконсультируем.
+            </div>
           </div>
-          <div className="get-service__annotation text-m mt-4 ">
-            Свяжемся с вами в течение 5 минут и бесплатно проконсультируем.
-          </div>
         </div>
-        <img src={arrowLong} className="arrow-long position-absolute" />
+        <img
+          src={manHand}
+          className="service__img man-hand d-none d-lg-block"
+        />
+        <div className="service__img arrow-long d-none d-lg-block" />
       </div>
-      <div className="get-service__second-step second-step col-6 d-flex ml-auto">
-        <div className="step d-flex align-items-center border-r-100per color-blue justify-content-center text-xxl bolder">
-          2
-        </div>
-        <div className="get-service__text col-8 ml-3 ">
-          <div className="get-service__header text-xl bold">
-            Обсудим план действий
+      <img src={arrowDown} className="service__img mx-auto mb-3 mt-3 d-lg-none" height={140} />
+      <div className="service__block service__block_second d-flex ">
+        <div className="service__step d-lg-flex col-lg-6 px-0 ml-lg-auto">
+          <Circle num={2} className="mx-auto mx-lg-0" />
+          <div className="service__text col-9 px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
+            <div className="service__title text-xl bolder text-center text-lg-left">
+              Обсудим план действий
+            </div>
+            <div className="service__annotation text-l text-left mt-4 pr-lg-5 text-center text-lg-left">
+              Уточним вашу ситуацию, предложим решение и план действий.
+              Согласуем условия и подпишем договор онлайн.
+            </div>
           </div>
-          <div className="get-service__annotation text-m mt-4 ">
-            Уточним вашу ситуацию, предложим решение и план действий. Согласуем
-            условия и подпишем договор онлайн.
-          </div>
         </div>
-        <img src={arrowDotted} className="arrow-dotted position-absolute" />
       </div>
-      <div className="get-service__first-step first-step d-flex col-10">
-        <div className="step d-flex align-items-center border-r-100per color-blue justify-content-center text-xxl bolder">
-          3
-        </div>
-        <div className="get-service__text col-5 ml-3">
-          <div className="get-service__header text-xl bold">Начнём работу</div>
-          <div className="get-service__annotation text-m mt-4 ">
-            И доведём её до конца: продадим вашу квартиру, проведём сделку по
-            покупке или оформим ипотеку.
+      <img src={arrowDown} className="service__img mx-auto mb-3 mt-3 d-lg-none" height={140} />
+      <div className="service__block service__block_third d-flex flex-column">
+        <div className="service__img arrow-dotted d-none d-lg-block" />
+        <div className="service__row d-flex">
+          <div className="service__step d-lg-flex flex-lg-row col-lg-7 col-xl-6 px-0 mt-lg-5">
+            <Circle num={3} className="mx-auto mx-lg-0" />
+            <div className="service__text col-9 px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
+              <div className="service__title text-xl bolder text-lg-left text-center">
+                Начнём работу
+              </div>
+              <div className="service__annotation text-l text-left mt-4 pr-lg-5 text-center text-lg-left">
+                И доведём её до конца: продадим вашу квартиру, проведём сделку
+                по покупке или оформим ипотеку.
+              </div>
+            </div>
           </div>
+          <img
+            src={handShake}
+            className="service__img man-hand col-lg-6 col-xl-0 px-0 d-none d-lg-block"
+          />
         </div>
       </div>
     </div>

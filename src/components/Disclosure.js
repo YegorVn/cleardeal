@@ -1,43 +1,51 @@
 import arrowDown from "../assets/icons/arrowDown.svg";
 import { useState } from "react";
-export const Disclosure = () => {
-  const content = [
-    {
-      header: "Почему у вас дешевле, чем у других? ",
-      text: "Мы выбрали те услуги, в которых имеем опыт и можем помочь вам благодаря своей экспертности. Чаще всего квартиру для аренды или покупки люди выбирают сами. А помощь профессионалов нужна на этапе подготовки сделки. Поэтому мы готовы оказать юридическое сопровождение, если вы уже выбрали квартиру, которую хотите купить. ",
-    },
-    {
-      header: "Вы присутствуете на сделках? ",
-      text: "Мы выбрали те услуги, в которых имеем опыт и можем помочь вам благодаря своей экспертности. Чаще всего квартиру для аренды или покупки люди выбирают сами. А помощь профессионалов нужна на этапе подготовки сделки. Поэтому мы готовы оказать юридическое сопровождение, если вы уже выбрали квартиру, которую хотите купить. ",
-      val: "",
-    },
-    {
-      header:
-        "Почему ипотечные брокеры не берут деньги за одобрение ипотеки, а вы берёте? ",
-      text: "Мы выбрали те услуги, в которых имеем опыт и можем помочь вам благодаря своей экспертности. Чаще всего квартиру для аренды или покупки люди выбирают сами. А помощь профессионалов нужна на этапе подготовки сделки. Поэтому мы готовы оказать юридическое сопровождение, если вы уже выбрали квартиру, которую хотите купить. ",
-      val: "",
-    },
-  ];
+export const Disclosure = ({content, className}) => {
+  
   const Tab = ({ className, tab }) => {
     const [opened, setOpened] = useState(false);
     return (
-      <div className={"tab d-flex flex-wrap p-5 background-white border-r-50 " + className}>
-        <div className="tab__header text-xl bold col-11 pl-0">{tab.header}</div>
-        {/* //// сделать из спанов */}
-        <img
-          className="tab__img ml-auto"
-          src={arrowDown}
-          onClick={() => setOpened(!opened)}
-        />
-        {/* //// */}
-        {opened && <div className="tab__text mt-5 text-l">{tab.text}</div>}
+      <div
+        className={
+          "tab px-0 " + className + " " + (opened ? "tab_opened" : "tab_closed")
+        }
+      >
+        <div
+          className={
+            "tab__cover d-flex  background-white border-r-50 " +
+            className
+          }
+        >
+          <div className="tab__header text-xl bold col-11 pl-0">
+            {tab.header}
+          </div>
+          <div
+            className={
+              "tab__cross ml-auto " +
+              (opened ? "tab__cross_cross" : "tab__cross_check")
+            }
+            onClick={() => setOpened(!opened)}
+          >
+            <div className="stick"></div>
+            <div className="stick"></div>
+          </div>
+
+        </div>
+        <div
+          className={
+            "tab__text text-l background-white " +
+            (opened ? "tab__text_opened" : "tab__text_closed")
+          }
+        >
+          {tab.text}
+        </div>
       </div>
     );
   };
   return (
-    <div className="disclosure">
+    <div className={"disclosure col-12 px-0 " + className}>
       {content.map((tab) => {
-        return <Tab tab={tab} className="col-12 mt-5" />;
+        return <Tab tab={tab} className="col-12" />;
       })}
     </div>
   );

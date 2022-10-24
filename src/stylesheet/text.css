@@ -1,3 +1,7 @@
+.text-xxxl {
+  font-size: 5.25rem;
+}
+
 .text-xxl {
   font-size: 3.75rem;
 }
@@ -40,9 +44,10 @@
 
 h1,
 h2 {
+  font-style: normal;
   font-weight: 600;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
 }
 
 h1 {
@@ -51,4 +56,54 @@ h1 {
 
 h2 {
   font-size: 3.75rem;
+}
+
+/* .big-h span{
+  white-space:nowrap;
+} */
+
+@media screen and (max-width: 992px) {
+  .text-xxxl {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-xxxl {
+    font-size: 3rem;
+  }
+
+  .text-xl {
+    font-size: 2.25rem;
+  }
+
+  
+
+  h2{
+    font-size: 2.3rem;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .text-xxxl {
+    font-size: 2.9rem;
+  }
+
+  .text-xxl {
+    font-size: 2.55rem;
+  }
+
+  .text-xl {
+    font-size: 2.25rem;
+  }
+
+  h2{
+    font-size: 2.4rem;
+  }
+}
+
+/* ///некоторые текстовые изменения */
+.banner__annotation{
+  line-height: 1.5;
 }

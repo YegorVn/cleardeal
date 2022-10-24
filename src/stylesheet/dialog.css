@@ -1,53 +1,5 @@
-/* ///можно сделать в js типо каждый второй с такими то классами */
-.dialog .bubble:nth-child(n) .bubble__body {
-  background-color: var(--white);
-  margin-left: 1rem;
+.dialog__bubble_left, .dialog__bubble_right{
+  padding: 2rem 4rem;
 }
 
-.dialog .bubble:nth-child(2n) .bubble__body {
-  background-color: var(--blue);
-  margin-right: 1rem;
-  order: -1;
-  color: var(--white);
-}
 
-.dialog .bubble:nth-child(n) .bubble__body::after {
-  content: "";
-  top: 100%;
-  position: absolute;
-  width: 30px;
-  height: 40px;
-}
-
-.dialog .bubble:nth-child(n) .bubble__body::after {
-  background-color: var(--white);
-  left: 0;
-  border-top-left-radius: -1rem;
-  border-bottom-right-radius: 2rem;
-  transform: rotate(20deg) translate(10%, -30%);
-}
-
-.dialog .bubble:nth-child(2n) .bubble__body::after {
-  background-color: var(--blue);
-  left: 100%;
-  border-top-left-radius: -1rem;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 0rem;
-  transform: rotate(-20deg) translate(-125%, -60%);
-}
-
-.dialog .bubble:nth-child(2n) {
-  margin-left: auto;
-}
-
-.bubble__body {
-  border-radius: 30px;
-  position: relative;
-}
-
-.bubble__img {
-  transform: translate(0, 33%);
-  width: 86px;
-  height: 86px;
-  border-radius: 100%;
-}

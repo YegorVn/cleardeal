@@ -1,50 +1,70 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { HwwVidget } from "./pieces/HwwVidget";
 
-export const HowWeWork = ({ className }) => {
-  const [current, setCurrent] = useState("communicate");
-  const content = [
-    {
-      header:
-        "Общаемся с вами на равных и объясняем сложные вещи простым языком.  ",
-      annotation:
-        "Консультируем вас столько, сколько нужно, чтобы вы приняли взвешенное решение. Присылаем полезные материалы и подробно отвечаем на вопросы. Сопровождаем вас на всех этапах и остаёмся на связи даже после сделки. ",
-      val: "communicate",
-    },
-    {
-      header:
-        "Прозрачные условия работы и оплаты услуг — никакого мелкого шрифта в договоре.",
-      annotation:
-        "Работаем в белую и дорожим репутацией. Вы заранее видите стоимость услуг, знаете обо всех этапах и о том, сколько времени займёт каждый шаг.",
-      val: "communicate1",
-    },
-    {
-      header:
-        "Вы платите только за нашу работу, а не за бренд, офис в центре города или надуманную комиссию агента. ",
-      annotation:
-        "Цена за услугу не зависит от стоимости квартиры и сложности сделки. Она не изменится потому, что вы приехали на Мерседесе или потому, что так захотел риелтор. ",
-      val: "communicate2",
-    },
-  ];
+export const HowWeWork = ({ className, chat, content }) => {
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [current, setCurrent] = useState(content[currentIdx].val);
+  useEffect(() => {
+    let timer1 = setInterval(() => {
+      // if(currentIdx + 1 > content.length) setCurrentIdx(0)
+      // else{
+      // setCurrentIdx(currentIdx + 1)
+      // setCurrent(content[currentIdx + 1].val);
+      // }
+    }, 500);
+    return () => {
+      clearInterval(timer1);
+    };
+  }, [current]);
 
   const Switch = ({ buttons, changeHandler, className, current }) => {
     return (
-      <div className={"switch d-flex justify-content-center " + className}>
-        {buttons.map((btn) => {
-          return (
-            <button
-              key={btn.val}
-              onClick={changeHandler}
-              value={btn.val}
-              className={
-                "btn switch__btn px-5 pt-3 pb-3 text-m col-4 " +
-                (current == btn.val && "btn_active switch__btn_active")
-              }
-            >
-              {btn.text}
-            </button>
-          );
-        })}
-      </div>
+      <>
+        <div
+          className={
+            "switch d-none d-md-flex flex-lg-row flex-column justify-content-center align-items-center " +
+            className
+          }
+        >
+          {buttons.map((btn) => {
+            return (
+              <button
+                key={btn.val}
+                onClick={changeHandler}
+                value={btn.val}
+                className={
+                  "btn switch__btn pt-3 pb-3 px-0 text-l mt-3 mt-lg-0 " +
+                  (current == btn.val && "btn_active switch__btn_active")
+                }
+              >
+                {btn.text}
+              </button>
+            );
+          })}
+        </div>
+        <div
+          className={
+            "switch-small d-flex justify-content-between align-items-center d-md-none " +
+            className
+          }
+        >
+          {buttons.map((btn, index) => {
+            return (
+              <button
+                key={btn.val}
+                onClick={changeHandler}
+                value={btn.val}
+                className={
+                  "btn switch-small__btn text-l mt-lg-0 d-flex align-items-center justify-content-center " +
+                  (current == btn.val && "btn_active switch-small__btn_active border-r-30 px-1" || "switch-small__btn_inactive border-r-100per")
+                }
+              >
+                {current == btn.val && btn.text || index + 1}
+              </button>
+            );
+          })}
+        </div>
+      </>
     );
   };
 
@@ -54,7 +74,7 @@ export const HowWeWork = ({ className }) => {
   };
 
   return (
-    <div className="how-we-work pb-5">
+    <div className={"how-we-work " + className}>
       <Switch
         buttons={[
           { text: "Человеческое общение", val: "communicate" },
@@ -62,22 +82,25 @@ export const HowWeWork = ({ className }) => {
           { text: "Ясная сделка", val: "communicate2" },
         ]}
         changeHandler={changeHandler}
-        className="mt-5 pt-5"
         current={current}
       />
-      <div className="how-we-work__body d-flex mt-5 pt-5">
-        <div className="col-5"></div>
-        <div className="col-7 ml-auto ">
+      <div className="how-we-work__body d-flex flex-column flex-lg-row mt-5 pt-lg-5">
+        <HwwVidget
+          current={current}
+          className="mx-auto mx-lg-0 col-lg-5 col-xl-5 pt-0 pr-0 pl-0"
+          bubbles={chat}
+        />
+        <div className="col-lg-6 ml-lg-auto pl-0 mt-5 mt-lg-0">
           {content.map((block) => {
             return (
               <>
                 {block.val === current && (
-                  <React.Fragment key={block.val}>
+                  <div className="how-we-work__block" key={block.val}>
                     <div className="text-xl bold">{block.header}</div>
-                    <div className="text-l mt-5 text-left col-11 pl-0">
+                    <div className="text-l mt-5 text-left col-sm-11 pl-0 pr-0">
                       {block.annotation}
                     </div>
-                  </React.Fragment>
+                  </div>
                 )}
               </>
             );

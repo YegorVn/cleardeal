@@ -1,51 +1,61 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import InputMask from "react-input-mask";
 export const PhoneForm = ({ className }) => {
-  const PhoneInput = ({ className, value, changeHandler }) => {
-    const [phone, setPhone] = useState("");
-    const onChange = (e) => {
-      console.log(e.target.value);
-      let mask = phone.replace(
-        /_/,
-        e.target.value.replace(/[^0-9]/g, "").slice(-1)
-      );
-      setPhone(mask);
-    };
+  const [phone, setPhone] = useState("");
+  const [wrong, setWrong] = useState(false);
+  const [completed, setCompleted] = useState(false);
 
-    const onKeyPress = (e) => {
-      if (e.key === "Backspace") console.log(e);
-      console.log(e);
-    };
-
-    return (
-      <input
-        onKeyPress={onKeyPress}
-        onChange={onChange}
-        onFocus={() => setPhone("+7 (___) ___ __ __")}
-        value={phone}
-        placeholder="+7 (909) 000 00 00"
-        className={"input input_phone text-m " + className}
-      />
-    );
+  const changeHandler = (e) => {
+    setPhone(e.target.value);
   };
 
-  const Button = ({ text, className }) => {
-    return (
-      <button className={"btn btn_contact text-m px-5 pt-3 pb-3 " + className}>
-        {text}
-      </button>
-    );
+  useEffect(() => {
+    if (phone.match(/^((\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{1,10}$/))
+      setWrong(false);
+    else if (phone === "") setWrong(false);
+    else setWrong(true);
+    if (
+      phone.length === 17 &&
+      phone.match(/^((\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{1,10}$/) &&
+      !wrong
+    )
+      setCompleted(true);
+    else setCompleted(false);
+  }, [phone, wrong, completed]);
+
+  const handlePhoneRequest = () => {
+    alert(phone);
   };
 
   return (
-    <>
-      <div className="phone-form">
-        <div className={"phone-form__content d-flex px-5 pt-5 pb-5 col-12 " + className}>
-          <PhoneInput className=" col-lg-4 col-xl-5 phone-form__input" />
-          <Button className="ml-auto" text="Позвоните мне" />
-          <Button className="ml-5" text="Напишите мне" />
-        </div>
-        <div className="phone-form__background"></div>
+    <div className={"phone-form " + className}>
+      <div className="phone-form__content d-flex flex-column justify-content-between flex-lg-row">
+        <InputMask
+          onChange={changeHandler}
+          mask="+7(999) 999 99 99"
+          placeholder="+7(909) 000 00 00"
+          value={phone}
+          className={
+            "input input_phone text-l col-lg-4 col-xl-4 pb-3 pt-3  pl-4 pr-5 phone-form__input " +
+            ((wrong && "input_wrong") || (completed && "input_not_wrong"))
+          }
+        />
+        <button
+          className="btn btn_contact text-l mt-5 mt-lg-0 btn_call"
+          onClick={() => handlePhoneRequest(phone)}
+          disabled={!completed}
+        >
+          Позвоните мне
+        </button>
+        <button
+          className="btn btn_contact text-m mt-3 mt-lg-0"
+          onClick={() => handlePhoneRequest(phone)}
+          disabled={!completed}
+        >
+          Напишите в WhatsApp
+        </button>
       </div>
-    </>
+      <div className="phone-form__background"></div>
+    </div>
   );
 };

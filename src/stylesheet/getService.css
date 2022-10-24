@@ -1,21 +1,87 @@
-.step{
-    width: 140px;
-    height: 140px;
-    border: 5px solid var(--blue);
+.get-service {
+  position: relative;
+  overflow-x: hidden;
 }
 
-.get-service__first-step{
-    margin-top: 125px;
-}
-.get-service__second-step{
-    margin-top: 350px;
+/* .get-service::after{
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  right: -50%;
+  bottom: -40%;
+  width: 1211px;
+  height: 1207px;
+  background-position: center;
+  background: radial-gradient(50% 50% at 37.3% 50%, #577BFA 0%, rgba(217, 217, 217, 0) 76.04%);
+} */
+
+/* ///// */
+.man-hand{
+  margin-top: -5%;
+  margin-left: -2%;
 }
 
 .arrow-long{
-    top: 140%;
-    left: 2%;
+  margin-top: -18%;
+  margin-left: 2rem;
+  background-image: url('../assets/images/getService/arrowLong.svg');
+  background-size: 100% !important;
+  width: 580px;
+  height: 375px;
+  background-repeat: no-repeat;
 }
+
 .arrow-dotted{
-    top: 60%;
-    left: -90%;
+  margin-left: 4rem;
+  background-image: url('../assets/images/getService/arrowDotted.svg');
+  background-size: 100% !important;
+  width: 580px;
+  height: 175px;
+  background-repeat: no-repeat;
 }
+
+.service__block_second{
+  margin-top: -75px;
+  margin-right: -110px;
+}
+
+.service__block_third{
+  margin-top: -75px;
+}
+
+.step {
+  width: 140px;
+  height: 140px;
+  border: 5px solid var(--blue);
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .arrow-long{
+    width: 475px;
+    height: 300px;
+  }
+
+  .arrow-dotted{
+    width: 500px;
+    height: 150px;
+  }
+
+  .service__block_second{
+    margin-top: -75px;
+    margin-right: -90px;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .service__block_second, .service__block_third{
+    margin-top: unset;
+    margin-right: unset;
+  }
+
+  .step {
+    width: 94px;
+    height: 94px;
+    border: 5px solid var(--blue);
+  }
+}
+

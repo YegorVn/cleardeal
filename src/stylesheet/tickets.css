@@ -1,1 +1,24 @@
+.phone-img,
+.girl-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 
+@media screen and (max-width: 992px) {
+    .phone-img,
+    .girl-img {
+      position: relative;
+      margin: 0 auto;
+    }
+}
+
+.phone-img {
+  width: 340px;
+  height: 350px;
+}
+
+.girl-img {
+  width: 340px;
+  height: 350px;
+}
