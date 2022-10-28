@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cleardeal/static/css/main.d60f2221.css",
-    "main.js": "/cleardeal/static/js/main.d1c0651a.js",
+    "main.css": "/cleardeal/static/css/main.a4e05672.css",
+    "main.js": "/cleardeal/static/js/main.3e2f0300.js",
     "static/media/logo.svg": "/cleardeal/static/media/logo.81a462999cb082d4dc047a65f7501a8b.svg",
     "static/media/logoWhite.svg": "/cleardeal/static/media/logoWhite.bfdf3e24ad7bc9a72624ddea3a56ff31.svg",
     "static/media/manHand.svg": "/cleardeal/static/media/manHand.00ea3a715c8fd68448bc6dbd0249a6e3.svg",
@@ -16,7 +16,7 @@
     "static/media/circles.svg": "/cleardeal/static/media/circles.9603c702eef90534f837b703d601abbb.svg",
     "static/media/arrowLong.svg": "/cleardeal/static/media/arrowLong.4c3301848d6f45a022fb.svg",
     "static/media/wp.svg": "/cleardeal/static/media/wp.41d5783a937ae4303418157989a6d280.svg",
-    "static/media/barcode.svg": "/cleardeal/static/media/barcode.0c76373e8b7ea7745b4bf4b36bafd051.svg",
+    "static/media/barcode.svg": "/cleardeal/static/media/barcode.b0f684e11d130b2f905a88f68e5e7435.svg",
     "static/media/battery.svg": "/cleardeal/static/media/battery.5fa59ebf773286874c789366e0d1c23e.svg",
     "index.html": "/cleardeal/index.html",
     "static/media/wifi.svg": "/cleardeal/static/media/wifi.c1f57d4e511924be609ce07fc290f8ff.svg",
@@ -40,11 +40,11 @@
     "static/media/string4.svg": "/cleardeal/static/media/string4.653aa516b92744d2b456.svg",
     "static/media/string1.svg": "/cleardeal/static/media/string1.c9f19413af8c011d1171.svg",
     "static/media/string2.svg": "/cleardeal/static/media/string2.2a7a7e88d60882a5f8da.svg",
-    "main.d60f2221.css.map": "/cleardeal/static/css/main.d60f2221.css.map",
-    "main.d1c0651a.js.map": "/cleardeal/static/js/main.d1c0651a.js.map"
+    "main.a4e05672.css.map": "/cleardeal/static/css/main.a4e05672.css.map",
+    "main.3e2f0300.js.map": "/cleardeal/static/js/main.3e2f0300.js.map"
   },
   "entrypoints": [
-    "static/css/main.d60f2221.css",
-    "static/js/main.d1c0651a.js"
+    "static/css/main.a4e05672.css",
+    "static/js/main.3e2f0300.js"
   ]
 }
