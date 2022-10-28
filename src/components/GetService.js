@@ -9,7 +9,7 @@ export const GetService = ({ className }) => {
     const control = useAnimation();
     const [ref, inView] = useInView({
       threshold: 1,
-      rootMargin: "-15%"
+      rootMargin: "-17%"
     });
     const point_1 = {
       visible: {
@@ -54,7 +54,7 @@ export const GetService = ({ className }) => {
         <div className="service__step d-lg-flex col-lg-7 col-xl-6 px-0">
           <Circle num={1} className="mx-auto mx-lg-0" />
           <div className="service__text col-9 px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
-            <div className="service__title text-xl bolder text-center text-lg-left">
+            <div className="service__title text-xl bold text-center text-lg-left">
               Оставьте заявку
             </div>
             <div className="service__annotation text-l text-left mt-4 pr-lg-5 text-center text-lg-left">
@@ -73,7 +73,7 @@ export const GetService = ({ className }) => {
         <div className="service__step d-lg-flex col-lg-6 px-0 ml-lg-auto">
           <Circle num={2} className="mx-auto mx-lg-0" />
           <div className="service__text col-9 px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
-            <div className="service__title text-xl bolder text-center text-lg-left">
+            <div className="service__title text-xl bold text-center text-lg-left">
               Обсудим план действий
             </div>
             <div className="service__annotation text-l text-left mt-4 pr-lg-5 text-center text-lg-left">
@@ -90,7 +90,7 @@ export const GetService = ({ className }) => {
           <div className="service__step d-lg-flex flex-lg-row col-lg-7 col-xl-6 px-0 mt-lg-5">
             <Circle num={3} className="mx-auto mx-lg-0" />
             <div className="service__text col-9 px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
-              <div className="service__title text-xl bolder text-lg-left text-center">
+              <div className="service__title text-xl bold text-lg-left text-center">
                 Начнём работу
               </div>
               <div className="service__annotation text-l text-left mt-4 pr-lg-5 text-center text-lg-left">

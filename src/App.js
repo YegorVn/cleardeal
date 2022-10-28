@@ -16,7 +16,7 @@ import vk from "./assets/icons/vk.svg";
 import wp from "./assets/icons/wp.svg";
 import tg from "./assets/icons/tg.svg";
 import startWork from "./assets/images/startWork.svg";
-// import startWork from "./assets/images/startWork.png";
+import phone from "./assets/images/phone.svg";
 import {
   MouseParallaxContainer,
   MouseParallaxChild,
@@ -44,6 +44,7 @@ function App() {
     { text: "Контакты", ref: contancts },
     { text: "Вопросы", ref: questions },
   ];
+
   return (
     <>
       <div className="app mx-auto">
@@ -53,86 +54,163 @@ function App() {
 
         {/* ///двигающийся фон */}
         <MouseParallaxContainer
-          className="parallax"
+          className="background"
           containerStyles={{
             width: "100%",
-            height: "1700px",
             position: "absolute",
             top: "0",
             overflow: "hidden",
             left: "0",
-            zIndex: "1",
+            zIndex: "-1",
           }}
           resetOnLeave
           useWindowMouseEvents={true}
         >
           <MouseParallaxChild
-            factorX={0.15}
-            factorY={0.15}
+            className="gradient-1"
+            factorX={0.01}
+            factorY={0.01}
             updateStyles={{
               position: "absolute",
-              width: "800px",
-              height: "800px",
-              top: "20%",
               background:
                 "radial-gradient(50% 50% at 50% 50%, #97cbf8 0%, rgba(217, 217, 217, 0) 100%)",
             }}
           />
           <MouseParallaxChild
-            factorX={0.3}
-            factorY={0.25}
+            className="gradient-2"
+            factorX={0.01}
+            factorY={0.01}
             updateStyles={{
               position: "absolute",
-              width: "1400px",
-              height: "1400px",
-              top: "-15%",
-              right: "-38%",
               background:
                 "radial-gradient(50% 50% at 50% 50%, #577bfa 0%, rgba(217, 217, 217, 0) 100%)",
             }}
             inverted={true}
           />
+          <MouseParallaxChild
+            className="gradient-3"
+            factorX={0.05}
+            factorY={0.01}
+            updateStyles={{
+              position: "absolute",
+              background:
+                "radial-gradient(50% 50% at 50% 50%, #a3cff4 0%, rgba(217, 217, 217, 0) 100%)",
+            }}
+          />
+          <MouseParallaxChild
+            className="gradient-4"
+            factorX={0.05}
+            factorY={0.01}
+            updateStyles={{
+              position: "absolute",
+              background:
+                "radial-gradient(50% 50% at 50% 50%,#577bfa 0%,rgba(217, 217, 217, 0) 100%)",
+            }}
+          />
+          <MouseParallaxChild
+            className="gradient-5"
+            factorX={0.03}
+            factorY={0.01}
+            updateStyles={{
+              position: "absolute",
+              background:
+                "radial-gradient(50% 50% at 50% 50%,#577bfa 0%,rgba(217, 217, 217, 0) 87.5%)",
+            }}
+          />
+          <MouseParallaxChild
+            className="gradient-6"
+            factorX={0.04}
+            factorY={0.01}
+            updateStyles={{
+              position: "absolute",
+              background:
+                "radial-gradient(50% 50% at 50% 50%, #577BFA 0%, rgba(217, 217, 217, 0) 100%)",
+            }}
+          />
+          <MouseParallaxChild
+            className="gradient-7"
+            factorX={0.01}
+            factorY={0.01}
+            updateStyles={{
+              position: "absolute",
+              background:
+                "radial-gradient(50% 50% at 37.3% 50%, #577BFA 0%, rgba(217, 217, 217, 0) 76.04%)",
+            }}
+          />
+          <MouseParallaxChild
+            className="gradient-8"
+            factorX={0.01}
+            factorY={0.01}
+            updateStyles={{
+              position: "absolute",
+              background:
+                "radial-gradient(50% 50% at 50% 50%, #577BFA 0%, rgba(217, 217, 217, 0) 87.5%)",
+            }}
+          />
+          <MouseParallaxChild
+            className="gradient-9"
+            factorX={0.01}
+            factorY={0.01}
+            updateStyles={{
+              position: "absolute",
+              background:
+                "radial-gradient(50% 50% at 50% 50%, #A3CFF4 0%, rgba(217, 217, 217, 0) 100%)",
+            }}
+          />
         </MouseParallaxContainer>
         {/* /// */}
 
-        <header className="d-flex flex-column flex-wrap flex-lg-row align-items-center mt-lg-5 pt-5 pt-lg-0 pb-4 px-3 px-lg-0 header">
-          <div className="d-flex w-100 px-0 align-items-center d-block d-lg-none">
-            <img className="mr-lg-auto mt-lg-0" src={logo} />
-            <div
-              onClick={() => setBurger(!burger)}
-              className={
-                "header__button burger ml-auto d-flex " +
-                (!burger ? "burger__opened" : "burger__closed")
-              }
-            >
-              <div className="burger__string"></div>
-              <div className="burger__string"></div>
-              <div className="burger__string"></div>
+        <header className="header">
+          <div className="header-small align-items-center pt-5 background-white d-sm-none">
+            <div className="d-flex px-5">
+              <img className="col-8 col-sm-5 px-0" src={logo} />
+              <div className="header__phone ml-auto"></div>
+            </div>
+            <div className="header-small__overflow">
+              <div className="header-small__links pt-4 pb-3 d-flex align-items-center px-5">
+                {links.map((link, index) => {
+                  return (
+                    <div
+                      className="ml-5 text-m header-small__link font-inter"
+                      onClick={() =>
+                        link.ref.current.scrollIntoView({
+                          block: "start",
+                          behavior: "smooth",
+                        })
+                      }
+                      key={index}
+                    >
+                      {link.text}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
-          <img className="mr-lg-auto mt-lg-0 d-none d-lg-block" src={logo} />
-          <div
-            className={
-              "header__links d-flex mt-0 mt-lg-5 mt-xl-0 ml-xl-auto flex-column-reverse flex-lg-row align-items-center " +
-              (burger ? "header__links_shown" : "header__links_closed")
-            }
-          >
-            {links.map((link, index) => {
-              return (
-                <div
-                  className="ml-lg-5 text-m header__link font-inter"
-                  onClick={() =>
-                    link.ref.current.scrollIntoView({
-                      block: "start",
-                      behavior: "smooth",
-                    })
-                  }
-                  key={index}
-                >
-                  {link.text}
-                </div>
-              );
-            })}
+          <div className="header-big d-none d-sm-flex flex-column flex-wrap flex-lg-row align-items-center mt-5 pt-5 pt-lg-0 pb-4 px-lg-0">
+            <img className="mr-lg-auto mt-lg-0 d-block" src={logo} />
+            <div
+              className={
+                "header-big__links d-flex flex-column flex-lg-row mt-0 mt-lg-5 mt-xl-0 ml-xl-auto align-items-center"
+              }
+            >
+              {links.map((link, index) => {
+                return (
+                  <div
+                    className="ml-lg-5 mt-3 mt-lg-0 text-m header__link font-inter"
+                    onClick={() =>
+                      link.ref.current.scrollIntoView({
+                        block: "start",
+                        behavior: "smooth",
+                      })
+                    }
+                    key={index}
+                  >
+                    {link.text}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </header>
 
@@ -149,15 +227,19 @@ function App() {
 
           <PhoneForm className="col-12 phone-form_main" />
           <Dialog className="col-12 px-0" />
-          <h2 className="h-1 pb-lg-5 pt-5 mb-5">Как мы работаем?</h2>
+          <h2 className="h-1 pb-lg-5 pt-5 mb-5" ref={benefits}>
+            Как мы работаем?
+          </h2>
           <HowWeWork
             className="pb-5 col-12 col-md-9 col-lg-12 mx-auto px-0"
             content={hwwContent}
             chat={hwwChat}
           />
-          <h2 className="h-2 mb-lg-5 pt-5 pb-5">Услуги и цены</h2>
+          <h2 className="h-2 mb-lg-5 pt-5 pb-5" ref={services}>
+            Услуги и цены
+          </h2>
           <ServicesPrices className="col-12 px-0" items={servicesPricesCards} />
-          <h2 className="mb-5 pb-5 pt-5 h-3" ref={benefits}>
+          <h2 className="mb-5 pb-5 pt-5 h-3" ref={comments}>
             Вот, с чем мы уже справились
           </h2>
           <Slider
@@ -165,7 +247,7 @@ function App() {
             content={sliderContent}
             cards={sliderCards}
           />
-          <h2 className="mb-5 pt-5 pb-5 h-4" ref={services}>
+          <h2 className="mb-5 pt-5 pb-5 h-4" ref={contancts}>
             Как получить услугу?
           </h2>
           <GetService className="col-12" />
@@ -173,7 +255,7 @@ function App() {
             С вами работает команда, а не один риелтор, который может заболеть,
             уйти в отпуск или не брать трубку
           </h2>
-          <Tickets/>
+          <Tickets />
           <div className="start-work d-flex flex-column flex-lg-row">
             <div className="start-work__text d-flex flex-column ml-lg-5 px-0 text-center text-lg-left px-lg-4 mt-lg-5">
               <div className="start-work__title text-xxl bolder mt-auto">
@@ -183,7 +265,10 @@ function App() {
                 Оставьте заявку, мы всё расскажем
               </div>
             </div>
-            <img className="start-work__img ml-lg-auto mt-5 mt-lg-0 mr-lg-5 col-lg-5 col-12 px-0 pr-lg-2" src={startWork} />
+            <img
+              className="start-work__img ml-lg-auto mt-5 mt-lg-0 mr-lg-5 col-lg-5 col-12 px-0 pr-lg-2"
+              src={startWork}
+            />
           </div>
           <PhoneForm />
           <h2 className="mb-5 pb-5 h-6 pt-5" ref={questions}>

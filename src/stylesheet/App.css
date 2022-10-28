@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
 @import "./variables.css";
 @import "./text.css";
 @import "./header.css";
@@ -25,18 +25,13 @@ body {
   color: var(--black);
 }
 
-#root{
+#root {
   overflow-x: hidden;
-
 }
 
 .app {
   position: inherit;
-}
-::-webkit-scrollbar {
-
-  /* width: 0; */
-  /* position: absolute !important; */
+  height: fit-content;
 }
 
 .app__content {
@@ -44,16 +39,137 @@ body {
   z-index: 1;
 }
 
+::-webkit-scrollbar {
+  /* width: 0; */
+  /* position: absolute !important; */
+}
+
+a {
+  cursor: pointer !important;
+}
+
 /* ///app size */
-@media screen and (min-width: 1650px) {
-  .app {
-    width: 1218px;
-  }
+
+.app {
+  width: 1218px;
+}
+
+.background {
+  height: 9976px;
+}
+
+.gradient-1 {
+  top: 3%;
+  width: 800px;
+  height: 800px;
+}
+
+.gradient-2 {
+  top: 0;
+  width: 1400px;
+  height: 1400px;
+  right: -38%;
+}
+
+.gradient-3 {
+  width: 600px;
+  height: 600px;
+  top: 29%;
+  left: 10%;
+}
+
+.gradient-4 {
+  width: 800px;
+  height: 800px;
+  top: 28%;
+  left: 50%;
+}
+
+.gradient-5 {
+  width: 500px;
+  height: 500px;
+  top: 37%;
+  left: 11%;
+}
+
+.gradient-6 {
+  width: 1500px;
+  height: 1500px;
+  top: 47%;
+  right: -53%;
+}
+
+.gradient-7 {
+  width: 1200px;
+  height: 1200px;
+  top: 63%;
+  right: -5%;
+}
+
+.gradient-8 {
+  width: 1400px;
+  height: 1400px;
+  top: 75%;
+  left: -20%;
+}
+
+.gradient-9 {
+  width: 1000px;
+  height: 1000px;
+  top: 80%;
+  right: -10%;
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1650px) {
   .app {
     width: 1350px;
+  }
+
+  .background {
+    height: 10608px;
+  }
+  .gradient-1 {
+    top: 3%;
+  }
+
+  .gradient-2 {
+    top: 0;
+    right: -60%;
+  }
+
+  .gradient-3 {
+    top: 28%;
+    left: -5%;
+  }
+
+  .gradient-4 {
+    top: 27%;
+    left: 50%;
+  }
+
+  .gradient-5 {
+    top: 35%;
+    left: 0%;
+  }
+
+  .gradient-6 {
+    top: 47%;
+    right: -70%;
+  }
+
+  .gradient-7 {
+    top: 63%;
+    right: -5%;
+  }
+
+  .gradient-8 {
+    top: 75%;
+    left: -20%;
+  }
+
+  .gradient-9 {
+    top: 80%;
+    right: -10%;
   }
 }
 
@@ -61,11 +177,63 @@ body {
   .app {
     width: 1200px;
   }
+
+  .background {
+    height: 10074px;
+  }
+
+  .gradient-1 {
+    top: 3%;
+  }
+
+  .gradient-2 {
+    top: 0;
+    right: -60%;
+  }
+
+  .gradient-3 {
+    top: 27%;
+    left: -5%;
+  }
+
+  .gradient-4 {
+    top: 26%;
+    left: 50%;
+  }
+
+  .gradient-5 {
+    top: 38%;
+    left: 0%;
+  }
+
+  .gradient-6 {
+    top: 47%;
+    right: -75%;
+  }
+
+  .gradient-7 {
+    top: 63%;
+    right: -30%;
+  }
+
+  .gradient-8 {
+    top: 75%;
+    left: -20%;
+  }
+
+  .gradient-9 {
+    top: 80%;
+    right: -10%;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .app {
     width: 992px;
+  }
+
+  .background {
+    height: 11142px;
   }
 }
 
@@ -73,49 +241,93 @@ body {
   .app {
     width: 768px;
   }
+
+  .background {
+    height: 14770px;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .app {
     width: 576px;
   }
+
+  .background {
+    height: 14357px;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .app {
-    width: 99vw;
+    width: 100vw;
+  }
+
+  .background {
+    height: 13160px;
+  }
+
+  .gradient-1 {
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: -20%;
+  }
+
+  .gradient-2 {
+    width: 500px;
+    height: 500px;
+    top: 3%;
+    right: -50%;
+  }
+
+  .gradient-3 {
+    width: 600px;
+    height: 600px;
+    top: 20%;
+    right: -50%;
+    left: unset;
+  }
+
+  .gradient-4 {
+    top: 25%;
+    left: 50%;
+  }
+
+  .gradient-5 {
+    width: 650px;
+    height: 650px;
+    top: 37%;
+    left: 15%;
+  }
+
+  .gradient-6 {
+    width: 550px;
+    height: 550px;
+    top: 47%;
+    right: -65%;
+    opacity: 0.5;
+  }
+
+  .gradient-7 {
+    top: 55%;
+  }
+
+  .gradient-8 {
+    width: 550px;
+    height: 550px;
+    top: 80%;
+    right: -50%;
+    left: unset;
+  }
+
+  .gradient-9 {
+    width: 750px;
+    height: 750px;
+    top: 83%;
+    right: -10%;
   }
 }
 /* /// */
-
-.background-1__circle-1,
-.background-1__circle-2 {
-  position: absolute;
-  z-index: -1 !important;
-}
-
-.background-1__circle-1 {
-  width: 800px;
-  height: 800px;
-  top: 50%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #97cbf8 0%,
-    rgba(217, 217, 217, 0) 100%
-  );
-}
-
-.background-1__circle-2 {
-  width: 1400px;
-  height: 1400px;
-  top: -35%;
-  right: -50%;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #577bfa 0%,
-    rgba(217, 217, 217, 0) 100%
-  );
-}
 
 /* .background-2 {
   top: 1100px;
@@ -220,6 +432,10 @@ body {
   margin-bottom: 15rem;
 }
 
+.h-6 {
+  margin-top: 13rem;
+}
+
 .start-work {
   margin-top: 20rem;
 }
@@ -234,6 +450,7 @@ body {
   .h-3,
   .h-4,
   .h-5,
+  .h-6,
   .dialog {
     margin-top: 5rem;
   }
@@ -292,7 +509,7 @@ button:focus {
 }
 
 .input_phone {
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Azeret Mono', monospace;
   border-radius: 30px;
   border: none;
 }
@@ -535,6 +752,13 @@ button:focus {
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-timing-function: linear;
+}
+
+@media screen and (max-width: 992px) {
+  .btn-slide {
+    width: 65px;
+    height: 65px;
+  }
 }
 
 /* ///*/

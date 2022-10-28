@@ -72,12 +72,34 @@ h2 {
   .text-xxxl {
     font-size: 3rem;
   }
-
+  
+  .text-xxl {
+    font-size: 3.75rem;
+  }
+  
   .text-xl {
     font-size: 2.25rem;
   }
-
   
+  .text-l {
+    font-size: 1.5rem;
+  }
+  
+  .text-m {
+    font-size: 1.375rem;
+  }
+  
+  .text-s {
+    font-size: 1.3rem;
+  }
+  
+  .text-xs {
+    font-size: 1.125rem;
+  }
+
+  h1{
+    font-size: 5.3rem;
+  }
 
   h2{
     font-size: 2.3rem;
@@ -86,16 +108,37 @@ h2 {
 
 
 @media screen and (max-width: 576px) {
-  .text-xxxl {
-    font-size: 2.9rem;
-  }
 
+  .text-xxxl {
+    font-size: 2.5rem;
+  }
+  
   .text-xxl {
     font-size: 2.55rem;
   }
-
+  
   .text-xl {
-    font-size: 2.25rem;
+    font-size: 1.95rem;
+  }
+  
+  .text-l {
+    font-size: 1.35rem;
+  }
+  
+  .text-m {
+    font-size: 1.275rem;
+  }
+  
+  .text-s {
+    font-size: 1.1rem;
+  }
+  
+  .text-xs {
+    font-size: 1.125rem;
+  }
+
+  h1{
+    font-size: 5.3rem;
   }
 
   h2{

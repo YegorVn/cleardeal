@@ -1,6 +1,12 @@
 .disclosure{
-  height: 60rem;
+  height: fit-content;
 }
+
+.disclosure__background{
+  opacity: 0;
+  z-index: -1;
+}
+
 .tab {
   transition: margin-top 1s;
   margin-top: 3rem;
@@ -16,6 +22,12 @@
 
 .tab__cover {
   padding: 2rem 3rem;
+}
+
+@media screen and (max-width: 576px) {
+  .tab__cover {
+    padding: 1rem 2rem;
+  }
 }
 
 .tab_opened > .tab__cover {

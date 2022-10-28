@@ -23,6 +23,41 @@
   animation-fill-mode: forwards;
 }
 /* /// */
+@keyframes width_animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.how-we-work__header::after{
+  content: "";
+  background-image: url('../assets/images/underlines/hww.svg');
+  height: 25px;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  background-repeat: no-repeat;
+  width: 0;
+  animation-name: width_animation;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+}
+
+.how-we-work__header{
+  position: relative;
+}
+
+@media screen and (max-width: 992px) {
+  .how-we-work__header::after{
+    top: 1.1em;
+    bottom: unset;
+  }
+}
 
 .hwwWidget {
   height: 30rem;
@@ -103,22 +138,13 @@
   position: relative;
 }
 
-@keyframes check__text_animation {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
 .check__text_0::before,
 .check__text_1::before,
 .check__text_2::before,
 .check__text_3::before,
 .check__text_4::before,
 .check__text_5::before {
-  animation-name: check__text_animation;
+  animation-name: width_animation;
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;

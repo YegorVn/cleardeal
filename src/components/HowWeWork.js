@@ -2,20 +2,29 @@ import React, { useEffect, useState } from "react";
 import { HwwVidget } from "./pieces/HwwVidget";
 
 export const HowWeWork = ({ className, chat, content }) => {
-  const [currentIdx, setCurrentIdx] = useState(0);
-  const [current, setCurrent] = useState(content[currentIdx].val);
+  const [current, setCurrent] = useState(content[0].val);
+  const [stop, setStop] = useState(false);
   useEffect(() => {
+    let i = 0;
     let timer1 = setInterval(() => {
-      // if(currentIdx + 1 > content.length) setCurrentIdx(0)
-      // else{
-      // setCurrentIdx(currentIdx + 1)
-      // setCurrent(content[currentIdx + 1].val);
-      // }
-    }, 500);
+      if (i + 1 > content.length) i = 0;
+      else {
+        console.log(i);
+        setCurrent(content[i].val);
+        i = i + 1;
+      }
+    }, 5000);
+    if (stop) clearInterval(timer1);
     return () => {
       clearInterval(timer1);
     };
-  }, [current]);
+  }, [stop]);
+
+  const changeHandler = (e) => {
+    setCurrent(e.target.value);
+    setStop(true);
+    console.log(e.target.value);
+  };
 
   const Switch = ({ buttons, changeHandler, className, current }) => {
     return (
@@ -56,21 +65,18 @@ export const HowWeWork = ({ className, chat, content }) => {
                 value={btn.val}
                 className={
                   "btn switch-small__btn text-l mt-lg-0 d-flex align-items-center justify-content-center " +
-                  (current == btn.val && "btn_active switch-small__btn_active border-r-30 px-1" || "switch-small__btn_inactive border-r-100per")
+                  ((current == btn.val &&
+                    "btn_active switch-small__btn_active border-r-30 px-1") ||
+                    "switch-small__btn_inactive border-r-100per")
                 }
               >
-                {current == btn.val && btn.text || index + 1}
+                {(current == btn.val && btn.text) || index + 1}
               </button>
             );
           })}
         </div>
       </>
     );
-  };
-
-  const changeHandler = (e) => {
-    setCurrent(e.target.value);
-    console.log(e.target.value);
   };
 
   return (
@@ -90,21 +96,25 @@ export const HowWeWork = ({ className, chat, content }) => {
           className="mx-auto mx-lg-0 col-lg-5 col-xl-5 pt-0 pr-0 pl-0"
           bubbles={chat}
         />
-        <div className="col-lg-6 ml-lg-auto pl-0 mt-5 mt-lg-0">
-          {content.map((block) => {
-            return (
-              <>
-                {block.val === current && (
-                  <div className="how-we-work__block" key={block.val}>
-                    <div className="text-xl bold">{block.header}</div>
-                    <div className="text-l mt-5 text-left col-sm-11 pl-0 pr-0">
-                      {block.annotation}
+        <div className="col-lg-7 px-0 mt-5 mt-lg-0 ">
+          <div className="col-lg-11 px-0 ml-lg-auto">
+            {content.map((block) => {
+              return (
+                <>
+                  {block.val === current && (
+                    <div className="how-we-work__block" key={block.val}>
+                      <div className="text-xl bold how-we-work__header">
+                        {block.header}
+                      </div>
+                      <div className="text-l mt-5 text-left pl-0 pr-0 pr-sm-4">
+                        {block.annotation}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </>
-            );
-          })}
+                  )}
+                </>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

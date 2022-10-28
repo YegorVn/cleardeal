@@ -13,7 +13,7 @@ import plainLogo from "../../assets/images/plainLogo.png";
 export const HwwVidget = ({ className, bubbles, current }) => {
   const Chat = () => {
     return (
-      <div className=" pt-4 px-5 pb-5">
+      <div className="pt-4 px-3 px-sm-5 pb-5">
         <div className="chat__header d-flex">
           <img src={circles} className="" />
           <img src={wifi} className="ml-2" />

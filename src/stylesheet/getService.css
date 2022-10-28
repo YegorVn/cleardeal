@@ -16,6 +16,10 @@
 } */
 
 /* ///// */
+.service__title{
+  margin-top: -0.2em;
+}
+
 .man-hand{
   margin-top: -5%;
   margin-left: -2%;

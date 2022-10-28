@@ -6,21 +6,34 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 export const Tickets = ({ className }) => {
   const control = useAnimation();
-  const [ref, inView] = useInView();
-  const ticket = {
-    visible: {
-      opacity: 1,
-      transition: { duration: 0.25 },
-      boxShadow: "0px 0px 2px 1px #FAFAFB",
-    },
-    hidden: { opacity: 1, boxShadow: "0px 0px 1px 1px #FAFAFB" },
+  const [ref, inView] = useInView({
+    threshold: 0,
+    rootMargin: "0%"
+  });
+  const ticket1 = {
+    visible: { opacity: 1, transition: { duration: 0.5, delay: 0 } },
+    hidden: { opacity: 0 },
+  };
+
+  const ticket2 = {
+    visible: { opacity: 1, transition: { duration: 0.5, delay: 0.5 } },
+    hidden: { opacity: 0 },
+  };
+
+  const ticket3 = {
+    visible: { opacity: 1, transition: { duration: 0.5, delay: 1 } },
+    hidden: { opacity: 0 },
+  };
+
+  const ticket4 = {
+    visible: { opacity: 1, transition: { duration: 0.5, delay: 1.5 } },
+    hidden: { opacity: 0 },
   };
 
   useEffect(() => {
     if (inView) {
       control.start("visible");
     } else {
-      control.start("hidden");
     }
   }, [control, inView]);
   return (
@@ -28,16 +41,17 @@ export const Tickets = ({ className }) => {
       <div className="d-flex flex-column flex-lg-row">
         <motion.div
           ref={ref}
-          variants={ticket}
+          variants={ticket1}
           initial="hidden"
           animate={control}
           className="ticket border-r-60 background-white d-flex flex-column flex-lg-row col-12 col-lg-8 pb-5 pt-5 px-sm-5"
         >
-          <img src={phone} className="phone-img" width={340} height={350} />{" "}
+          <img src={phone} className="phone-img d-none d-lg-block pr-2" />
           <div className="ticket__content col-12 col-xl-8 col-lg-7 pr-2 pl-2 px-sm-0">
             <div className="ticket__header color-blue text-xl bold pt-2 text-left ">
               Один чат для связи — прямо в вашем телефоне
             </div>
+            <img src={phone} className="phone-img col-12 px-0 pt-4 d-block d-lg-none" />
             <div className="ticket__text text-l col-lg-9 pl-0 pb-5 mt-4">
               Колл-центр ответит на вопросы, менеджер по продажам будет держать
               в курсе сделки, юристы скажут, какие документы потребуются.
@@ -46,7 +60,7 @@ export const Tickets = ({ className }) => {
         </motion.div>
         <motion.div
           ref={ref}
-          variants={ticket}
+          variants={ticket2}
           initial="hidden"
           animate={control}
           className="ticket border-r-60 background-white col-12 col-lg-4 ml-lg-4 mr-5 pb-4 pt-5 px-sm-4 mt-5 mt-lg-0"
@@ -65,7 +79,7 @@ export const Tickets = ({ className }) => {
       <div className="d-flex flex-column flex-lg-row mt-lg-4">
         <motion.div
           ref={ref}
-          variants={ticket}
+          variants={ticket3}
           initial="hidden"
           animate={control}
           className="ticket border-r-60 background-white col-12 col-lg-5 pt-5 pl-sm-5 mt-5 mt-lg-0 pb-lg-5"
@@ -82,16 +96,17 @@ export const Tickets = ({ className }) => {
         </motion.div>
         <motion.div
           ref={ref}
-          variants={ticket}
+          variants={ticket4}
           initial="hidden"
           animate={control}
           className="ticket border-r-60 d-flex flex-column flex-lg-row background-white px-2 col-12 col-lg-7 ml-lg-4 pt-5 px-sm-5 mt-5 mt-lg-0"
         >
-          <img src={girl} className="girl-img" width={340} height={350} />
+          <img src={girl} className="girl-img d-none d-lg-block"/>
           <div className="ticket__content col-12 col-lg-7">
             <div className="ticket__header color-blue text-xl bold text-left ">
               Бесплатная консультация
             </div>
+            <img src={girl} className="girl-img pt-4 col-12 d-block d-lg-none"/>
             <div className="ticket__text text-l pb-5 mt-4 pr-lg-3">
               Разберёмся в ситуации, предложим варианты действий, чтобы вы
               спокойно приняли взвешенное решение. Бесплатно.

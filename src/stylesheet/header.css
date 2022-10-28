@@ -3,6 +3,29 @@
   position: relative;
 }
 
+.header__phone{
+  background-color: var(--blue);
+  background-image: url("../assets/images/phone.svg");
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 10px 1px var(--blue);
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  background-position: center;
+}
+
+.header-small__overflow{
+  width: 100vw;
+  overflow-x: scroll;
+}
+
+.header-small__links{
+  width: 200%;
+}
+
+.header-small__link{
+}
+
 .burger {
   width: 35px;
   height: 26px;
@@ -11,27 +34,7 @@
   flex-flow: column;
 }
 
-@media screen and (max-width: 992px) {
-  .header__links{
-    z-index: 3;
-    position: absolute;
-    background-color: var(--light-blue);
-    width:95%;
-    transition: transform 1s;
-    padding: 3rem;
-    top: 100%;
-    border-radius: 30px;
-  }
-  .header__links>.header__link{
-    padding: 1rem;
-  }
-  .header__links_shown{
-    transform: translateY(0);
-  }
-  .header__links_closed{
-    transform: translateY(-200%);
-  }
-}
+
 
 
 .burger__string {

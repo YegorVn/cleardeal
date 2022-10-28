@@ -1,7 +1,6 @@
 import arrowDown from "../assets/icons/arrowDown.svg";
 import { useState } from "react";
-export const Disclosure = ({content, className}) => {
-  
+export const Disclosure = ({ content, className }) => {
   const Tab = ({ className, tab }) => {
     const [opened, setOpened] = useState(false);
     return (
@@ -12,16 +11,15 @@ export const Disclosure = ({content, className}) => {
       >
         <div
           className={
-            "tab__cover d-flex  background-white border-r-50 " +
-            className
+            "tab__cover d-flex  background-white border-r-50 " + className
           }
         >
-          <div className="tab__header text-xl bold col-11 pl-0">
+          <div className="tab__header text-xl bold col-12 col-md-11 pr-0 pl-0">
             {tab.header}
           </div>
           <div
             className={
-              "tab__cross ml-auto " +
+              "tab__cross ml-auto d-none d-md-flex " +
               (opened ? "tab__cross_cross" : "tab__cross_check")
             }
             onClick={() => setOpened(!opened)}
@@ -29,7 +27,6 @@ export const Disclosure = ({content, className}) => {
             <div className="stick"></div>
             <div className="stick"></div>
           </div>
-
         </div>
         <div
           className={
@@ -44,9 +41,10 @@ export const Disclosure = ({content, className}) => {
   };
   return (
     <div className={"disclosure col-12 px-0 " + className}>
-      {content.map((tab) => {
-        return <Tab tab={tab} className="col-12" />;
-      })}
+        {content.map((tab) => {
+          return <Tab tab={tab} className="col-12" />;
+        })}
+      
     </div>
   );
 };
