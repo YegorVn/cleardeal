@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cleardeal/static/css/main.d4dfe9de.css",
-    "main.js": "/cleardeal/static/js/main.6d373488.js",
+    "main.css": "/cleardeal/static/css/main.88c92ef6.css",
+    "main.js": "/cleardeal/static/js/main.e8a19637.js",
     "static/media/logoWhite.svg": "/cleardeal/static/media/logoWhite.bfdf3e24ad7bc9a72624ddea3a56ff31.svg",
     "static/media/manHand.svg": "/cleardeal/static/media/manHand.00ea3a715c8fd68448bc6dbd0249a6e3.svg",
     "static/media/girl.png": "/cleardeal/static/media/girl.6cbd50e30fedfe297b38.png",
@@ -9,6 +9,10 @@
     "static/media/handShake.svg": "/cleardeal/static/media/handShake.852274cb7e9543c9dcd8450bce59b0e9.svg",
     "static/media/phone.png": "/cleardeal/static/media/phone.23a55dd44399b8cbdd66.png",
     "static/media/person.png": "/cleardeal/static/media/person.f323d28957e7b7a039fa.png",
+    "static/media/person2.png": "/cleardeal/static/media/person2.f226a557ebe2b990572b.png",
+    "static/media/person1.png": "/cleardeal/static/media/person1.9f925230c95688184121.png",
+    "static/media/person4.png": "/cleardeal/static/media/person4.9db9d578deb2ef5c1bff.png",
+    "static/media/person3.png": "/cleardeal/static/media/person3.0dedb5da581a7365f8d8.png",
     "static/media/arrowDotted.svg": "/cleardeal/static/media/arrowDotted.3158d88aad43a161195f.svg",
     "static/media/zero.svg": "/cleardeal/static/media/zero.582c25730c3141399fd5944c9d48a84a.svg",
     "static/media/phone.svg": "/cleardeal/static/media/phone.27cdd67113337cf6e2b30ef07b66e86a.svg",
@@ -41,11 +45,11 @@
     "static/media/string1.svg": "/cleardeal/static/media/string1.c9f19413af8c011d1171.svg",
     "static/media/arrowRightBlueBig.svg": "/cleardeal/static/media/arrowRightBlueBig.e543640fe71b7679e7c0.svg",
     "static/media/arrowLeftBlueBig.svg": "/cleardeal/static/media/arrowLeftBlueBig.4f0f84c9cfd84462f9e7.svg",
-    "main.d4dfe9de.css.map": "/cleardeal/static/css/main.d4dfe9de.css.map",
-    "main.6d373488.js.map": "/cleardeal/static/js/main.6d373488.js.map"
+    "main.88c92ef6.css.map": "/cleardeal/static/css/main.88c92ef6.css.map",
+    "main.e8a19637.js.map": "/cleardeal/static/js/main.e8a19637.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4dfe9de.css",
-    "static/js/main.6d373488.js"
+    "static/css/main.88c92ef6.css",
+    "static/js/main.e8a19637.js"
   ]
 }
