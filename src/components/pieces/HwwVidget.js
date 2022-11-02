@@ -77,7 +77,7 @@ export const HwwVidget = ({ className, bubbles, current }) => {
                           animation-delay: ${index + 1 + "s"};
                         }
                         .check__text_${index}::before {
-                          animation-delay: ${index + 0.5 + "s"};
+                          animation-delay: ${index + 2 + "s"};
                         }
                         `,
                     }}

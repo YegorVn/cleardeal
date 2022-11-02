@@ -11,7 +11,7 @@ export const Disclosure = ({ content, className }) => {
       >
         <div
           className={
-            "tab__cover d-flex  background-white border-r-50 " + className
+            "tab__cover d-flex  background-white border-r-40 " + className
           }
         >
           <div className="tab__header text-xl bold col-12 col-md-11 pr-0 pl-0">

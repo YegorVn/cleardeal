@@ -12,6 +12,10 @@
   margin-top: 3rem;
 }
 
+.tab:first-child{
+  margin-top: 0;
+}
+
 .tab_closed {
   margin-top: 3rem;
 }
@@ -21,7 +25,7 @@
 }
 
 .tab__cover {
-  padding: 2rem 3rem;
+  padding: 1.5rem 2.5rem 1.5rem 4.75rem;
 }
 
 @media screen and (max-width: 576px) {

@@ -32,6 +32,15 @@
   }
 }
 
+@keyframes width_animation_50per {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 25%;
+  }
+}
+
 .how-we-work__header::after{
   content: "";
   background-image: url('../assets/images/underlines/hww.svg');
@@ -46,6 +55,21 @@
   animation-duration: 0.5s;
   animation-delay: 1s;
   animation-timing-function: linear;
+}
+
+.how-we-work__block:nth-child(2) .how-we-work__header::after{
+  bottom: -1em;
+}
+
+.how-we-work__block:nth-child(2) .how-we-work__header::after{
+  top: 1.1em;
+}
+
+.how-we-work__block:nth-child(3) .how-we-work__header::after{
+  animation-name: width_animation;
+  max-width: 10rem;
+  top: 2.4em;
+  left: 0;
 }
 
 .how-we-work__header{
@@ -146,7 +170,7 @@
 .check__text_5::before {
   animation-name: width_animation;
   animation-fill-mode: forwards;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   content: "";
   position: absolute;
@@ -374,7 +398,7 @@
   width: 2px;
   height: 0;
   background-color: var(--blue);
-  left: 16px;
+  left: 15px;
   top: 100%;
 }
 
@@ -397,12 +421,12 @@
   border-radius: 100%;
   border-left-color: transparent;
   border-bottom-color: transparent;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
 }
 
 .roadmap__circle::before {
   animation-name: roadmap__circle_arrow_animation;
-  animation-duration: 4s;
+  animation-duration: 6000ms;
   animation-fill-mode: forwards;
   content: "";
   position: absolute;
@@ -412,7 +436,7 @@
   top: 1.5px;
   border-radius: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 54%;
 }
 
 .roadmap__text {

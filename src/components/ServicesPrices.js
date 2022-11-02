@@ -4,7 +4,7 @@ export const ServicesPrices = ({ items, className }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
 
   return (
-    <div className={"services " + className}>
+    <div className={`services ${className}`}>
       <div className="services__cards col-12 px-0 d-sm-flex d-none justify-content-between flex-wrap ">
         {items.map((card, index) => {
           return (
@@ -16,6 +16,7 @@ export const ServicesPrices = ({ items, className }) => {
             />
           );
         })}
+        
       </div>
       <div className="services__cards_small col-12 px-0 d-sm-none d-block">
         {items.map((card, index) => {

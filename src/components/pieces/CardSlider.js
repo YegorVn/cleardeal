@@ -44,14 +44,43 @@ export const CardSlider = ({ changeHandler, className, currentIdx, cards }) => {
   };
 
   return (
-    <>
+    <div className="card-slider">
+      <div className="card-slider__header p-5 d-flex align-items-center position-absolute">
+        <button
+          className="btn-slide btn-slide-left"
+          onClick={() => {
+            changeHandler("previous");
+          }}
+        ></button>
+        <div className="card-slider__person mx-auto ml-2 d-flex flex-column align-items-center flex-lg-row">
+          <img
+            src={person.avatar}
+            className="card-slider__avatar border-r-100per"
+          />
+          <div className="card-slider__person-data pl-lg-3 bold">
+            <div className="card-slider__name text-xl mx-auto mx-lg-0">
+              {person.name}
+            </div>
+            <div className="card-slider__region mt-1 text-m mx-auto mx-lg-0">
+              {person.region}
+            </div>
+          </div>
+        </div>
+        <button
+          className="btn-slide btn-slide-right ml-lg-auto"
+          onClick={() => {
+            changeHandler("next");
+          }}
+        ></button>
+      </div>
+
       {cards.map((card, index) => {
         return (
           <>
             {currentIdx === index && (
               <div
                 className={
-                  "card-slider d-lg-flex align-items-center pr-0 pl-3 pr-lg-4 mx-auto mx-xl-0 " +
+                  "d-lg-flex align-items-center pr-0 mx-auto mx-xl-0 " +
                   className
                 }
               >
@@ -62,39 +91,8 @@ export const CardSlider = ({ changeHandler, className, currentIdx, cards }) => {
                   <div className="left-card__background background-white border-r-20"></div>
                 </div>
                 <div className="card-slider__main-card main-card border-r-20 p-3 p-lg-5 background-white border-r-20 ">
-                  <div className="card-slider__header d-flex align-items-center">
-                    <button
-                      className="btn-slide btn-slide-left"
-                      onClick={() => {
-                        changeHandler("previous");
-                      }}
-                    ></button>
-                    <div className="card-slider__person mx-auto ml-2 d-flex flex-column align-items-center flex-lg-row">
-                      <img
-                        src={person.avatar}
-                        className="card-slider__avatar border-r-100per"
-                      />
-                      <div className="card-slider__person-data pl-lg-3 bold">
-                        <div className="card-slider__name text-xl mx-auto mx-lg-0">
-                          {person.name}
-                        </div>
-                        <div className="card-slider__region mt-1 text-m mx-auto mx-lg-0">
-                          {person.region}
-                        </div>
-                      </div>
-                    </div>
-                    <button
-                      className="btn-slide btn-slide-right ml-lg-auto"
-                      onClick={() => {
-                        changeHandler("next");
-                      }}
-                    ></button>
-                  </div>
-
                   <div className="main-card__content">
-                    <div className="card-slider__text mt-lg-5 pt-3 text-l mb-3">
-                      {card.text}
-                    </div>
+                    <div className="card-slider__text text-l">{card.text}</div>
                   </div>
                 </div>
                 <div className="card-slider__right-card d-none right-card d-lg-flex justify-content-end flex-column">
@@ -113,39 +111,6 @@ export const CardSlider = ({ changeHandler, className, currentIdx, cards }) => {
           </>
         );
       })}
-      {/* <div className={"card-slider-small d-block d-lg-none"}>
-        <button
-          className="card-slider-small__btn card-slider-small__btn_left"
-          onClick={() => scrollRight()}
-        ></button>
-        <div className="card-slider-small__content" ref={horSlider}>
-          {cards.map((card) => {
-            return (
-              <div className="card-slider-small__card px-4 pt-4 pb-4 d-flex flex-column">
-                <div className="card-slider-small__person d-flex align-items-center">
-                  <img
-                    src={person.avatar}
-                    className="card-slider__avatar border-r-100per"
-                  />
-                  <div className="card-slider-small__person-data pl-3 bold">
-                    <div className="card-slider-small__name">{person.name}</div>
-                    <div className="card-slider-small__region mt-1">
-                      {person.region}
-                    </div>
-                  </div>
-                </div>
-                <div className="card-slider-small__text mt-auto mb-auto">
-                  {card.text}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <button
-          className="card-slider-small__btn card-slider-small__btn_right"
-          onClick={() => scrollLeft()}
-        ></button>
-      </div> */}
-    </>
+    </div>
   );
 };
