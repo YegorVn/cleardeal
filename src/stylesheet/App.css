@@ -443,9 +443,14 @@ a {
   .h-3,
   .h-4,
   .h-5,
-  .h-6,
-  .dialog {
-    margin-top: 5rem;
+  .h-6{
+    margin-top: 0;
+    padding-bottom: 1.25rem;
+  }
+
+  .dialog{
+    padding-top: 0;
+    margin-top: 10rem;
   }
 
   .start-work {
@@ -454,6 +459,11 @@ a {
 
   .h-5 {
     margin-bottom: 10rem;
+  }
+
+  .h-6{
+    padding-bottom: 3rem;
+    white-space: nowrap;
   }
 }
 
@@ -628,20 +638,21 @@ button:focus {
   width: 100%;
   height: 100%;
   fill: transparent;
-  stroke: url(#linear);
   stroke-width: 3px;
+  stroke: var(--blue);
 }
 
 @keyframes switch__rect_anim {
   0% {
     stroke-dasharray: 0 1000;
+    opacity: 1;
   }
-
   90% {
     stroke-dasharray: 1000 1;
   }
 
   100% {
+    opacity: 0;
     stroke-dasharray: 0 1000;
   }
 }
@@ -819,7 +830,7 @@ button:focus {
 .btn-slide:focus::after {
   animation-name: btn_slide;
   animation-duration: 0.5s;
-  animation-delay: 0s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-timing-function: linear;
@@ -973,6 +984,10 @@ button:focus {
   margin-top: 15rem;
 }
 
+.banner__annotation {
+  font-size: 1.5rem;
+}
+
 @media screen and (max-width: 1200px) and (min-width: 992px) {
   .banner{
     margin-top: 30rem;
@@ -982,6 +997,22 @@ button:focus {
 @media screen and (max-width: 992px) and (min-width: 576px) {
   .banner{
     margin-top: 15rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner{
+    margin-top: 12rem;
+  }
+
+  .banner__annotation{
+    font-size: 1.15rem;
+  }
+
+  .banner__text{
+    font-weight: 700;
+    color: var(--blue);
+    text-transform: uppercase !important;
   }
 }
 /* /// */

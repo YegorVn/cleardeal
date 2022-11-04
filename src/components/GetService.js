@@ -9,7 +9,7 @@ export const GetService = ({ className }) => {
     const control = useAnimation();
     const [ref, inView] = useInView({
       threshold: 1,
-      rootMargin: "-17%"
+      rootMargin: "-5%"
     });
     const point_1 = {
       visible: {
@@ -29,7 +29,7 @@ export const GetService = ({ className }) => {
       if (inView) {
         control.start("visible");
       } else {
-        // control.start("hidden");
+        control.start("hidden");
       }
     }, [control, inView]);
     return (

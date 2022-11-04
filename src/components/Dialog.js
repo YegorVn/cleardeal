@@ -8,7 +8,7 @@ export const Dialog = ({className}) => {
   return (
     <div className={"dialog " + className}>
       <Bubble
-        className="bubble_left bold text-s mt-5 col-lg-10 pl-0"
+        className="bubble_left bold text-s col-lg-10 pl-0"
         text={
           "Пытаюсь продать квартиру, чтобы купить новую. Всё кажется таким запутанным, боюсь что-то упустить и потерять деньги. Агенты берут большие проценты, но говорят, что это не окончательная цена, могут быть дополнительные расходы."
         }

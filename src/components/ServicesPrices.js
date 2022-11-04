@@ -24,7 +24,7 @@ export const ServicesPrices = ({ items, className }) => {
             <>
               {currentIdx === index && (
                 <Card
-                  className="col-11 col-sm-9 col-lg-4 col-xl-4 mx-auto mx-lg-0 mt-3 mt-lg-0 pl-4 pr-4 pt-5 pb-5"
+                  className="col-12 col-sm-9 col-lg-4 col-xl-4 mx-auto mx-lg-0 mt-3 mt-lg-0 pl-4 pr-4 pt-5 pb-5"
                   card={card}
                   animDuration={index}
                   key={index}
@@ -33,7 +33,7 @@ export const ServicesPrices = ({ items, className }) => {
             </>
           );
         })}
-        <div className="services__circles justify-content-center mt-4 d-flex col-12">
+        <div className="services__circles justify-content-center mt-5 d-flex col-12">
           {items.map((el, index) => {
             return (
               <div

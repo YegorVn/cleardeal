@@ -20,14 +20,14 @@ export const Slider = ({ content, cards, className }) => {
           currentIdx={currentIdx}
           cards={cards}
         />
-        <div className="slider__block mt-xl-3 mt-5 pt-3">
+        <div className="slider__block mt-xl-3 mt-5 pt-sm-3">
           {content.map((block, index) => {
             return (
               <React.Fragment key={index}>
                 {currentIdx === index && (
                   <div className="slider__text ">
                     <div className="slider__title bold ">{block.header}</div>
-                    <div className="text-l mt-5 text-left col-11 pl-0">
+                    <div className="text-l mt-4 mt-sm-5 text-left col-sm-11 pr-0 pl-0">
                       {block.annotation}
                     </div>
                   </div>

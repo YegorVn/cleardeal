@@ -71,7 +71,7 @@ export const Card = ({ card, className, animDuration }) => {
       </motion.div>
       <div
         className={
-          "btn-show d-flex align-items-center mb-4 mt-5 " +
+          "btn-show d-flex align-items-center mb-3 mt-4 mb-sm-4 mt-sm-5 " +
           (closed ? "btn-show_closed" : "btn-show_shown")
         }
         onClick={() => changeHandler()}
@@ -94,7 +94,7 @@ export const Card = ({ card, className, animDuration }) => {
           {card.annotation}
         </div>
       )}
-      <div className="card__price color-blue text-xl bolder mb-5 mt-4">
+      <div className="card__price color-blue text-xl bolder mb-4 mt-3 mb-sm-5 mt-sm-4">
         {card.price}
       </div>
       <button className="btn card__btn text-m ">Оставить заявку</button>

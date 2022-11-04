@@ -110,7 +110,7 @@ h2 {
 @media screen and (max-width: 576px) {
 
   .text-xxxl {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   
   .text-xxl {
@@ -118,15 +118,15 @@ h2 {
   }
   
   .text-xl {
-    font-size: 1.95rem;
+    font-size: 1.5rem;
   }
   
   .text-l {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
   
   .text-m {
-    font-size: 1.275rem;
+    font-size: 1.5rem;
   }
   
   .text-s {
@@ -142,7 +142,7 @@ h2 {
   }
 
   h2{
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
 }
 

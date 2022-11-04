@@ -110,7 +110,7 @@ export const HowWeWork = ({ className, chat, content }) => {
         changeHandler={changeHandler}
         current={current}
       />
-      <div className="how-we-work__body d-flex flex-column flex-lg-row mt-5 pt-lg-5">
+      <div className="how-we-work__body d-flex flex-column flex-lg-row mt-4 mt-sm-5 pt-lg-5">
         <div className="mx-auto mx-lg-0 col-lg-5 col-xl-6 pt-0 pr-xl-4 pl-0">
           <HwwVidget
             current={current}
@@ -126,12 +126,12 @@ export const HowWeWork = ({ className, chat, content }) => {
                   {
                     <div className="how-we-work__block" key={block.val}>
                       {block.val === current && (
-                        <div className="text-xl bold pr-4 pr-xl-0 how-we-work__header">
+                        <div className="text-xl bold pr-sm-4 pr-xl-0 how-we-work__header">
                           {block.header}
                         </div>
                       )}
                       {block.val === current && (
-                        <div className="text-l mt-5 text-left pl-0 pr-0 pr-sm-5">
+                        <div className="text-l mt-4 mt-sm-5 text-left pl-0 pr-0 pr-sm-5">
                           {block.annotation}
                         </div>
                       )}

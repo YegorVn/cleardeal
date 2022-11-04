@@ -48,7 +48,7 @@ export const PhoneForm = ({ className }) => {
           Позвоните мне
         </button>
         <button
-          className="btn btn_contact text-m mt-3 mt-xl-0"
+          className="btn btn_contact text-l mt-3 mt-xl-0"
           onClick={() => handlePhoneRequest(phone)}
           disabled={!completed}
         >

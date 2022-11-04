@@ -7,9 +7,9 @@ export const Header = ({ links }) => {
   return (
     <>
       <header className="header">
-        <div className="header-small align-items-center pt-5 pb-3 background-white d-sm-none col-12">
+        <div className="header-small align-items-center pt-4 pb-4 d-sm-none col-12">
           <div className="d-flex px-4 align-items-center">
-            <img className="col-8 col-sm-5 px-0" src={logo} />
+            <img className="col-6 col-sm-8 col-sm-5 px-0" src={logo} />
             {/* <div className="header__phone ml-auto"></div> */}
             <div
               onClick={() => setBurger(!burger)}
@@ -50,6 +50,7 @@ export const Header = ({ links }) => {
               })}
             </div>
           </div>
+          <div className="header-small__background"></div>
         </div>
         <div
           className={`header-big background-light-grey col-12 d-none d-sm-flex flex-column flex-wrap flex-xl-row justify-content-center

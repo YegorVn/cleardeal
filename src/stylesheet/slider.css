@@ -168,11 +168,11 @@
 
 @media screen and (max-width: 992px) {
   .slider__block {
-    width: 90%;
+    width: 100%;
   }
 
   .card-slider {
-    width: 90%;
+    width: 100%;
   }
 
   .card-slider__text{
@@ -194,11 +194,15 @@
   }
 
   .slider__title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .card-slider__main-card {
-    height: 32rem;
+    height: fit-content;
+  }
+
+  .card-slider__text{
+    text-justify: inter-character;
   }
 }
 

@@ -51,7 +51,7 @@ export const CardSlider = ({ changeHandler, className, currentIdx, cards }) => {
 
   return (
     <div className={`card-slider ${className}`}>
-      <div className="card-slider__header mt-5 px-3 px-sm-5 d-flex align-items-start align-items-md-center position-absolute">
+      <div className="card-slider__header mt-5 px-4 px-sm-5 d-flex align-items-start align-items-md-center position-absolute">
         <button
           className="btn-slide btn-slide-left"
           onClick={() => {
@@ -96,7 +96,7 @@ export const CardSlider = ({ changeHandler, className, currentIdx, cards }) => {
                   </div>
                   <div className="left-card__background background-white border-r-20"></div>
                 </div>
-                <div className="card-slider__main-card main-card border-r-20 px-3 pb-5 p-sm-5 background-white border-r-20 d-flex">
+                <div className="card-slider__main-card main-card border-r-20 px-4 pb-5 p-sm-5 background-white border-r-20 d-flex">
                   <div className="card-slider__text text-l">
                     {cards[currentIdx].text}
                   </div>

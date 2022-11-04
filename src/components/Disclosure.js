@@ -11,21 +11,22 @@ export const Disclosure = ({ content, className }) => {
       >
         <div
           className={
-            "tab__cover d-flex  background-white border-r-40 " + className
+            "tab__cover d-flex align-items-xl-center background-white border-r-40 " + className
           }
         >
-          <div className="tab__header text-xl bold col-12 col-md-11 pr-0 pl-0">
+          <div className="tab__header text-xl bold col-11 col-md-11 pr-3 pr-sm-0 pl-0">
             {tab.header}
           </div>
           <div
-            className={
-              "tab__cross ml-auto d-none d-md-flex " +
-              (opened ? "tab__cross_cross" : "tab__cross_check")
-            }
+            className={`btn-show ml-auto mt-2 mt-xl-0 ${opened ? "btn-show_closed" : "btn-show_shown"}`}
             onClick={() => setOpened(!opened)}
           >
-            <div className="stick"></div>
-            <div className="stick"></div>
+            <div
+              className={
+                "btn-show__icon " +
+                (opened ? "btn-show__icon_shown" : "btn-show__icon_closed")
+              }
+            ></div>
           </div>
         </div>
         <div
@@ -41,10 +42,9 @@ export const Disclosure = ({ content, className }) => {
   };
   return (
     <div className={"disclosure col-12 px-0 " + className}>
-        {content.map((tab) => {
-          return <Tab tab={tab} className="col-12" />;
-        })}
-      
+      {content.map((tab) => {
+        return <Tab tab={tab} className="col-12" />;
+      })}
     </div>
   );
 };

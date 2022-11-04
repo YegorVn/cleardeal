@@ -161,17 +161,16 @@ function App() {
         </MouseParallaxContainer>
         {/* /// */}
 
-        <div className="app__content px-2">
+        <div className="app__content px-5 px-sm-2">
           <div className="banner pl-0 ">
-            <div className="banner__text pl-0 pr-0 d-flex text-center flex-column align-items-center text-xxxl bolder">
-              Сделки с недвижимостью по фиксированной цене
+            <div className="banner__text pl-0 pr-0 d-flex text-left text-sm-center flex-column align-items-center text-xxxl bolder">
+              Сделки с недвижимостью <div className="d-sm-block d-none">по фиксированной цене</div>
             </div>
-            <div className="banner__annotation bold text-l text-center col-12 col-lg-9 mx-auto mt-4 pt-3 pb-5">
-              Помогаем продать, купить квартиру и одобрить ипотеку<br></br> на
+            <div className="banner__annotation px-0 text-left text-sm-center col-12 col-lg-9 mx-auto mt-4 mb-5 mb-sm-5 mt-sm-4 pt-sm-3">
+              Помогаем продать, купить квартиру и одобрить ипотеку<br className="d-none d-xl-block"></br> на
               ясных условиях: вы сразу видите цену и что в неё входит.
             </div>
           </div>
-
           <PhoneForm className="col-12 phone-form_main" />
           <Dialog className="col-12 px-0" />
           <h2 className="h-1" ref={benefits}>
@@ -223,11 +222,11 @@ function App() {
           </h2>
           <Disclosure className="" content={disclosureContent} />
         </div>
-        <div className="footer d-flex flex-wrap col-lg-12 col-xl-12 mx-auto color-white">
-          <div className="footer__logo col-lg-6 d-flex flex-column p-0">
-            <img src={logoWhite} width={435}/>
+        <div className="footer d-flex flex-wrap px-5 col-lg-12 col-xl-12 mx-auto color-white">
+          <div className="footer__logo col-10 col-lg-6 d-flex flex-column p-0">
+            <img src={logoWhite} className="px-0"/>
             <a
-              className="footer__founder mt-3 text-s ml-3 color-white pb-2 "
+              className="footer__founder mt-sm-3 text-s ml-auto ml-sm-3 color-white pb-2 "
               href="https://getbootstrap.com/docs/5.0/layout/breakpoints/"
             >
               Проект Александра Колотий
@@ -235,7 +234,7 @@ function App() {
           </div>
           <div className="footer__contact col-lg-6 text-xl d-flex flex-column p-0 mt-5 mt-lg-0">
             <div className="footer__phone ml-lg-auto">+7 (900) 555 55 55</div>
-            <div className="footer__mail ml-lg-auto">kolotii@gmail.com</div>
+            <div className="footer__mail mt-3 mt-sm-0 ml-lg-auto">kolotii@gmail.com</div>
           </div>
           <div className="footer__socmedia col-lg-6 p-0 mt-5 mt-lg-0 align-items-end d-flex">
             <a href="https://www.instagram.com/">
