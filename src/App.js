@@ -3,7 +3,8 @@ import "./stylesheet/App.css";
 import logoWhite from "./assets/images/logoWhite.svg";
 import { Dialog } from "./components/Dialog";
 import { PhoneForm } from "./components/PhoneForm";
-import { HowWeWork } from "./components/HowWeWork";
+// import { HowWeWork } from "./components/HowWeWork";
+import { HowWeWork } from './parts/index'
 import { ServicesPrices } from "./components/ServicesPrices";
 import { Slider } from "./components/Slider";
 import { GetService } from "./components/GetService";
@@ -15,7 +16,6 @@ import vk from "./assets/icons/vk.svg";
 import wp from "./assets/icons/wp.svg";
 import tg from "./assets/icons/tg.svg";
 import startWork from "./assets/images/startWork.svg";
-import phone from "./assets/images/phone.svg";
 import {
   MouseParallaxContainer,
   MouseParallaxChild,

@@ -876,21 +876,50 @@ button:focus {
 }
 
 .select__el {
+  position: relative;
   padding: 0.5rem 1.5rem;
+  text-align: center;
 }
 
-.select__el:first-child:hover {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+.select__el::after{
+  content: "";
+  position: absolute;
+  transform-origin: left;
+  height: 5px;
+  background-size: 0%;
+  background-position: left center;
+  bottom: 5px;
+  right: 0;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/header/selectString1.svg");
+  transition: 0.2s linear;
 }
 
-.select__el:last-child:hover {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+.select__el:nth-child(1)::after{
+  left: calc(50% - 50px);
+  width: 100px;
+  background-image: url("../assets/images/header/selectString1.svg");
 }
 
-.select__el:hover {
-  background-color: var(--light-blue);
+.select__el:nth-child(2)::after{
+  left: calc(50% - 35px);
+  width: 70px;
+  background-image: url("../assets/images/header/selectString2.svg");
+}
+
+@keyframes select__el_anim {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.select__el:hover:after{
+  animation-name: select__el_anim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 /* /// */

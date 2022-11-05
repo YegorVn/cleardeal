@@ -22,13 +22,15 @@ export const Select = ({ elements, className, changeHandler }) => {
           (shown && "select__els_shown") || "select__els_hidden"
         }`}
       >
-        {elements.map((el) => {
-          return (
-            <div className="select__el" onClick={() => handleSelect(el)}>
-              {el.text}
-            </div>
-          );
-        })}
+        {elements
+          .filter((el) => JSON.stringify(el) !== JSON.stringify(active))
+          .map((el) => {
+            return (
+              <div className="select__el" onClick={() => handleSelect(el)}>
+                {el.text}
+              </div>
+            );
+          })}
       </div>
     </div>
   );

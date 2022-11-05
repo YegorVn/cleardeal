@@ -23,13 +23,16 @@ export const Bubble = ({
     if (inView) {
       control.start("visible");
     } 
+    else{
+      control.start("hidden")
+    }
   }, [control, inView]);
 
   return (
-    <div className={"bubble d-flex flex-column flex-md-row " + className}>
+    <div className={"bubble d-flex " + className}>
       {img && (
         <img
-          className="bubble__img mt-2 mt-md-auto order-1 order-md-0"
+          className="bubble__img mt-auto mt-md-0 mt-md-auto order-1 order-md-0"
           src={img}
         />
       )}
@@ -39,7 +42,7 @@ export const Bubble = ({
         initial="hidden"
         animate={control}
       >
-        {inView && <div
+        <div
           className={"bubble__body bubble__body_writed " + elClassName}
           style={
             bubbleWrite && {
@@ -49,7 +52,7 @@ export const Bubble = ({
           }
         >
           {text}
-        </div>}
+        </div>
         {bubbleWrite && inView && (
           <div
             className={

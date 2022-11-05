@@ -6,5 +6,10 @@
   .dialog__bubble_left, .dialog__bubble_right{
     padding: 2rem 2rem;
   }
+
+  .bubble__img{
+    width: 54px !important;
+    height: 54px !important;
+  }
 }
 
