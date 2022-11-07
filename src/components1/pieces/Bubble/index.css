@@ -1,0 +1,185 @@
+/* ///поменять */
+@media screen and (max-width: 576px) {
+  .bubble__body_writed{
+    font-size: 0.75rem !important;
+  }
+  .bubble_right_small .bubble__body_writed{
+    padding-right: 0 !important;
+    font-size: 0.75rem !important;
+  }
+}
+/* /// */
+
+@keyframes become_visible {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ///wrapper */
+.bubble_right_small {
+  margin-left: auto;
+}
+
+.bubble_right_small .bubble__body,
+.bubble_right_big .bubble__body {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.bubble_left_small .bubble__body,
+.bubble_left_big .bubble__body {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/* /// */
+
+/* ///bubble-img */
+.bubble__img {
+  transform: translate(0, 33%);
+  width: 86px;
+  height: 86px;
+  border-radius: 100%;
+}
+/* /// */
+
+/* ///IMGORDER */
+.bubble_left_big .bubble__body {
+  order: 1;
+}
+
+.bubble_right_big .bubble__body {
+  order: 0;
+}
+
+.bubble_left_big .bubble__img {
+  order: 0;
+}
+
+.bubble_right_big .bubble__img {
+  order: 1;
+}
+
+@media screen and (max-width: 768px) {
+  /* .bubble_right_big.bubble__img {
+    margin-left: auto;
+  } */
+}
+/* /// */
+
+/* ///TAIL */
+.bubble_left_big .bubble__body::after,
+.bubble_right_big .bubble__body::after,
+.bubble_left_small .bubble__body::after,
+.bubble_right_small .bubble__body::after {
+  content: "";
+  top: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.bubble_left_big .bubble__body::after,
+.bubble_right_big .bubble__body::after {
+  width: 30px;
+  height: 40px;
+}
+
+.bubble_left_small .bubble__body::after,
+.bubble_right_small .bubble__body::after {
+  width: 15px;
+  height: 15px;
+  background-size: cover;
+}
+
+.bubble_left_small .bubble__body::after,
+.bubble_left_big .bubble__body::after {
+  transform: translateY(-10%) rotate(10deg);
+  background-image: url("../../../assets/images/bubble/tailLeft.png");
+  left: 10px;
+}
+
+.bubble_right_small .bubble__body::after,
+.bubble_right_big .bubble__body::after {
+  transform: translateY(-10%) rotate(-10deg);
+  background-image: url("../../../assets/images/bubble/tailRight.png");
+  right: 10px;
+}
+/* /// */
+
+/* /// BODy props*/
+.bubble__body {
+  position: relative;
+}
+
+.bubble__body_writed {
+  z-index: 1;
+}
+/* /// */
+
+/* ///writing */
+.bubble_left_big .bubble__body_writed,
+.bubble_right_big .bubble__body_writed,
+.bubble_left_small .bubble__body_writed,
+.bubble_right_small .bubble__body_writed {
+  opacity: 0;
+  animation-name: become_visible;
+  animation-fill-mode: forwards;
+}
+
+.bubble__body_writing {
+  position: absolute;
+  width: fit-content;
+  bottom: 0;
+}
+
+.bubble_right_small .bubble__body_writing {
+  right: 0;
+}
+
+.bubble_right_big .bubble__body_writing {
+
+  right: 86px;
+}
+
+.bubble_left_big .bubble__body_writing {
+  left: 86px;
+}
+
+@media screen and (max-width: 576px) {
+  .bubble_right_big .bubble__body_writing {
+    right: 54px;
+  }
+  
+  .bubble_left_big .bubble__body_writing {
+    left: 54px;
+  }
+}
+/* /// */
+
+/* /// Circle */
+.bubble_right_big .bubble__circle, .bubble_left_big .bubble__circle{
+  width: 30px;
+  height: 30px;
+}
+
+.bubble__circle {
+  animation-duration: 1s;
+  animation-name: become_visible;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background-color: var(--light-grey);
+  border-radius: 100%;
+  margin-left: 6px;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+}
+
+.bubble__circle:first-child {
+  margin-left: 0;
+}

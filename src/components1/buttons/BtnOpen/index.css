@@ -1,0 +1,78 @@
+/* .btn_open_icon {
+    border: none;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-color: var(--white);
+    cursor: pointer;
+    position: relative;
+    background-position: center 55%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .btn_open {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .btn_open_icon_closed {
+    background-image: url("../../../assets/icons/arrowDownBlue.png");
+  }
+  
+  .btn_open_icon_shown {
+    background-image: url("../../../assets/icons/cross.svg");
+  }
+  
+  .btn_open_shown::after,
+  .btn_open_closed::after {
+    top: -3px;
+    z-index: 0;
+    left: -3px;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background: linear-gradient(to right, #577bfa 0%, rgba(217, 217, 217, 0) 70%);
+    content: "";
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes btn_open-show-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes btn_open-close-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  .btn_open_shown::after {
+    animation-name: btn_open-show-animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+  
+  .btn_open_closed::after {
+    animation-name: btn_open-close-animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+  
+  .btn_open_text {
+    user-select: none;
+  } */

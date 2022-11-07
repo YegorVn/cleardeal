@@ -1,0 +1,124 @@
+.switch-small__btn{
+  font-size: 1.1rem !important;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+
+}
+
+.switch-small__btn_inactive{
+  border: 2px solid var(--blue);
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  color: var(--blue);
+}
+
+@keyframes switch-small__btn_anim{
+  0%{
+    flex-grow: 0;
+  }
+  100%{
+    flex-grow: 0.8;
+  }
+}
+
+.switch-small__btn_active{
+  flex-basis: 170px;
+  background: var(--blue);
+  color: var(--white);
+  border: 2px solid var(--blue);
+  height: 40px;
+  animation-name: switch-small__btn_anim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+/* /////// */
+.switch {
+  width: fit-content;
+}
+
+.switch__btn {
+  border-radius: 40px;
+  font-weight: 600;
+  margin-left: 2.5rem;
+  position: relative;
+  width: 23.75rem;
+  padding: 0.75rem 0;
+  border: none;
+  color: var(--blue);
+  background: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .switch__btn {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .switch__btn {
+    margin-left: 0rem;
+  }
+}
+
+.switch__svg {
+  z-index: -1;
+  position: absolute;
+  width: 106%;
+  height: 140%;
+  left: -3%;
+  top: -20%;
+  overflow: visible;
+}
+
+.switch__rect {
+  rx: 40px;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 3px;
+  stroke: url(#linear);
+}
+
+.switch__btn .switch__rect {
+  opacity: 0.3;
+}
+
+@keyframes switch__rect_anim {
+  0% {
+    stroke-dasharray: 0 1000;
+  }
+  
+  90% {
+    stroke-dasharray: 1000 1;
+  }
+  100% {
+    stroke-dasharray: 0 1000;
+    opacity: 1;
+  }
+}
+
+.switch__btn_active{
+  background: var(--blue);
+  color: var(--white);
+  transition: 0.5s;
+}
+
+.switch__btn_active .switch__rect {
+  opacity: 1;
+  stroke-dashoffset: 0;
+  animation-name: switch__rect_anim;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-duration: 15000ms;
+}
+
+.switch__btn:first-child {
+  margin-left: 0;
+}
+
+
+

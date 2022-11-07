@@ -1,23 +1,14 @@
-.get-service {
+/* .get-service {
   position: relative;
   overflow-x: hidden;
 }
 
-/* .get-service::after{
-  overflow: hidden;
-  content: "";
-  position: absolute;
-  right: -50%;
-  bottom: -40%;
-  width: 1211px;
-  height: 1207px;
-  background-position: center;
-  background: radial-gradient(50% 50% at 37.3% 50%, #577BFA 0%, rgba(217, 217, 217, 0) 76.04%);
-} */
-
-/* ///// */
 .service__title{
   margin-top: -0.2em;
+}
+
+.service__text{
+  width: calc(100% - 140px);
 }
 
 .man-hand{
@@ -89,3 +80,17 @@
   }
 }
 
+@media screen and (max-width: 576px) {
+  .service__title{
+    font-size: 2.2rem;
+  }
+
+  .service__annotation{
+    font-size: 1.5rem;
+  }
+
+  .service__text{
+    width: 100%;
+  }
+}
+ */

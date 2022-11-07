@@ -1,0 +1,254 @@
+.background {
+  height: 8256px;
+}
+
+.gradient-1, .gradient-2, .gradient-3, .gradient-4, .gradient-5, .gradient-6, .gradient-7, .gradient-8, .gradient-9{
+  opacity: 0.5;
+}
+
+.gradient-1 {
+  top: 3%;
+  width: 800px;
+  height: 800px;
+}
+
+.gradient-2 {
+  top: 0;
+  width: 1400px;
+  height: 1400px;
+  right: -38%;
+}
+
+.gradient-3 {
+  width: 600px;
+  height: 600px;
+  top: 29%;
+  left: 10%;
+}
+
+.gradient-4 {
+  width: 800px;
+  height: 800px;
+  top: 28%;
+  left: 50%;
+}
+
+.gradient-5 {
+  width: 500px;
+  height: 500px;
+  top: 41%;
+  left: 11%;
+}
+
+.gradient-6 {
+  width: 1500px;
+  height: 1500px;
+  top: 47%;
+  right: -53%;
+}
+
+.gradient-7 {
+  width: 1200px;
+  height: 1200px;
+  top: 63%;
+  right: -5%;
+}
+
+.gradient-8 {
+  width: 1400px;
+  height: 1400px;
+  top: 75%;
+  left: -20%;
+}
+
+.gradient-9 {
+  width: 1000px;
+  height: 1000px;
+  top: 80%;
+  right: -10%;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1650px) {
+  .background {
+    height: 10608px;
+  }
+
+  .gradient-1 {
+    top: 3%;
+  }
+
+  .gradient-2 {
+    top: 0;
+    right: -60%;
+  }
+
+  .gradient-3 {
+    top: 28%;
+    left: -5%;
+  }
+
+  .gradient-4 {
+    top: 27%;
+    left: 50%;
+  }
+
+  .gradient-5 {
+    top: 35%;
+    left: 0%;
+  }
+
+  .gradient-6 {
+    top: 47%;
+    right: -70%;
+  }
+
+  .gradient-7 {
+    top: 63%;
+    right: -5%;
+  }
+
+  .gradient-8 {
+    top: 75%;
+    left: -20%;
+  }
+
+  .gradient-9 {
+    top: 80%;
+    right: -10%;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  .background {
+    height: 10018px;
+  }
+
+  .gradient-1 {
+    top: 3%;
+  }
+
+  .gradient-2 {
+    top: 0;
+    right: -60%;
+  }
+
+  .gradient-3 {
+    top: 27%;
+    left: -5%;
+  }
+
+  .gradient-4 {
+    top: 26%;
+    left: 50%;
+  }
+
+  .gradient-5 {
+    top: 38%;
+    left: 0%;
+  }
+
+  .gradient-6 {
+    top: 47%;
+    right: -75%;
+  }
+
+  .gradient-7 {
+    top: 63%;
+    right: -30%;
+  }
+
+  .gradient-8 {
+    top: 75%;
+    left: -20%;
+  }
+
+  .gradient-9 {
+    top: 80%;
+    right: -10%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .background {
+    height: 11142px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .background {
+    height: 14770px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .background {
+    height: 14357px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .background {
+    height: 9470px;
+  }
+
+  .gradient-1 {
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: -40%;
+  }
+
+  .gradient-2 {
+    width: 500px;
+    height: 500px;
+    top: 3%;
+    right: -90%;
+  }
+
+  .gradient-3 {
+    width: 600px;
+    height: 600px;
+    top: 20%;
+    right: -70%;
+    left: unset;
+  }
+
+  .gradient-4 {
+    top: 25%;
+    left: 50%;
+  }
+
+  .gradient-5 {
+    width: 650px;
+    height: 650px;
+    top: 36%;
+    left: 50%;
+  }
+
+  .gradient-6 {
+    width: 550px;
+    height: 550px;
+    top: 47%;
+    right: -65%;
+    opacity: 0.5;
+  }
+
+  .gradient-7 {
+    top: 55%;
+  }
+
+  .gradient-8 {
+    width: 550px;
+    height: 550px;
+    top: 80%;
+    right: -50%;
+    left: unset;
+  }
+
+  .gradient-9 {
+    width: 750px;
+    height: 750px;
+    top: 83%;
+    right: -10%;
+  }
+}

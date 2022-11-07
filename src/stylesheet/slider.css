@@ -1,7 +1,6 @@
-.slider {
+/* .slider {
 }
 
-/* ////// card-slider-small*/
 .card-slider-small {
   position: relative;
   width: 98vw;
@@ -61,7 +60,6 @@
   border: 1px solid var(--grey);
 }
 
-/* ////// */
 
 @keyframes slider__text_animation {
   0% {
@@ -206,7 +204,6 @@
   }
 }
 
-/* ///card-anim */
 @keyframes main-card_animation {
   0% {
     opacity: 0;
@@ -237,7 +234,6 @@
   height: 1.5rem;
 }
 
-/* ///left-card */
 @keyframes left-card-anim {
   0% {
     z-index: 1;
@@ -262,7 +258,6 @@
   animation-duration: 2s;
 }
 
-/* ///right-card */
 .card-slider__right-card {
   animation-duration: 0.75s;
   z-index: -1;
@@ -304,5 +299,4 @@
   opacity: 1;
   z-index: -1;
 }
-
-/* /// */
+ */

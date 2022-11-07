@@ -1,5 +1,4 @@
-/* ///switch */
-.switch-small__btn{
+/* .switch-small__btn{
 }
 
 .switch-small__btn_inactive{
@@ -22,7 +21,6 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-/* /// */
 @keyframes width_animation {
   0% {
     width: 0;
@@ -102,7 +100,6 @@
   animation-timing-function: ease-in;
 }
 
-/* ///check */
 .check {
   position: relative;
   overflow: hidden;
@@ -249,9 +246,7 @@
   left: 5px;
   background-image: url("../assets/images/check/mark6.svg");
 }
-/* /// */
 
-/* ///roadmap */
 .roadmap{
   position: relative;
   width: 100%;
@@ -484,6 +479,15 @@
   }
 
   .hwwWidget {
-    min-height: 35rem;
+    height: 15rem;
   }
-}
+
+  .roadmap__stroke{
+    display: none;
+  }
+
+  .check__list{
+    height: 200%;
+    top: 5% !important;
+  }
+} */

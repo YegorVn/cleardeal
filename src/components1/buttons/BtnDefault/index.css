@@ -1,0 +1,57 @@
+.btn {
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.5s;
+  border-radius: 60px;
+  font-weight: 600;
+}
+
+.btn:disabled {
+  opacity: 1 !important;
+}
+
+button:focus {
+  box-shadow: none !important;
+  outline: none;
+}
+
+.btn:hover:disabled {
+  color: var(--blue);
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1200px) {
+  .btn {
+    white-space: unset !important;
+  }
+}
+
+.btn_active {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.btn_blue{
+  background-color: var(--blue);
+  border: 3px solid var(--blue);
+  color: var(--white);
+}
+
+.btn_white{
+  background-color: transparent;
+  color: var(--blue);
+  border: 3px solid var(--blue);
+}
+
+.btn_white:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.btn_blue:hover {
+  background-color: transparent;
+  border: 3px solid var(--blue);
+  color: var(--blue);
+}
+
+

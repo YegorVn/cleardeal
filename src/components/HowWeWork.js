@@ -31,7 +31,7 @@ export const HowWeWork = ({ className, chat, content }) => {
       <>
         <div
           className={
-            "switch d-none d-md-flex flex-lg-row flex-column justify-content-center align-items-center " +
+            "switch d-none d-md-flex mx-auto flex-lg-row flex-column justify-content-center align-items-center " +
             className
           }
         >
@@ -56,10 +56,10 @@ export const HowWeWork = ({ className, chat, content }) => {
                       y2="200"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#577BFA" />
+                      <stop stopColor="#577BFA" />
                       <stop
                         offset="0.3"
-                        stop-color="#E5EBEE"
+                        stopColor="#E5EBEE"
                         stop-opacity="1"
                       />
                     </linearGradient>

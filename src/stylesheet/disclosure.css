@@ -1,4 +1,4 @@
-.disclosure{
+/* .disclosure{
   height: fit-content;
 }
 
@@ -81,7 +81,6 @@
   opacity: 0;
 }
 
-/* /// cross */
 
 .tab__cross {
   width: 50px;
@@ -123,4 +122,4 @@
 .tab__cross_cross > .stick:nth-child(2) {
   transform-origin: left;
   transform: translateX(-9px) rotate(-45deg);
-}
+} */

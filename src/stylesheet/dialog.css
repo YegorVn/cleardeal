@@ -1,10 +1,11 @@
-.dialog__bubble_left, .dialog__bubble_right{
+/* .dialog__bubble_left, .dialog__bubble_right{
   padding: 2rem 4rem;
 }
 
 @media screen and (max-width: 576px) {
   .dialog__bubble_left, .dialog__bubble_right{
-    padding: 2rem 2rem;
+    padding: 2rem 1rem 2rem 1.5rem;
+    font-size: 1rem;
   }
 
   .bubble__img{
@@ -12,4 +13,4 @@
     height: 54px !important;
   }
 }
-
+ */

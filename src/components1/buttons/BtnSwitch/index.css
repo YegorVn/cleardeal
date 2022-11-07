@@ -1,0 +1,77 @@
+/* .btn_switch {
+  border-radius: 40px;
+  font-weight: 600;
+  margin-left: 2.5rem;
+  position: relative;
+  width: 23.75rem;
+  opacity: 0.5;
+  color: var(--black);
+  outline: none !important;
+  padding: 2rem 0 ;
+}
+
+.btn_switch:hover{
+}
+
+.btn_switch_svg {
+  z-index: -1;
+  position: absolute;
+  width: 106%;
+  height: 140%;
+  left: -3%;
+  top: -20%;
+  overflow: visible;
+}
+
+.btn_switch_rect {
+  opacity: 0;
+  rx: 40px;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 3px;
+  stroke: var(--blue);
+}
+
+@keyframes switch__rect_anim {
+  0% {
+    stroke-dasharray: 0 1000;
+    opacity: 1;
+  }
+  90% {
+    stroke-dasharray: 1000 1;
+  }
+
+  100% {
+    opacity: 0;
+    stroke-dasharray: 0 1000;
+  }
+}
+
+.btn_switch_active {
+  opacity: 1;
+}
+
+.btn_switch_active .switch__rect {
+  opacity: 1;
+  stroke-dashoffset: 0;
+  animation-name: switch__rect_anim;
+  animation-fill-mode: forwards;
+  animation-duration: 6000ms;
+}
+
+.btn_switch:first-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .btn_switch {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .btn_switch {
+    margin-left: 0rem;
+  }
+} */

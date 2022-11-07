@@ -1,0 +1,31 @@
+.burger {
+  width: 35px;
+  height: 26px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+}
+
+.burger__string {
+  height: 4px;
+  width: 100%;
+  background-color: var(--blue);
+}
+
+.burger__string {
+  transition: 0.25s;
+}
+
+.burger__closed > .burger__string:nth-child(1) {
+  transform-origin: left;
+  transform: translateY(-2px) translateX(5px) rotate(45deg);
+}
+
+.burger__closed > .burger__string:nth-child(2) {
+  opacity: 0;
+}
+
+.burger__closed > .burger__string:nth-child(3) {
+  transform-origin: left;
+  transform: translateY(0px) translateX(5px) rotate(-45deg);
+}

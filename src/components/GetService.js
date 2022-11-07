@@ -53,8 +53,8 @@ export const GetService = ({ className }) => {
       <div className="service__block service__block_first d-flex flex-wrap">
         <div className="service__step d-lg-flex col-lg-7 col-xl-6 px-0">
           <Circle num={1} className="mx-auto mx-lg-0" />
-          <div className="service__text col-9 px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
-            <div className="service__title text-xl bold text-center text-lg-left">
+          <div className="service__text px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
+            <div className="service__title mt-4 mt-md-0 text-xl bold text-center text-lg-left">
               Оставьте заявку
             </div>
             <div className="service__annotation text-l text-left mt-4 pr-lg-5 text-center text-lg-left">
@@ -68,12 +68,12 @@ export const GetService = ({ className }) => {
         />
         <div className="service__img arrow-long d-none d-lg-block" />
       </div>
-      <img src={arrowDown} className="service__img mx-auto mb-3 mt-3 d-lg-none" height={140} />
-      <div className="service__block service__block_second d-flex ">
+      <img src={arrowDown} className="service__img mx-auto mb-3 mt-3 d-none" height={140} />
+      <div className="service__block service__block_second d-flex mt-5 mt-sm-0">
         <div className="service__step d-lg-flex col-lg-6 px-0 ml-lg-auto">
           <Circle num={2} className="mx-auto mx-lg-0" />
-          <div className="service__text col-9 px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
-            <div className="service__title text-xl bold text-center text-lg-left">
+          <div className="service__text mt-4 mt-md-0 col-11 px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
+            <div className="service__title mt-4 mt-sm-0 text-xl bold text-center text-lg-left">
               Обсудим план действий
             </div>
             <div className="service__annotation text-l text-left mt-4 pr-lg-5 text-center text-lg-left">
@@ -83,14 +83,14 @@ export const GetService = ({ className }) => {
           </div>
         </div>
       </div>
-      <img src={arrowDown} className="service__img mx-auto mb-3 mt-3 d-lg-none" height={140} />
-      <div className="service__block service__block_third d-flex flex-column">
+      <img src={arrowDown} className="service__img mx-auto mb-3 mt-3 d-none" height={140} />
+      <div className="service__block service__block_third d-flex flex-column mt-5 mt-sm-0">
         <div className="service__img arrow-dotted d-none d-lg-block" />
         <div className="service__row d-flex">
           <div className="service__step d-lg-flex flex-lg-row col-lg-7 col-xl-6 px-0 mt-lg-5">
             <Circle num={3} className="mx-auto mx-lg-0" />
-            <div className="service__text col-9 px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
-              <div className="service__title text-xl bold text-lg-left text-center">
+            <div className="service__text col-12 px-0 pl-lg-5 mx-auto mx-lg-0 mt-3 mt-lg-0">
+              <div className="service__title mt-4 mt-md-0 text-xl bold text-lg-left text-center">
                 Начнём работу
               </div>
               <div className="service__annotation text-l text-left mt-4 pr-lg-5 text-center text-lg-left">

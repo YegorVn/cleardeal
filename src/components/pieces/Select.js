@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 export const Select = ({ elements, className, changeHandler }) => {
   const [shown, setShown] = useState(false);
   const [active, setActive] = useState(elements[0]);
+  const ref = useRef();
 
   const handleSelect = (el) => {
     setActive(el);
     changeHandler(el);
   };
 
+  useOnClickOutside(ref, () => setShown(false));
+
   return (
     <div
+      ref={ref}
       className={`select ${
         (shown && "select_shown") || "select_hidden"
       } ${className}`}

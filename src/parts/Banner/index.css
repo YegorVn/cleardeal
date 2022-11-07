@@ -1,0 +1,92 @@
+.banner {
+  margin-top: 15rem;
+}
+
+.banner__annotation {
+  font-size: 1.5rem;
+}
+
+.banner__stroke {
+  display: inline-block;
+  position: relative;
+}
+
+.banner__highlight{
+  margin-top: -0.3rem;
+  vertical-align: middle;
+  padding: 0.8rem 0.6rem 0.7rem 0.6rem;
+  font-size: 0.9rem !important;
+  font-weight: 800;
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+}
+
+.banner__highlight div{
+  margin-bottom: -0.2rem;
+}
+
+@keyframes banner__stroke_anim {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+.banner__stroke::after {
+  animation-name: banner__stroke_anim;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  background-image: url("../../assets/images/banner/bannerStorke.svg");
+  height: 6px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: calc(50% - 100px);
+  bottom: -5px;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  .banner {
+    margin-top: 30rem;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 576px) {
+  .banner {
+    margin-top: 15rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  @keyframes banner__stroke_anim {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 150px;
+    }
+  }
+
+  .banner {
+    min-width: 390px;
+    margin-top: 12rem;
+  }
+
+  .banner__annotation {
+    font-size: 1.15rem;
+  }
+
+  .banner__text {
+    font-weight: 700 !important;
+    color: var(--blue);
+    text-transform: uppercase !important;
+  }
+
+  .banner__stroke::after {
+    left: calc(50% - 75px);
+  }
+}

@@ -1,5 +1,4 @@
-/* ///bubble-img */
-.bubble__img {
+/* .bubble__img {
   transform: translate(0, 33%);
   width: 86px;
   height: 86px;
@@ -15,9 +14,7 @@
     margin-left: auto;
   }
 }
-/* /// */
 
-/* ///tail */
 .bubble_left .bubble__body::after,
 .bubble_right .bubble__body::after,
 .bubble_left_small .bubble__body::after,
@@ -52,13 +49,11 @@
   background-image: url("../assets/images/bubble/tailRight.png");
   right: 10px;
 }
-/* /// */
 
 .bubble__body {
   position: relative;
 }
 
-/* ///writing */
 .bubble__body_writed{
   z-index: 1;
 }
@@ -100,4 +95,4 @@
 
 .bubble__circle:first-child{
   margin-left: 0;
-}
+} */

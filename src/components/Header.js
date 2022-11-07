@@ -48,6 +48,8 @@ export const Header = ({ links }) => {
                   </div>
                 );
               })}
+            <div className="header__small__overflow-background"></div>
+
             </div>
           </div>
           <div className="header-small__background"></div>

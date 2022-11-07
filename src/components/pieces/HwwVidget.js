@@ -20,7 +20,17 @@ export const HwwVidget = ({ className, bubbles, current }) => {
           <img src={mail} className="ml-2" />
           <img src={battery} className="ml-auto" />
         </div>
-        <div className="chat__dialog pb-5">
+        <div className="d-block d-sm-none">
+          <Bubble
+            className="bubble_right_small text-xxxs pl-0 pr-0 ml-auto mt-4 col-9"
+            text={bubbles[1].text}
+            elClassName="pl-3 pt-3 pb-3 pr-3 border-r-20 background-blue color-white"
+            bubbleWrite={true}
+            animDelay={1}
+            animDuration={1}
+          />
+        </div>
+        <div className="chat__dialog pb-5 d-none d-sm-block">
           {bubbles.map((bubble, index) => {
             return (
               <React.Fragment key={index}>
