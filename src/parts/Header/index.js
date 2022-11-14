@@ -3,7 +3,7 @@ import "./index.css";
 import logo from "../../assets/images/Global/logo.png";
 import { Select } from "../../components1/pieces";
 import { useState } from "react";
-import {index as Burger} from './Burger'
+import { index as Burger } from "./Burger";
 
 export const Index = ({ links }) => {
   const [burger, setBurger] = useState(false);
@@ -13,9 +13,8 @@ export const Index = ({ links }) => {
         <div className="header-small align-items-center pt-4 pb-4 d-sm-none col-12">
           <div className="d-flex px-4 align-items-center">
             <img className="col-7 col-sm-8 col-sm-5 px-0" src={logo} />
-            <Burger state={burger} onClick={() => setBurger(!burger)}/>
+            <Burger state={burger} onClick={() => setBurger(!burger)} />
           </div>
-
           <div
             className={`header-small__overflow ${
               burger
@@ -23,11 +22,11 @@ export const Index = ({ links }) => {
                 : "header-small__overflow_hidden"
             }`}
           >
-            <div className="header-small__links pt-4 pb-3 d-flex align-items-center">
+            <div className="header-small__links pt-4 pb-5 d-flex flex-column align-items-center">
               {links.map((link, index) => {
                 return (
                   <div
-                    className="ml-5 text-m header-small__link font-inter"
+                    className="mt-3 text-m header-small__link font-inter"
                     onClick={() =>
                       link.ref.current.scrollIntoView({
                         block: "start",
@@ -40,16 +39,20 @@ export const Index = ({ links }) => {
                   </div>
                 );
               })}
-              <div className="header__small__overflow-background"></div>
+              <Select
+                className="text-s mt-3"
+                elements={[
+                  { text: "Красноярск", val: "Krasnoyarsk" },
+                  { text: "Кемерово", val: "Kemerovo" },
+                ]}
+              />
             </div>
           </div>
           <div className="header-small__background"></div>
         </div>
         <div
           className={`header-big background-light-grey col-12 d-none d-sm-flex flex-column flex-wrap flex-xl-row justify-content-center
-     align-items-center ${
-       burger ? "header-big_active" : ""
-     }`}
+     align-items-center ${burger ? "header-big_active" : ""}`}
         >
           <div className="d-flex align-items-center">
             <div

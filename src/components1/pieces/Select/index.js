@@ -21,7 +21,12 @@ export const Index = ({ elements, className, changeHandler }) => {
           (shown && "select__content_shown") || "select__content_hidden"
         } `}
       >
-        <div className="select__active" onClick={() => setShown(!shown)}>
+        <div
+          className={`select__active ${
+            (shown && "select__active_shown") || "select__active_hidden"
+          }`}
+          onClick={() => setShown(!shown)}
+        >
           {active.text}
         </div>
         <div
@@ -33,7 +38,11 @@ export const Index = ({ elements, className, changeHandler }) => {
             .filter((el) => JSON.stringify(el) !== JSON.stringify(active))
             .map((el, index) => {
               return (
-                <div className="select__el" onClick={() => handleSelect(el)} key={index}>
+                <div
+                  className="select__el"
+                  onClick={() => handleSelect(el)}
+                  key={index}
+                >
                   {el.text}
                 </div>
               );

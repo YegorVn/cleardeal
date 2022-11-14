@@ -58,7 +58,7 @@ export const Index = ({ chat, content }) => {
                   {
                     <div className="how-we-work__block" key={block.val}>
                       {block.val === current && (
-                        <div className="text-xl bold pr-sm-4 pr-xl-0 how-we-work__header">
+                        <div className="text-xl bold  pr-sm-4 pr-xl-0 how-we-work__header">
                           {block.header}
                         </div>
                       )}

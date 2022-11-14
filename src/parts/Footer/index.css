@@ -5,6 +5,11 @@
   left: 0;
 }
 
+.footer__phone{
+  color: var(--white) !important;
+  text-decoration: none !important;
+}
+
 .footer-background div {
   bottom: 0;
   width: 100%;
@@ -39,7 +44,21 @@
 
 @media screen and (max-width: 576px) {
   .footer__phone {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
+    border: 3px solid var(--white);
+    border-radius: 40px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer__mail{
+    font-size: 1.75rem;
+    margin: 0 auto;
+  }
+  
+  .footer__documents a{
+    font-size: 0.8rem !important;
   }
 }
 

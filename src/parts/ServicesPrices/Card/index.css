@@ -49,6 +49,6 @@
 
 @media screen and (max-width: 576px) {
   .card__header {
-    font-size: 2rem;
+    /* font-size: 2rem; */
   }
 }

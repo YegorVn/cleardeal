@@ -20,7 +20,7 @@
 
 .man-hand {
   margin-top: -5%;
-  margin-left: -2%;
+  /* margin-left: -2%; */
 }
 
 .arrow-long {
@@ -51,6 +51,26 @@
   margin-top: -75px;
 }
 
+@media screen and (max-width: 1440px) {
+  .arrow-long {
+    width: 500px;
+    height: 325px;
+  }
+
+  .arrow-dotted {
+    width: 500px;
+    height: 150px;
+  }
+
+  .service__block_second {
+    margin-top: -50px !important;
+  }
+
+  .service__block_third {
+    margin-top: -50px !important;
+  }
+}
+
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .arrow-long {
     width: 475px;
@@ -78,11 +98,11 @@
 
 @media screen and (max-width: 576px) {
   .service__title {
-    font-size: 2.2rem;
+    /* font-size: 2.2rem; */
   }
 
   .service__annotation {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
   }
 
   .service__text {

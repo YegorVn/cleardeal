@@ -1,6 +1,5 @@
 import "./index.css";
-import sign1 from "../../../assets/images/roadmap/sign1.svg";
-import sign2 from "../../../assets/images/roadmap/sign2.svg";
+import sign from "../../../assets/images/roadmap/sign.png";
 import plainLogo from "../../../assets/images/plainLogo.png";
 export const Index = ({ className }) => {
   return (
@@ -12,19 +11,17 @@ export const Index = ({ className }) => {
         <div className="roadmap__stroke w-50 mt-3"></div>
         <div className="d-flex roadmap__signs text-xxs mt-auto mb-auto">
           <div className="roadmap__sign">
-            <div className="roadmap__name">Евгения Маркова</div>
-            <img className="mt-2" src={sign2} />
-          </div>
-          <div className="roadmap__sign ml-auto col-6">
             <div className="roadmap__name">Александр Колотий</div>
-            <img className="mt-2" src={sign1} />
+          </div>
+          <div className="roadmap__sign ml-auto ">
+            <img className="mt-2" src={sign} />
           </div>
         </div>
       </div>
       <div className="roadmap__main background-white p-4 d-flex flex-column">
         <div className="roadmap__header d-flex align-items-center">
           <img src={plainLogo} />
-          <div className="ml-2 text-xs roadmap__title">Договор</div>
+          <div className="text-xs roadmap__title">Договор</div>
         </div>
         <div className="roadmap__steps mt-auto">
           {[

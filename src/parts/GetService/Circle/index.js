@@ -6,7 +6,7 @@ export const Index = ({ num, className }) => {
   const control = useAnimation();
   const [ref, inView] = useInView({
     threshold: 1,
-    rootMargin: "-5%",
+    rootMargin: "-2%",
   });
   const point_1 = {
     visible: {

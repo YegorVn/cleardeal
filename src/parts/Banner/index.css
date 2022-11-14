@@ -1,3 +1,6 @@
+.kek{
+}
+
 .banner {
   margin-top: 15rem;
 }
@@ -49,6 +52,11 @@
   bottom: -5px;
 }
 
+@media screen and (max-width: 1200px) {
+  .banner__text div{
+  }
+}
+
 @media screen and (max-width: 1200px) and (min-width: 992px) {
   .banner {
     margin-top: 30rem;
@@ -72,17 +80,15 @@
   }
 
   .banner {
-    min-width: 390px;
     margin-top: 12rem;
   }
 
   .banner__annotation {
-    font-size: 1.15rem;
+    font-size: 1.15rem !important;
   }
 
   .banner__text {
     font-weight: 700 !important;
-    color: var(--blue);
     text-transform: uppercase !important;
   }
 

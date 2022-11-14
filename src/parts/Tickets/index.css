@@ -5,12 +5,10 @@
   bottom: 0;
 }
 
-@media screen and (max-width: 992px) {
-    .phone-img,
-    .girl-img {
-      position: relative;
-      margin: 0 auto;
-    }
+.cross {
+  position: absolute;
+  right: 10%;
+  bottom: 15%;
 }
 
 .phone-img {
@@ -22,12 +20,30 @@
   height: 350px;
 }
 
-.ticket__text{
+.ticket__text {
   font-weight: 500 !important;
 }
 
+@media screen and (max-width: 1200px) {
+  .phone-img {
+    width: 300px;
+  }
+  .girl-img {
+    height: 275px;
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .phone-img,
+  .girl-img {
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (max-width: 576px) {
-  .ticket{
+  .ticket {
     border-radius: 30px !important;
   }
 

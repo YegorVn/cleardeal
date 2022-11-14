@@ -3,6 +3,7 @@ import "./index.css";
 // import idea from "../assets/images/idea.svg";
 import phone from "../../assets/images/tickets/phone.png";
 import girl from "../../assets/images/tickets/girl.png";
+import cross from "../../assets/images/tickets/cross.svg";
 import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -69,7 +70,7 @@ export const Index = ({ className }) => {
           className="ticket border-r-60 background-white d-flex flex-column flex-lg-row col-12 col-lg-8 pb-5 pt-5 px-sm-5"
         >
           <img src={phone} className="phone-img d-none d-lg-block pr-2" />
-          <div className="ticket__content col-12 col-xl-8 col-lg-7 pr-2 pl-2 px-sm-0">
+          <div className="ticket__content col-12 col-xl-8 col-lg-10 pr-2 pl-2 px-sm-0">
             <div className="ticket__header color-blue text-xl bold pt-2 text-left ">
               Один чат для связи — прямо в вашем телефоне
             </div>
@@ -110,17 +111,21 @@ export const Index = ({ className }) => {
           variants={ticket3}
           initial="hidden"
           animate={control3}
-          className="ticket border-r-60 background-white col-12 col-lg-5 pt-5 pl-sm-5 mt-5 mt-lg-0 pb-lg-5"
+          className="ticket border-r-60 background-white col-12 col-lg-5 pt-5 pl-sm-5 mt-5 mt-lg-0 pb-lg-3"
         >
           <div className="ticket__content px-2 px-sm-0">
             <div className="ticket__header color-blue text-xl bold text-left ">
               Вы всегда можете передумать
             </div>
             <div className="ticket__text text-l pb-5 mt-4">
-              У нас нет штрафов за отказ от услуг.
-              <br className="d-none d-xl-block"></br> Вы можете одновременно
-              продавать квартиру с нами или сами.
+              У нас нет штрафов<br className="d-none d-xl-block"></br> за отказ
+              от услуг.<br className="d-none d-xl-block"></br>
+              Вы можете<br className="d-none d-xl-block"></br> одновременно
+              <br className="d-none d-xl-block"></br>
+              продавать квартиру<br className="d-none d-xl-block"></br> с нами
+              или сами.
             </div>
+            <img src={cross} className="cross"></img>
           </div>
         </motion.div>
         <motion.div
@@ -131,17 +136,19 @@ export const Index = ({ className }) => {
           className="ticket border-r-60 d-flex flex-column flex-lg-row background-white px-2 col-12 col-lg-7 ml-lg-4 pt-5 px-sm-5 mt-5 mt-lg-0"
         >
           <img src={girl} className="girl-img d-none d-lg-block" />
-          <div className="ticket__content col-12 col-lg-7">
+          <div className="ticket__content col-12 col-lg-9 col-xl-7">
             <div className="ticket__header color-blue text-xl bold text-left ">
               Бесплатная консультация
             </div>
             <img
               src={girl}
-              className="girl-img pt-4 col-12 d-block d-lg-none"
+              className="girl-img pt-4 col-10 d-block d-lg-none"
             />
             <div className="ticket__text text-l pb-5 mt-4 pr-lg-3">
-              Разберёмся в ситуации, предложим варианты действий, чтобы вы
-              спокойно приняли взвешенное решение. Бесплатно.
+              Разберёмся в ситуации, предложим варианты
+              <br className="d-block d-sm-none"></br> действий, чтобы вы
+              спокойно приняли взвешенное<br className="d-block d-sm-none"></br>{" "}
+              решение. Бесплатно.
             </div>
           </div>
         </motion.div>

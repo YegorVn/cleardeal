@@ -1,7 +1,7 @@
 import "./index.css";
 import { BtnSlide, BtnOpen, BtnSwitch, BtnDefault } from "../../buttons/index";
 
-export const index = ({ variant, value, className, onClick, ...props }) => {
+export const index = ({ variant, value, className, onClick, disabled, ...props }) => {
   return (
     <>
       {(variant === "slide-right" && (
@@ -9,6 +9,7 @@ export const index = ({ variant, value, className, onClick, ...props }) => {
           className={`btn-slide-left ${className}`}
           onClick={onClick}
           text={props.children}
+          disabled={disabled}
         />
       )) ||
         (variant === "slide-left" && (
@@ -16,14 +17,16 @@ export const index = ({ variant, value, className, onClick, ...props }) => {
             className={`btn-slide-right ${className}`}
             onClick={onClick}
             text={props.children}
-          />
+            disabled={disabled}
+            />
         )) ||
         (variant === "open" && (
           <BtnOpen
             className={`${className}`}
             onClick={onClick}
             text={props.children}
-          />
+            disabled={disabled}
+            />
         )) ||
         (variant === "switch" && (
           <BtnSwitch
@@ -31,21 +34,24 @@ export const index = ({ variant, value, className, onClick, ...props }) => {
             className={`${className}`}
             onClick={onClick}
             text={props.children}
-          />
+            disabled={disabled}
+            />
         )) ||
         (variant === "blue" && (
           <BtnDefault
             className={`btn_blue ${className}`}
             onClick={onClick}
             text={props.children}
-          />
+            disabled={disabled}
+            />
         )) ||
         (variant === "white" && (
           <BtnDefault
             className={`btn_white ${className}`}
             onClick={onClick}
             text={props.children}
-          />
+            disabled={disabled}
+            />
         ))}
     </>
   );

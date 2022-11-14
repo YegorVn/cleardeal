@@ -1,11 +1,11 @@
 /* ///поменять */
 @media screen and (max-width: 576px) {
   .bubble__body_writed{
-    font-size: 0.75rem !important;
+    /* font-size: 0.75rem !important; */
   }
   .bubble_right_small .bubble__body_writed{
     padding-right: 0 !important;
-    font-size: 0.75rem !important;
+    /* font-size: 0.75rem !important; */
   }
 }
 /* /// */

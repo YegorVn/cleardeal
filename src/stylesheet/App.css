@@ -26,8 +26,8 @@
   position: absolute;
   width: 100%;
   background-size: cover;
-  height: 20px;
-  bottom: -15px;
+  height: 7px;
+  bottom: 0;
   left: 0;
   background-repeat: no-repeat;
   background-image: url(../assets/images/teamStroke.svg);
@@ -143,7 +143,7 @@ a {
 
 .h-5 {
   padding-top: calc(calc(4.5rem + 46px) + 3rem);
-  margin-top: 15rem;
+  margin-top: 5rem;
   margin-bottom: 12rem;
 }
 
@@ -168,7 +168,6 @@ a {
   .h-2,
   .h-4,
   .h-6 {
-    white-space: nowrap;
   }
 
   .dialog {
@@ -432,8 +431,8 @@ a {
 
 @media screen and (max-width: 992px) {
   .btn-slide {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
   }
 }
 /* /// */

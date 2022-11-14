@@ -70,7 +70,7 @@
 
 @media screen and (min-width: 1440px) and (max-width: 1650px) {
   .background {
-    height: 10608px;
+    height: 9690px;
   }
 
   .gradient-1 {
@@ -120,7 +120,7 @@
 
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
   .background {
-    height: 10018px;
+    height: 8842px;
   }
 
   .gradient-1 {
@@ -170,25 +170,25 @@
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .background {
-    height: 11142px;
+    height: 9575px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .background {
-    height: 14770px;
+    height: 12646px;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .background {
-    height: 14357px;
+    height: 13252px;
   }
 }
 
 @media screen and (max-width: 576px) {
   .background {
-    height: 9470px;
+    height: 9225px;
   }
 
   .gradient-1 {

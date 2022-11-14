@@ -35,7 +35,7 @@
   }
 
   .tab__header {
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
   }
 
   .tab__text_opened {
@@ -64,7 +64,7 @@
 .tab__text_opened {
   transition: opacity 0.5s;
   opacity: 1;
-  padding: 1.5rem 3rem 4rem 3rem;
+  padding: 1.5rem 2.5rem 3rem 4.75rem;
 }
 
 .tab__text_closed {

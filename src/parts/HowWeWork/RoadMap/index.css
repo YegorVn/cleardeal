@@ -59,6 +59,10 @@
   border-radius: 40px;
 }
 
+.roadmap__sign, .roadmap__name{
+  width: fit-content;
+}
+
 @keyframes roadmap__text_animation {
   0% {
     opacity: 0;

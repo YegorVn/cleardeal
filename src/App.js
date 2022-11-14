@@ -23,12 +23,11 @@ import {
   StartWork,
   Modal,
 } from "./parts";
-import {Index as PhoneForm} from './components1/parts/PhoneForm' 
+import {PhoneForm, Cookie} from './components1/parts' 
 
 import "./stylesheet/App.css";
 
 // import { PhoneForm } from "./components/PhoneForm";
-import { Cookie } from "./components/Cookie";
 
 
 import {
