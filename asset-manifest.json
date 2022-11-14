@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cleardeal/static/css/main.53575045.css",
-    "main.js": "/cleardeal/static/js/main.f0c80961.js",
+    "main.js": "/cleardeal/static/js/main.fd96c481.js",
     "static/media/logoWhite.svg": "/cleardeal/static/media/logoWhite.bfdf3e24ad7bc9a72624ddea3a56ff31.svg",
     "static/media/manHand.svg": "/cleardeal/static/media/manHand.00ea3a715c8fd68448bc6dbd0249a6e3.svg",
     "static/media/girl.png": "/cleardeal/static/media/girl.6cbd50e30fedfe297b38.png",
@@ -50,10 +50,10 @@
     "static/media/arrowLeftBlueBig.svg": "/cleardeal/static/media/arrowLeftBlueBig.4f0f84c9cfd84462f9e7.svg",
     "static/media/selectString1.svg": "/cleardeal/static/media/selectString1.2705d3514f5c9db18249.svg",
     "main.53575045.css.map": "/cleardeal/static/css/main.53575045.css.map",
-    "main.f0c80961.js.map": "/cleardeal/static/js/main.f0c80961.js.map"
+    "main.fd96c481.js.map": "/cleardeal/static/js/main.fd96c481.js.map"
   },
   "entrypoints": [
     "static/css/main.53575045.css",
-    "static/js/main.f0c80961.js"
+    "static/js/main.fd96c481.js"
   ]
 }
