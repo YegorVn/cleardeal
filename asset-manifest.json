@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cleardeal/static/css/main.53575045.css",
-    "main.js": "/cleardeal/static/js/main.fd96c481.js",
+    "main.css": "/cleardeal/static/css/main.24c32264.css",
+    "main.js": "/cleardeal/static/js/main.846d1a03.js",
     "static/media/logoWhite.svg": "/cleardeal/static/media/logoWhite.bfdf3e24ad7bc9a72624ddea3a56ff31.svg",
     "static/media/manHand.svg": "/cleardeal/static/media/manHand.00ea3a715c8fd68448bc6dbd0249a6e3.svg",
     "static/media/girl.png": "/cleardeal/static/media/girl.6cbd50e30fedfe297b38.png",
@@ -13,7 +13,7 @@
     "static/media/person1.png": "/cleardeal/static/media/person1.9f925230c95688184121.png",
     "static/media/person4.png": "/cleardeal/static/media/person4.9db9d578deb2ef5c1bff.png",
     "static/media/person3.png": "/cleardeal/static/media/person3.0dedb5da581a7365f8d8.png",
-    "static/media/arrowDotted.svg": "/cleardeal/static/media/arrowDotted.3158d88aad43a161195f.svg",
+    "static/media/arrowDotted.svg": "/cleardeal/static/media/arrowDotted.76c9f59f55ce7e92daa1.svg",
     "static/media/zero.svg": "/cleardeal/static/media/zero.582c25730c3141399fd5944c9d48a84a.svg",
     "static/media/phone.svg": "/cleardeal/static/media/phone.27cdd67113337cf6e2b3.svg",
     "static/media/circles.svg": "/cleardeal/static/media/circles.9603c702eef90534f837b703d601abbb.svg",
@@ -21,7 +21,7 @@
     "static/media/wa.svg": "/cleardeal/static/media/wa.0e0f1e6f6e931c52ef837c74c83c8653.svg",
     "static/media/wp.svg": "/cleardeal/static/media/wp.41d5783a937ae4303418157989a6d280.svg",
     "static/media/barcode.svg": "/cleardeal/static/media/barcode.b0f684e11d130b2f905a88f68e5e7435.svg",
-    "static/media/battery.svg": "/cleardeal/static/media/battery.3311b140f5654f8b9b51f0db3e537532.svg",
+    "static/media/battery.svg": "/cleardeal/static/media/battery.67d47555a41642ea49b6e74d51c5a979.svg",
     "index.html": "/cleardeal/index.html",
     "static/media/wifi.svg": "/cleardeal/static/media/wifi.c1f57d4e511924be609ce07fc290f8ff.svg",
     "static/media/cross.svg": "/cleardeal/static/media/cross.99d6860cec04a0a1d381.svg",
@@ -49,11 +49,11 @@
     "static/media/arrowRightBlueBig.svg": "/cleardeal/static/media/arrowRightBlueBig.e543640fe71b7679e7c0.svg",
     "static/media/arrowLeftBlueBig.svg": "/cleardeal/static/media/arrowLeftBlueBig.4f0f84c9cfd84462f9e7.svg",
     "static/media/selectString1.svg": "/cleardeal/static/media/selectString1.2705d3514f5c9db18249.svg",
-    "main.53575045.css.map": "/cleardeal/static/css/main.53575045.css.map",
-    "main.fd96c481.js.map": "/cleardeal/static/js/main.fd96c481.js.map"
+    "main.24c32264.css.map": "/cleardeal/static/css/main.24c32264.css.map",
+    "main.846d1a03.js.map": "/cleardeal/static/js/main.846d1a03.js.map"
   },
   "entrypoints": [
-    "static/css/main.53575045.css",
-    "static/js/main.fd96c481.js"
+    "static/css/main.24c32264.css",
+    "static/js/main.846d1a03.js"
   ]
 }
