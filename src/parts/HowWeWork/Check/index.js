@@ -2,7 +2,7 @@ import "./index.css";
 import zero from "../../../assets/icons/zero.svg";
 import barcode from "../../../assets/icons/barcode.svg";
 import React from "react";
-export const Index = () => {
+export const Index = ({items}) => {
   return (
     <div className="check">
       <div className="check__list background-white d-flex flex-column pr-4 pl-5">
@@ -11,8 +11,8 @@ export const Index = () => {
             { text: "Оценка квартиры" },
             { text: "Поиск покупателя" },
             { text: "Подготовка договора" },
-            { text: "Аренда и уборка офиса в центре города" },
-            { text: "Кофемашина в офис и корпоративное такси" },
+            { text: <>Аренда и уборка<br></br> офиса в центре города</> },
+            { text: <>Кофемашина в офис<br></br> и корпоративное такси</> },
             { text: "Бонус риэлтора" },
           ].map((el, index) => {
             return (

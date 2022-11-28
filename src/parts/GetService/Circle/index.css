@@ -1,13 +1,19 @@
 .step {
   width: 140px;
   height: 140px;
+  min-width: 140px;
+  min-height: 140px;
   border: 5px solid var(--blue);
+  font-size: 3.5rem !important;
 }
 
 @media screen and (max-width: 992px) {
   .step {
     width: 94px;
     height: 94px;
+    min-width: 94px;
+    min-height: 94px;
     border: 5px solid var(--blue);
+    font-size: 2rem !important;
   }
 }

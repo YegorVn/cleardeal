@@ -1,3 +1,16 @@
+.confirm-city{
+  position: absolute;
+  background-color: var(--light-grey);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--grey);
+  border-radius: 30px;
+  top: 100%;
+  left: 64%;
+}
+
+
+
+/* //// */
 .header {
   z-index: 2;
   position: relative;
@@ -34,20 +47,21 @@
 
 .header__phone {
   background-color: var(--blue);
-  background-image: url("../../assets/images/Global/phone.svg");
+  /* background-image: url("../../assets/images/Global/phone.svg"); */
   background-repeat: no-repeat;
-  box-shadow: 0px 0px 10px 1px var(--blue);
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
+  /* box-shadow: 0px 0px 10px 1px var(--blue); */
+  border-radius: 30px;
+  color: var(--white);
+  height: 100%;
+  padding: 0.5rem 2rem;
   background-size: 49%;
   background-position: 55% 55%;
   cursor: pointer;
 }
 
 .header__phone:hover {
-  animation-name: header__phone_anim;
-  animation-duration: 0.5s;
+  /* animation-name: header__phone_anim; */
+  animation-duration: 2s;
 }
 
 /* ///header-big */
@@ -126,16 +140,6 @@
   height: 46px;
 }
 
-.header-big__content {
-  /* position: absolute;
-  background: var(--white);
-  width: 100%;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  top: 100%;
-  transition: 1s; */
-}
-
 @media screen and (max-width: 1200px) {
   .header-big__content {
     position: absolute;
@@ -182,6 +186,20 @@
   z-index: -100;
   display: none !important;
   opacity: 0;
+}
+
+.header__small .header__phone {
+  background-color: var(--blue);
+  background-image: url("../../assets/images/Global/phone.svg");
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  color: var(--white);
+  height: 50px;
+  width: 50px;
+  padding: 0.5rem 2rem;
+  background-size: 49%;
+  background-position: 55% 55%;
+  cursor: pointer;
 }
 
 .header-small__links {

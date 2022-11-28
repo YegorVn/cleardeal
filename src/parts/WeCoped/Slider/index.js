@@ -31,7 +31,10 @@ export const Index = ({ changeHandler, className, currentIdx, cards }) => {
             handleSlide("previous");
           }}
         >
-          <div className="btn-slide__icon"></div>
+          <div className="btn-slide__icon">
+            <div className="btn-slide__stick"></div>
+            <div className="btn-slide__stick"></div>
+          </div>
         </button>
         <div className="slider__person mx-auto ml-2 d-flex flex-column align-items-center flex-lg-row">
           <img src={person.avatar} className="slider__avatar" />
@@ -50,7 +53,10 @@ export const Index = ({ changeHandler, className, currentIdx, cards }) => {
             handleSlide("next");
           }}
         >
-          <div className="btn-slide__icon"></div>
+           <div className="btn-slide__icon">
+            <div className="btn-slide__stick"></div>
+            <div className="btn-slide__stick"></div>
+          </div>
         </button>
       </div>
 
@@ -59,19 +65,16 @@ export const Index = ({ changeHandler, className, currentIdx, cards }) => {
           <>
             {currentIdx === index && (
               <div
-                className={
-                  "d-lg-flex align-items-center pr-0 mx-auto mx-xl-0 " +
-                  className
-                }
+                className={"d-lg-flex align-items-center pr-0 mx-auto mx-xl-0"}
               >
                 <div className="slider__left-card left-card d-flex justify-content-end flex-column">
-                  <div className="slider__text mt-5 pt-3 text-l mb-3">
+                  <div className="slider__text mt-5 pt-3 text-s mb-3">
                     {cards[currentIdx].text}
                   </div>
                   <div className="left-card__background"></div>
                 </div>
                 <div className="slider__main-card main-card px-4 pb-5 p-sm-5 background-white d-flex">
-                  <div className="slider__text text-l">
+                  <div className="slider__text text-s">
                     {cards[currentIdx].text}
                   </div>
                 </div>
@@ -106,7 +109,7 @@ export const Index = ({ changeHandler, className, currentIdx, cards }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="text-l mt-5">
+                  <div className="text-s mt-5 slider__text">
                     {cards[currentIdx - 1]
                       ? cards[currentIdx - 1].text
                       : cards[currentIdx].text}

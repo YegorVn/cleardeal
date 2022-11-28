@@ -1,90 +1,84 @@
-.background {
-  height: 8256px;
+.background{
+  width: 100vw;
+  position: absolute !important;
+  top: 0;
+  height: 100% !important;
+  overflow: hidden !important;
+  left: calc(calc(100vw - 100%) / -2);
+  z-index: -1;
 }
 
-.gradient-1, .gradient-2, .gradient-3, .gradient-4, .gradient-5, .gradient-6, .gradient-7, .gradient-8, .gradient-9{
-  opacity: 0.5;
+.gradient-1,
+.gradient-2,
+.gradient-3,
+.gradient-4,
+.gradient-5,
+.gradient-6,
+.gradient-7,
+.gradient-8,
+.gradient-9 {
+  opacity: 0.75;
+  position: absolute;
 }
 
 .gradient-1 {
-  top: 3%;
   width: 800px;
   height: 800px;
 }
 
 .gradient-2 {
-  top: 0;
   width: 1400px;
   height: 1400px;
-  right: -38%;
 }
 
 .gradient-3 {
   width: 600px;
   height: 600px;
-  top: 29%;
-  left: 10%;
 }
 
 .gradient-4 {
   width: 800px;
   height: 800px;
-  top: 28%;
-  left: 50%;
 }
 
 .gradient-5 {
   width: 500px;
   height: 500px;
-  top: 41%;
-  left: 11%;
 }
 
 .gradient-6 {
   width: 1500px;
   height: 1500px;
-  top: 47%;
-  right: -53%;
 }
 
 .gradient-7 {
   width: 1200px;
   height: 1200px;
-  top: 63%;
-  right: -5%;
 }
 
 .gradient-8 {
   width: 1400px;
   height: 1400px;
-  top: 75%;
-  left: -20%;
 }
 
 .gradient-9 {
   width: 1000px;
   height: 1000px;
-  top: 80%;
-  right: -10%;
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1650px) {
-  .background {
-    height: 9690px;
-  }
-
+@media screen and (min-width: 1550px) {
   .gradient-1 {
     top: 3%;
   }
 
   .gradient-2 {
     top: 0;
-    right: -60%;
+    left: 70%;
   }
 
   .gradient-3 {
-    top: 28%;
-    left: -5%;
+    top: 26%;
+    left: 10%;
   }
 
   .gradient-4 {
@@ -93,34 +87,128 @@
   }
 
   .gradient-5 {
-    top: 35%;
-    left: 0%;
+    top: 34%;
+    left: 5%;
   }
 
   .gradient-6 {
     top: 47%;
-    right: -70%;
+    left: 75%;
   }
 
   .gradient-7 {
     top: 63%;
-    right: -5%;
+    left: -30%;
   }
 
   .gradient-8 {
     top: 75%;
-    left: -20%;
+    left: -40%;
   }
 
   .gradient-9 {
     top: 80%;
-    right: -10%;
+    left: 70%;
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
+@media screen and (min-width: 1400px) and (max-width: 1550px) {
+  .gradient-1 {
+    top: 3%;
+    left: -25%;
+  }
+
+  .gradient-2 {
+    top: 0;
+    left: 60%;
+  }
+
+  .gradient-3 {
+    top: 24%;
+    left: 2%;
+  }
+
+  .gradient-4 {
+    top: 25%;
+    left: 50%;
+  }
+
+  .gradient-5 {
+    top: 34%;
+    left: 3%;
+  }
+
+  .gradient-6 {
+    top: 47%;
+    left: 75%;
+  }
+
+  .gradient-7 {
+    top: 63%;
+    left: 50%;
+  }
+
+  .gradient-8 {
+    top: 82%;
+    left: -40%;
+  }
+
+  .gradient-9 {
+    top: 85%;
+    left: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .gradient-1 {
+    top: 3%;
+    left: -25%;
+  }
+
+  .gradient-2 {
+    top: 0;
+    left: 60%;
+  }
+
+  .gradient-3 {
+    top: 24%;
+    left: 2%;
+  }
+
+  .gradient-4 {
+    top: 25%;
+    left: 50%;
+  }
+
+  .gradient-5 {
+    top: 34%;
+    left: 3%;
+  }
+
+  .gradient-6 {
+    top: 47%;
+    left: 75%;
+  }
+
+  .gradient-7 {
+    top: 63%;
+    left: 50%;
+  }
+
+  .gradient-8 {
+    top: 82%;
+    left: -40%;
+  }
+
+  .gradient-9 {
+    top: 85%;
+    left: 60%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
   .background {
-    height: 8842px;
+    height: 9931px;
   }
 
   .gradient-1 {
@@ -129,7 +217,7 @@
 
   .gradient-2 {
     top: 0;
-    right: -60%;
+    left: 60%;
   }
 
   .gradient-3 {
@@ -143,74 +231,141 @@
   }
 
   .gradient-5 {
-    top: 38%;
-    left: 0%;
+    top: 36%;
+    left: -5%;
   }
 
   .gradient-6 {
     top: 47%;
-    right: -75%;
+    left: 75%;
   }
 
   .gradient-7 {
     top: 63%;
-    right: -30%;
+    left: 50%;
   }
 
   .gradient-8 {
-    top: 75%;
-    left: -20%;
+    top: 80%;
+    left: -70%;
   }
 
   .gradient-9 {
     top: 80%;
-    right: -10%;
-  }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .background {
-    height: 9575px;
+    left: 60%;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  .background {
-    height: 12646px;
+  .gradient-1 {
+    top: 3%;
+  }
+
+  .gradient-2 {
+    top: 0;
+    left: 60%;
+  }
+
+  .gradient-3 {
+    top: 27%;
+    left: -5%;
+  }
+
+  .gradient-4 {
+    top: 26%;
+    left: 50%;
+  }
+
+  .gradient-5 {
+    top: 36%;
+    left: -5%;
+  }
+
+  .gradient-6 {
+    top: 47%;
+    left: 75%;
+  }
+
+  .gradient-7 {
+    top: 63%;
+    left: 50%;
+  }
+
+  .gradient-8 {
+    top: 80%;
+    left: -70%;
+  }
+
+  .gradient-9 {
+    top: 80%;
+    left: 60%;
   }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-  .background {
-    height: 13252px;
+  .gradient-1 {
+    top: 3%;
+  }
+
+  .gradient-2 {
+    top: 0;
+    left: 60%;
+  }
+
+  .gradient-3 {
+    top: 27%;
+    left: -5%;
+  }
+
+  .gradient-4 {
+    top: 26%;
+    left: 50%;
+  }
+
+  .gradient-5 {
+    top: 36%;
+    left: -5%;
+  }
+
+  .gradient-6 {
+    top: 47%;
+    left: 75%;
+  }
+
+  .gradient-7 {
+    top: 63%;
+    left: 50%;
+  }
+
+  .gradient-8 {
+    top: 80%;
+    left: -70%;
+  }
+
+  .gradient-9 {
+    top: 80%;
+    left: 60%;
   }
 }
 
 @media screen and (max-width: 576px) {
   .background {
-    height: 9225px;
+    opacity: 0.75 !important;
   }
 
   .gradient-1 {
-    width: 300px;
-    height: 300px;
-    top: 5%;
-    left: -40%;
+    top: 2%;
+    left: -90%;
   }
 
   .gradient-2 {
-    width: 500px;
-    height: 500px;
     top: 3%;
-    right: -90%;
+    left: 20%;
   }
 
   .gradient-3 {
-    width: 600px;
-    height: 600px;
     top: 20%;
-    right: -70%;
-    left: unset;
+    left: 70%;
   }
 
   .gradient-4 {
@@ -219,36 +374,28 @@
   }
 
   .gradient-5 {
-    width: 650px;
-    height: 650px;
     top: 36%;
     left: 50%;
   }
 
   .gradient-6 {
-    width: 550px;
-    height: 550px;
     top: 47%;
-    right: -65%;
+    left: -200%;
     opacity: 0.5;
   }
 
   .gradient-7 {
-    top: 55%;
+    top: 60%;
+    left: 70%;
   }
 
   .gradient-8 {
-    width: 550px;
-    height: 550px;
     top: 80%;
-    right: -50%;
-    left: unset;
+    left: 50%;
   }
 
   .gradient-9 {
-    width: 750px;
-    height: 750px;
     top: 83%;
-    right: -10%;
+    left: -30%;
   }
 }

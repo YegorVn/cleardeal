@@ -15,18 +15,7 @@ export const Index = ({ className, bubbles }) => {
         <img src={mail} className="ml-2" />
         <img src={battery} className="ml-auto" />
       </div>
-      <div className="d-block d-sm-none">
-        <Bubble
-          className="bubble_right_small text-xxxs pl-0 pr-0 ml-auto mt-4 col-9 border-r-20"
-          text={bubbles[1].text}
-          bodyClassName="pl-3 pt-3 pb-3 pr-3 border-r-20"
-          animation={{
-            duration: 1,
-            delay: 1,
-          }}
-        />
-      </div>
-      <div className="chat__dialog pb-5 d-none d-sm-block">
+      <div className="chat__dialog_small mt-5 pb-5 d-block d-sm-none">
         {bubbles.map((bubble, index) => {
           return (
             <Bubble
@@ -34,16 +23,50 @@ export const Index = ({ className, bubbles }) => {
               className={`${
                 (bubble.val === "right" && "bubble_right_small") ||
                 (bubble.val === "left" && "bubble_left_small")
-              } text-xxxs pl-0 pr-0 mt-4 col-9`}
+              } text-xxxs pl-0 pr-0 mt-sm-4 chat__bubble`}
               text={bubble.text}
               bodyClassName="pl-3 pt-3 pb-3 pr-3 border-r-20"
-              animation={{
-                duration: index + 1,
-                delay: index * 0.5,
+              writedAnimation={{ duration: 0.25, delay: index * 5 }}
+              writingAnimation={{ duration: 1, delay: index * 5 }}
+              disappearAnimation={{ duration: 0.1, delay: (index + 0.75) * 5 }}
+              isBubbleDisappear={true}
+            />
+          );
+        })}
+      </div>
+      <div className="chat__dialog mt-5 pb-5 d-none d-sm-block">
+        {bubbles.map((bubble, index) => {
+          return (
+            <Bubble
+              key={index}
+              className={`${
+                (bubble.val === "right" && "bubble_right_small") ||
+                (bubble.val === "left" && "bubble_left_small")
+              } text-xxxs pl-0 pr-0 mt-sm-4 chat__bubble`}
+              text={bubble.text}
+              bodyClassName="pl-3 pt-3 pb-3 pr-3 border-r-20"
+              writedAnimation={{
+                duration: 0.5,
+                delay: index * 0.25,
+                visible: { transform: "translateX(0%)", opacity: 1 },
+                hidden: {
+                  transform:
+                    bubble.val === "left"
+                      ? "translateX(-5%)"
+                      : "translateX(5%)",
+                  opacity: 0
+                },
               }}
             />
           );
         })}
+        <Bubble
+          className={`bubble_right_small text-xxxs pl-0 pr-0 mt-sm-4 chat__bubble`}
+          bodyClassName="pl-3 pt-3 pb-3 pr-3 border-r-20"
+          text={'bubble.text'}
+          writingAnimation={{ duration: 1, delay: 3 * 1.5 }}
+          isBubbleEmpty={true}
+        />
       </div>
     </div>
   );

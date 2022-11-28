@@ -16,26 +16,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1500px) {
-}
-
-@media (min-width: 1200px)and (max-width: 1601px) {
-  .col-xl-7 {
-    flex: 0 0 52% !important;
-    max-width: 54%;
-  }
-
-  .col-xl-6 {
-    flex: 0 0 40%;
-    max-width: 40%;
-  }
-
-  .how-we-work__body{
-    margin: 1rem auto !important;
-    justify-content: center !important;
-  }
-}
-.how-we-work__header::after {
+.how-we-work__title::after {
   content: "";
   background-image: url("../../assets/images/underlines/hww.svg");
   height: 25px;
@@ -51,24 +32,47 @@
   animation-timing-function: linear;
 }
 
-.how-we-work__block:nth-child(2) .how-we-work__header::after {
+.how-we-work__block:nth-child(2) .how-we-work__title::after {
   bottom: -1em;
 }
 
-.how-we-work__block:nth-child(2) .how-we-work__header::after {
+.how-we-work__block:nth-child(2) .how-we-work__title::after {
   top: 1.1em;
 }
 
-.how-we-work__block:nth-child(3) .how-we-work__header::after {
+.how-we-work__block:nth-child(3) .how-we-work__title::after {
   animation-name: width_animation;
   max-width: 10rem;
   top: 2.4em;
   left: 0;
 }
 
-.how-we-work__header {
+.how-we-work__title {
+  white-space: nowrap;
   position: relative;
 }
+
+.how-we-work__annotation{
+  white-space: nowrap;
+}
+
+@media (min-width: 1200px)and (max-width: 1601px) {
+  /* .col-xl-7 {
+    flex: 0 0 52% !important;
+    max-width: 54%;
+  }
+
+  .col-xl-6 {
+    flex: 0 0 40%;
+    max-width: 40%;
+  } */
+
+  .how-we-work__body{
+    margin: 1rem auto !important;
+    justify-content: center !important;
+  }
+}
+
 
 @media screen and (max-width: 992px) {
   .how-we-work__header::after {
@@ -108,8 +112,5 @@
     width: 100%;
     height: 11rem;
   }
-
-  .roadmap__stroke {
-    display: none;
-  }
 }
+

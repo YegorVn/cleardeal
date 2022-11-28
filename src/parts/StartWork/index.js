@@ -1,16 +1,16 @@
 import "./index.css";
 import startWork from "../../assets/images/startWork/startWork.svg";
-import {Index as PhoneForm} from '../../components1/parts/PhoneForm' 
+// import {Index as PhoneForm} from '../../components1/parts/PhoneForm' 
 
 export const Index = () => {
   return (
     <>
       <div className="start-work d-flex flex-column flex-lg-row">
         <div className="start-work__text d-flex flex-column ml-lg-5 px-0 text-center text-lg-left px-lg-4 mt-lg-5">
-          <div className="start-work__title text-xxl bolder mt-auto">
+          <div className="start-work__title bolder mt-auto">
             Начнём работу?
           </div>
-          <div className="start-work__annotation text-l mb-auto mt-3">
+          <div className="start-work__annotation text-m mb-auto mt-3">
             Оставьте заявку, мы всё расскажем
           </div>
         </div>
@@ -19,7 +19,7 @@ export const Index = () => {
           src={startWork}
         />
       </div>
-      <PhoneForm />
+      {/* <PhoneForm /> */}
     </>
   );
 };

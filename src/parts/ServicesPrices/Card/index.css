@@ -6,7 +6,6 @@
 
 .card__header {
   min-height: 3em;
-  font-size: 2.25rem;
 }
 
 .card__header p {
@@ -14,7 +13,13 @@
   white-space: nowrap;
 }
 
+.card__header{
+  white-space: nowrap;
+  font-size: 32px;
+}
+
 .card__text {
+  white-space: nowrap;
   height: 3em;
 }
 
@@ -48,7 +53,26 @@
 }
 
 @media screen and (max-width: 576px) {
+  .card{
+    font-size: 0.6rem;
+  }
   .card__header {
-    /* font-size: 2rem; */
+    font-size: 3em !important;
+  }
+
+  .card__text {
+    font-size: 2em !important;
+  }
+
+  .card__price{
+    font-size: 4em !important;
+  }
+
+  .card__button{
+    font-size: 2em !important;
+  }
+
+  .card__show{
+    font-size: 2em !important;
   }
 }

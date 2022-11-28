@@ -76,7 +76,7 @@
   background-size: cover;
   width: 0;
   height: 100%;
-  background-size: 100%;
+  background-size: 80%;
   background-repeat: no-repeat;
   background-position: rotate(-5deg);
 }
@@ -105,23 +105,6 @@
   background-image: url("../../../assets/images/check/string6.svg");
 }
 
-/* .check__circle_0::before,
-.check__circle_1::before,
-.check__circle_2::before,
-.check__circle_3::before,
-.check__circle_4::before,
-.check__circle_5::before {
-  animation-name: fadeout;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-  bottom: 5px;
-  content: "";
-  position: absolute;
-  background-size: cover;
-  width: 20px;
-  height: 19px;
-} */
 
 .check__circle_0::before {
   background-image: url("../../../assets/images/check/mark1.svg");

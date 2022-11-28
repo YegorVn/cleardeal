@@ -15,3 +15,14 @@
 .cookie__learn-more:hover{
   color: var(--light-grey) !important;
 }
+
+.cookie__text{
+  /* white-space:initial !important; */
+}
+
+@media screen and (min-width: 992px) {
+  .cookie{
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+  }
+}

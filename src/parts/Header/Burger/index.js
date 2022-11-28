@@ -1,6 +1,6 @@
 import "./index.css";
 
-export const index = ({ state, onClick }) => {
+export const Index = ({ state, onClick }) => {
   return (
     <div
       onClick={onClick}

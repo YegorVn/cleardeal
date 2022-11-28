@@ -53,13 +53,13 @@ export const Index = ({ show, onClose }) => {
         <div className="request__offer px-0 d-flex col-lg-7 flex-column">
           <div className="text-xl bolder">{gotText}</div>
           <SocialMedia className="mt-4 mt-lg-auto" />
-          <Button
+          {/* <Button
             variant="white"
             className="d-block d-sm-none mt-4"
             onClick={onClose}
           >
             Вернуться на главную
-          </Button>
+          </Button> */}
         </div>
         <img src={manHand} className="ml-auto d-none d-lg-block" />
         <button

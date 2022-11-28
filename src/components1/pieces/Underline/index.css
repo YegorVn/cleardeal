@@ -1,0 +1,16 @@
+
+.underline{
+  width: fit-content;
+  display: inline-block;
+  position: relative;
+}
+.underline__stroke{
+  display: block;
+  position: absolute;
+  transform-origin: left;
+}
+
+.underline__img{
+  width: 100%;
+  display: block;
+}

@@ -1,24 +1,34 @@
 /* ///поменять */
-@media screen and (max-width: 576px) {
-  .bubble__body_writed{
-    /* font-size: 0.75rem !important; */
-  }
-  .bubble_right_small .bubble__body_writed{
-    padding-right: 0 !important;
-    /* font-size: 0.75rem !important; */
-  }
-}
-/* /// */
-
 @keyframes become_visible {
   0% {
     opacity: 0;
   }
-  
+
   100% {
     opacity: 1;
   }
 }
+
+
+
+@media screen and (max-width: 576px) {
+  .bubble__body_writed {
+    /* font-size: 0.75rem !important; */
+  }
+  .bubble_right_small .bubble__body_writed {
+    /* padding-right: 0 !important; */
+    /* font-size: 0.75rem !important; */
+  }
+}
+
+.bubble{
+  position: relative;
+}
+
+
+/* /// */
+
+
 
 /* ///wrapper */
 .bubble_right_small {
@@ -122,19 +132,35 @@
 /* /// */
 
 /* ///writing */
-.bubble_left_big .bubble__body_writed,
-.bubble_right_big .bubble__body_writed,
-.bubble_left_small .bubble__body_writed,
-.bubble_right_small .bubble__body_writed {
-  opacity: 0;
-  animation-name: become_visible;
-  animation-fill-mode: forwards;
+.bubble_left_big .bubble__body_writing,
+.bubble_left_big .bubble__body_writed{
+  margin-left: 1rem;
 }
 
-.bubble__body_writing {
-  position: absolute;
-  width: fit-content;
-  bottom: 0;
+.bubble_right_big .bubble__body_writed, 
+.bubble_right_big .bubble__body_writing{
+  margin-right: 1rem;
+}
+
+.bubble__body_writing{
+ border-radius: 40px;
+ position: absolute;
+ width: fit-content;
+ bottom: 0;
+}
+
+.bubble_right_small .bubble__body_writing, .bubble_left_small .bubble__body_writing{
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.bubble_right_small .bubble__body_writed{
+  margin-left: auto;
+}
+
+.bubble_right_big .bubble__body_writing,
+.bubble_left_big .bubble__body_writing {
+  padding: 1.5rem 2rem;
 }
 
 .bubble_right_small .bubble__body_writing {
@@ -142,7 +168,6 @@
 }
 
 .bubble_right_big .bubble__body_writing {
-
   right: 86px;
 }
 
@@ -152,23 +177,30 @@
 
 @media screen and (max-width: 576px) {
   .bubble_right_big .bubble__body_writing {
-    right: 54px;
+    right: calc(54px) !important;
   }
-  
+
   .bubble_left_big .bubble__body_writing {
-    left: 54px;
+    left: calc(54px) !important;
+  }
+
+  .bubble__img{
+    width: 54px !important;
+    height: 54px !important;
   }
 }
 /* /// */
 
 /* /// Circle */
-.bubble_right_big .bubble__circle, .bubble_left_big .bubble__circle{
-  width: 30px;
-  height: 30px;
+.bubble_right_big .bubble__circle,
+.bubble_left_big .bubble__circle {
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
 }
 
 .bubble__circle {
-  animation-duration: 1s;
+  animation-duration: 0.25s;
   animation-name: become_visible;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;

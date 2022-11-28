@@ -28,7 +28,7 @@ export const Index = ({ items, className }) => {
             <Card
               className="col-11 col-sm-9 col-lg-4 col-xl-4 mx-auto mx-lg-0 mt-3 mt-lg-0 pl-4 pr-4 pt-5 pb-5"
               card={card}
-              animDuration={index}
+              animDuration={0.5}
               key={index}
             />
           );
@@ -40,7 +40,7 @@ export const Index = ({ items, className }) => {
               <Card
                 className={`services__card col-12 col-sm-9 col-lg-4 col-xl-4 mx-lg-0 mt-3 mt-lg-0 pl-4 pr-4 pt-5 pb-5`}
                 card={card}
-                animDuration={index}
+                animDuration={1.25}
                 key={index}
               />
           );

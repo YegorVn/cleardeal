@@ -1,25 +1,44 @@
 import "./index.css";
 
-import React from "react";
+import React, { memo, useContext, useMemo } from "react";
 import { useState, useEffect } from "react";
-import { Button } from "../../components1/pieces";
 import manHand from "../../assets/images/modal/manHand.svg";
+// import { PhoneInput } from "../../components1/parts";
+import { Button } from "../../components1/pieces";
+import { Context } from "../../Context";
+import { Index as SocialMedia } from "./";
 import vk from "../../assets/images/modal/vk.svg";
 import wa from "../../assets/images/modal/wa.svg";
 import tg from "../../assets/images/modal/tg.svg";
-import { PhoneInput } from "../../components1/parts";
 
 export const Index = () => {
+  const [context, setContext] = useContext(Context);
   const [visited, setVisited] = useState(false);
-  const [show, setShow] = useState(true);
-  const [stage, setStage] = useState("");
-  const [completed, setCompleted] = useState(true);
   const [gotText, setGotText] = useState("");
+
+  const checkDoesWeWork = () => {
+    const hours = new Date().getHours();
+    const minutes = new Date().getMinutes();
+    if (hours * 60 + minutes >= 540 && hours * 60 + minutes <= 1180)
+      return true;
+    return false;
+  };
+
+  useEffect(() => {
+    if (checkDoesWeWork())
+      setGotText("Готово! Свяжемся с вами в течение 5 минут.");
+    if (!checkDoesWeWork())
+      setGotText(
+        "Готово! Сейчас мы не работаем, свяжемся с вами с 9:00 до 20:00."
+      );
+  });
+
   useEffect(() => {
     if (!visited) {
       const updateMousePosition = (ev) => {
         if (ev.clientX < 10 || ev.clientY < 10) {
-          setShow(true);
+          setContext({ ...context, modal: true });
+          setVisited(true);
         }
       };
       window.addEventListener("mousemove", updateMousePosition);
@@ -27,121 +46,133 @@ export const Index = () => {
         window.removeEventListener("mousemove", updateMousePosition);
       };
     }
-    if (stage === "phone") setCompleted(false);
-  }, [visited, stage]);
+  }, [visited]);
 
   const onClose = () => {
     setVisited(true);
-    setShow(false);
-  };
-
-  const SocialMedia = ({ className }) => {
-    return (
-      <div className={`${className}`}>
-        <div className="text-s ml-md-3 mb-lg-4">Посмотрите наши соцсети</div>
-        <div className={`social-media d-flex ${className}`}>
-          <a>
-            <img src={vk} />
-          </a>
-          <a className="ml-3">
-            <img src={wa} />
-          </a>
-          <a href="https://t.me/a_kolotii" className="ml-3">
-            <img src={tg} />
-          </a>
-        </div>
-      </div>
-    );
-  };
-
-  const completedHanlder = (val) => {
-    setCompleted(val);
+    setContext({ ...context, modal: false });
   };
 
   const stageHandler = () => {
-    if (stage === "") setStage("phone");
-    else if (stage === "phone") {
-      setStage("got");
-      if (true) setGotText("Готово! Свяжемся с вами в течение 5 минут.");
-      else if (false)
-        setGotText(
-          "Сейчас мы не работаем, свяжемся с вами завтра с 9:00 до 20:00."
-        );
+    if (context.modalStage === "")
+      setContext({ ...context, modalStage: "phone" });
+    else if (context.modalStage === "phone") {
+      setContext({ ...context, modalStage: "got" });
     }
   };
 
-  return (
-    <div className={"modal d-flex " + (show ? "modal_shown" : "modal_closed")}>
-      <div className="modal__content background-grey col-11 col-sm-10 col-md-10 col-lg-10 col-xl-8 border-r-50 m-auto px-5 d-flex">
-        <div className="modal__offer px-0 d-flex col-lg-7 flex-column">
-          <div className="text-xl modal-title bolder px-0">
-            {(stage === "phone" && <>Оставить заявку</>) ||
-              (stage === "got" && <>Спасибо!</>) ||
-              (stage === "" && (
-                <>
-                  <div>Поможем решить</div>
-                  <div>и ваш вопрос</div>
-                  <div>с недвижимостью</div>
-                </>
-              ))}
-          </div>
-          {stage === "phone" && (
-            <div className="text-xs mt-3">
-              Мы используем файлы cookie и аналогичные технологии, чтобы делать
-              сайт удобнее для вас
-            </div>
-          )}
-          {stage === "phone" && (
-            <PhoneInput className=" mt-5" completedHanlder={completedHanlder} />
-          )}
-          {stage === "got" && (
-            <div className="text-xl bolder mt-5">{gotText}</div>
-          )}
-          {stage === "got" && <SocialMedia className="mt-4 mt-lg-auto" />}
-          {stage === "got" && (
-            <Button
-              variant="white"
-              className="d-block d-sm-none mt-4"
-              onClick={() => setShow(false)}
-            >
-              Вернуться на главную
-            </Button>
-          )}
+  const ModalContent = memo(({ context, gotText, onClose, stageHandler }) => {
+    return (
+      <div
+        className={`modal__content background-grey  border-r-50 m-auto d-flex ${
+          context.modal ? "modal__content_shown" : "modal__content_closed"
+        }`}
+      >
+        <div className="modal__offer px-0 d-flex flex-column">
+          {(context.modalStage === "" && (
+            <>
+              <div className="text-xxxl modal-title bolder px-0">
+                Поможем решить<br></br>и ваш вопрос<br></br>с недвижимостью
+              </div>
+            </>
+          )) ||
+            (context.modalStage === "phone" && (
+              <>
+                <div className="text-xxxl modal-title bolder px-0">
+                  Оставить заявку
+                </div>
+              </>
+            )) ||
+            (context.modalStage === "got" && (
+              <>
+                <div className="text-xl bolder col-xl-7">{gotText}</div>
+                <div className="mt-4">
+                  <div className="text-s ml-md-3 mb-lg-4">
+                    Посмотрите наши соцсети
+                  </div>
+                  <div className={`social-media d-flex`}>
+                    <a>
+                      <img src={vk} width={93} />
+                    </a>
+                    <a className="ml-3">
+                      <img src={wa} width={93} />
+                    </a>
+                    <a href="https://t.me/a_kolotii" className="ml-3">
+                      <img src={tg} width={93} />
+                    </a>
+                  </div>
+                </div>
+                <Button
+                  variant="white"
+                  className="d-block text-m d-sm-none mt-4"
+                  onClick={onClose}
+                >
+                  Вернуться на главную
+                </Button>
+              </>
+            ))}
           <div
-            className={`modal__buttons mt-5 mt-lg-auto ${
-              stage === "phone"
-                ? "d-flex flex-column flex-lg-row modal__buttons_phone_stage"
-                : stage === "got"
+            className={`modal__buttons  ${
+              context.modalStage === "phone"
+                ? "d-flex flex-column flex-lg-row modal__buttons_phone_stage mt-4"
+                : context.modalStage === "got"
                 ? "d-none"
-                : "d-flex flex-column"
+                : "d-flex flex-column mt-lg-auto mt-5"
             }`}
           >
             <Button
-              className="text-xs bold col-lg-8"
-              variant="blue"
               onClick={stageHandler}
-              disabled={completed ? false : true}
+              className="text-m bold"
+              variant="blue"
+              disabled={false}
             >
-              {stage === "phone" ? "Позвоните мне" : "Бесплатная консультация"}
+              {context.modalStage === "phone"
+                ? "Позвоните мне"
+                : "Бесплатная консультация"}
             </Button>
             <Button
-              className={`text-xs bold col-lg-6 mt-3 ${
-                stage === "phone" ? "ml-lg-3 mt-lg-0" : ""
+              className={`text-m bold mt-3 ${
+                context.modalStage === "phone" ? "ml-lg-3 mt-lg-0" : ""
               }`}
               variant="white"
               onClick={onClose}
-              disabled={completed ? false : true}
+              disabled={false}
             >
-              {stage === "phone" ? "Напишите в WhatsApp" : "Нет, спасибо"}
+              {context.modalStage === "phone" ? (
+                <>
+                  <span className="d-block d-lg-none">Написать в WhatsApp</span>
+                  <span className="d-none d-lg-block">Напишите в WhatsApp</span>
+                </>
+              ) : (
+                "Нет, спасибо"
+              )}
             </Button>
           </div>
         </div>
-        <img src={manHand} className="ml-auto d-none d-lg-block" />
+        <img
+          src={manHand}
+          className="modal__img ml-auto mr-5 d-none d-lg-block mt-auto"
+        />
         <button
           className="btn_close d-none d-md-block"
           onClick={onClose}
         ></button>
       </div>
+    );
+  });
+
+  return (
+    <div
+      className={`modal d-flex ${
+        context.modal ? "modal_shown" : "modal_closed"
+      }`}
+    >
+      <ModalContent
+        context={context}
+        onClose={onClose}
+        stageHandler={stageHandler}
+        gotText={gotText}
+      />
     </div>
   );
 };

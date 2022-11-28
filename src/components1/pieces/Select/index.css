@@ -4,47 +4,42 @@
   cursor: pointer;
   height: fit-content;
   position: relative;
-  width: 9em;
+  width: 7.5em;
   height: fit-content;
-}
-
-.select__content_hidden {
-}
-
-.select__content_shown {
- 
 }
 
 .select__active{
+  text-align: left;
   border-radius: 30px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.1rem;
+  color: var(--blue);
   left: 0;
   width: 100%;
   height: fit-content;
-  border: 1px solid var(--black);
+  border: 2px solid var(--blue);
 }
 
 .select__active_shown{
   border-radius: 30px;
-  padding: 0.5rem 1.5rem;
   left: 0;
   width: 100%;
   height: fit-content;
   border-bottom-color: transparent !important;
-  border-top-left-radius: 22px;
-  border-top-right-radius: 22px;
+  border-top-left-radius: 23px;
+  border-top-right-radius: 23px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 .select__els {
+  text-align: left;
   position: absolute;
   left: 0;
   width: 100%;
-  border: 1px solid var(--black);
+  border: 2px solid var(--blue);
   border-top: 0 !important;
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
+  border-bottom-left-radius: 23px;
+  border-bottom-right-radius: 23px;
 }
 
 .select__els_hidden {
@@ -52,11 +47,12 @@
 }
 
 .select__el {
+  transition: 0.25s;
   position: relative;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.1rem;
 }
 
-.select__el::after {
+/* .select__el::after {
   content: "";
   position: absolute;
   transform-origin: left;
@@ -89,10 +85,8 @@
   100% {
     background-size: 100% 100%;
   }
-}
+} */
 
-.select__el:hover:after {
-  animation-name: select__el_anim;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+.select__el:hover {
+  color: var(--blue);
 }

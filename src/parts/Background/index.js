@@ -2,20 +2,12 @@ import {
   MouseParallaxContainer,
   MouseParallaxChild,
 } from "react-parallax-mouse";
-import './index.css'
+import "./index.css";
 
 export const Index = () => {
   return (
     <MouseParallaxContainer
       className="background"
-      containerStyles={{
-        width: "100%",
-        position: "absolute",
-        top: "0",
-        overflow: "hidden",
-        left: "0",
-        zIndex: "-1",
-      }}
       resetOnLeave
       useWindowMouseEvents={true}
     >
@@ -24,7 +16,6 @@ export const Index = () => {
         factorX={0.01}
         factorY={0.01}
         updateStyles={{
-          position: "absolute",
           background:
             "radial-gradient(50% 50% at 50% 50%, #97cbf8 0%, rgba(217, 217, 217, 0) 100%)",
         }}
@@ -34,7 +25,6 @@ export const Index = () => {
         factorX={0.01}
         factorY={0.01}
         updateStyles={{
-          position: "absolute",
           background:
             "radial-gradient(50% 50% at 50% 50%, #577bfa 0%, rgba(217, 217, 217, 0) 100%)",
         }}
@@ -45,7 +35,6 @@ export const Index = () => {
         factorX={0.05}
         factorY={0.01}
         updateStyles={{
-          position: "absolute",
           background:
             "radial-gradient(50% 50% at 50% 50%, #a3cff4 0%, rgba(217, 217, 217, 0) 100%)",
         }}
@@ -55,7 +44,6 @@ export const Index = () => {
         factorX={0.05}
         factorY={0.01}
         updateStyles={{
-          position: "absolute",
           background:
             "radial-gradient(50% 50% at 50% 50%,#577bfa 0%,rgba(217, 217, 217, 0) 100%)",
         }}
@@ -65,7 +53,6 @@ export const Index = () => {
         factorX={0.03}
         factorY={0.01}
         updateStyles={{
-          position: "absolute",
           background:
             "radial-gradient(50% 50% at 50% 50%,#577bfa 0%,rgba(217, 217, 217, 0) 87.5%)",
         }}
@@ -75,7 +62,6 @@ export const Index = () => {
         factorX={0.04}
         factorY={0.01}
         updateStyles={{
-          position: "absolute",
           background:
             "radial-gradient(50% 50% at 50% 50%, #577BFA 0%, rgba(217, 217, 217, 0) 100%)",
         }}
@@ -85,7 +71,6 @@ export const Index = () => {
         factorX={0.01}
         factorY={0.01}
         updateStyles={{
-          position: "absolute",
           background:
             "radial-gradient(50% 50% at 37.3% 50%, #577BFA 0%, rgba(217, 217, 217, 0) 76.04%)",
         }}
@@ -95,7 +80,6 @@ export const Index = () => {
         factorX={0.01}
         factorY={0.01}
         updateStyles={{
-          position: "absolute",
           background:
             "radial-gradient(50% 50% at 50% 50%, #577BFA 0%, rgba(217, 217, 217, 0) 87.5%)",
         }}
@@ -105,7 +89,6 @@ export const Index = () => {
         factorX={0.01}
         factorY={0.01}
         updateStyles={{
-          position: "absolute",
           background:
             "radial-gradient(50% 50% at 50% 50%, #A3CFF4 0%, rgba(217, 217, 217, 0) 100%)",
         }}

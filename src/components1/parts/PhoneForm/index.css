@@ -35,16 +35,10 @@
   animation-timing-function: linear;
 }
 
-@media screen and( max-width: 1200px) {
-  .phone-form__content .col-xl-5 {
-    flex: 0 0 38%;
-    max-width: 38%;
-  }
-}
-
+/* /////////////////////////////// */
 .phone-form {
   position: relative;
-  padding: 2.3rem 2.75rem;
+  padding: 2.3rem 4.2rem;
   border: 2px solid transparent;
 }
 
@@ -79,5 +73,12 @@
 
   .phone-form_main {
     margin-top: 0rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .phone-form__content .col-xl-5 {
+    flex: 0 0 36% !important;
+    max-width: 36% !important;
   }
 }

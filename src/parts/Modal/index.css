@@ -19,15 +19,6 @@
   }
 }
 
-@keyframes anim {
-  0%{
-      opacity: 0.5;
-  }
-  100%{
-      opacity: 1;
-  }
-}
-
 .modal{
   width: 100vw;
   height: 100vh;
@@ -42,30 +33,54 @@
   opacity: 0.6;
   z-index: 3;
   display: block;
+  transition: 1s;
 }
 
 .modal_closed{
   z-index: -100;
-  display: none;
-}
-
-.modal_closed>.modal__content{
-  display: none !important;
-}
-
-.modal_shown>.modal__content{
-  display: flex;
-  animation-name: anim;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
   opacity: 0;
 }
 
+.modal_shown{
+  opacity: 1;
+}
+
 .modal__content{
-  height: fit-content;
-  padding: 4rem 0;
+  width: 61rem !important;
+  height: 28rem;
+  padding: 4rem;
   z-index: 4;
+  overflow: hidden;
   position: relative;
+}
+
+.modal__content::after{
+  content: "";
+  position: absolute;
+  width: 500px;
+  opacity: 0.7;
+  height: 100%;
+  right: -30%;
+  top: 0;
+  z-index: -1;
+  background: radial-gradient(50% 50% at 37.3% 50%, #577BFA 0%, rgba(217, 217, 217, 0) 69.79%);
+}
+
+/* ///elements */
+
+.modal-title{
+  font-size: 3.75rem;
+}
+
+.modal__img{
+  position: absolute;
+  right: 5%;
+  height: 24rem;
+  bottom: 0;
+}
+
+.modal-title{
+  line-height: 1.2;
 }
 
 .modal__buttons .btn{
@@ -83,7 +98,16 @@
     width: 100% !important;
   }
 
-  .modal-title{
-    font-size: 2rem !important;
+  .modal__content{
+    max-width: 80% !important;
+  }
+
+  .modal__offer{
+    width: 100%;
+  }
+
+  .modal__content::after{
+    width: 0;
+    height: 0;
   }
 }

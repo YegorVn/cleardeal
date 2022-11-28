@@ -1,12 +1,3 @@
-// import { Dialog } from "./components/Dialog";
-// import { HowWeWork } from "./components/HowWeWork";
-// import { HowWeWork } from './parts/index'
-// import { ServicesPrices } from "./components/ServicesPrices";
-// import { Slider } from "./components/Slider";
-// import { GetService } from "./components/GetService";
-// import { Tickets } from "./components/Tickets";
-// import { Disclosure } from "./components/Disclosure";
-// import { Header } from "./components/Header";
 import { useRef, useEffect, useState } from "react";
 import {
   Background,
@@ -23,128 +14,97 @@ import {
   StartWork,
   Modal,
 } from "./parts";
-import {PhoneForm, Cookie} from './components1/parts' 
+import { PhoneForm, Cookie } from "./components1/parts";
+import teamStroke from "./assets/images/teamStroke.svg";
 
 import "./stylesheet/App.css";
-
-// import { PhoneForm } from "./components/PhoneForm";
-
+import { Context } from "./Context.js";
 
 import {
   disclosureContent,
   hwwContent,
+  dialogContent,
   hwwChat,
   sliderContent,
   sliderCards,
   servicesPricesCards,
+  getServiceContent,
+  bannerContent,
+  ticketsContent,
 } from "./Text";
+
+import { Underline } from "./components1/pieces";
+
 function App() {
+  const [context, setContext] = useState({
+    city: "moscow",
+    modal: false,
+    modalStage: "",
+    leftPhone: false,
+    askedAboutCity: false,
+    phone: "",
+  });
   const benefits = useRef();
   const services = useRef();
   const comments = useRef();
   const contancts = useRef();
   const questions = useRef();
 
-  const [burger, setBurger] = useState(false);
   const links = [
     { text: "Преимущества", ref: benefits },
     { text: "Услуги и цены", ref: services },
     { text: "Отзывы", ref: comments },
-    { text: "Контакты", ref: contancts },
     { text: "Вопросы", ref: questions },
+    { text: "Контакты", ref: contancts },
   ];
 
   return (
-    <>
+    <Context.Provider value={[context, setContext]}>
       <Header links={links} />
       <Cookie />
       <Modal />
-      <Background />
       <div className="app mx-auto">
-        <div className="app__content ">
-          <Banner />
-          <PhoneForm className=""/>
-          <Dialog />
-          <h2 className="h-1" ref={benefits}>
-            Как мы работаем?
-          </h2>
-          <HowWeWork content={hwwContent} chat={hwwChat} />
-          <h2 className="h-2" ref={services}>
-            Услуги и цены
-          </h2>
-          <ServicesPrices items={servicesPricesCards} />
-          <h2 className="h-3" ref={comments}>
-            Вот, с чем мы уже справились
-          </h2>
-          <WeCoped content={sliderContent} cards={sliderCards} />
-          <h2 className="mb-5 h-4" ref={contancts}>
-            Как получить услугу?
-          </h2>
-          <GetService />
-          <h2 className="h-5">
-            С вами работает <div className="team-stroke d-inline-block">команда</div>, а не один риелтор, который может заболеть,
-            уйти в отпуск или не брать трубку
-          </h2>
-          <Tickets />
-          <StartWork />
-          <h2 className="h-6" ref={questions}>
-            Остались вопросы?
-          </h2>
-          <Disclosure content={disclosureContent} />
-          {/* <PhoneForm className="col-12 phone-form_main" />
-          <Dialog className="col-12 px-0" />
-          <h2 className="h-1" ref={benefits}>
-            Как мы работаем?
-          </h2>
-          <HowWeWork
-            className="col-12 col-md-9 col-lg-12 mx-auto px-0"
-            content={hwwContent}
-            chat={hwwChat}
-          />
-          <h2 className="h-2" ref={services}>
-            Услуги и цены
-          </h2>
-          <ServicesPrices className="col-12 px-0" items={servicesPricesCards} />
-          <h2 className="h-3" ref={comments}>
-            Вот, с чем мы уже справились
-          </h2>
-          <Slider
-            className="col-12"
-            content={sliderContent}
-            cards={sliderCards}
-          />
-          <h2 className="mb-5 h-4" ref={contancts}>
-            Как получить услугу?
-          </h2>
-          <GetService className="col-12" />
-          <h2 className="h-5">
-            С вами работает команда, а не один риелтор, который может заболеть,
-            уйти в отпуск или не брать трубку
-          </h2>
-          <Tickets />
-          <div className="start-work d-flex flex-column flex-lg-row">
-            <div className="start-work__text d-flex flex-column ml-lg-5 px-0 text-center text-lg-left px-lg-4 mt-lg-5">
-              <div className="start-work__title text-xxl bolder mt-auto">
-                Начнём работу?
-              </div>
-              <div className="start-work__annotation text-l mb-auto mt-3">
-                Оставьте заявку, мы всё расскажем
-              </div>
-            </div>
-            <img
-              className="start-work__img ml-lg-auto mt-5 mt-lg-0 mr-lg-5 col-lg-5 col-12 px-0 pr-lg-2"
-              src={startWork}
-            />
-          </div>
-          <PhoneForm />
-          <h2 className="h-6" ref={questions}>
-            Остались вопросы?
-          </h2>
-          <Disclosure className="" content={disclosureContent} /> */}
-        </div>
+        <Background />
+        <Banner items={bannerContent} />
+        <PhoneForm className="phone-form__main" />
+        <Dialog items={dialogContent} />
+        <h2 className="h-1" ref={benefits}>
+          Как мы работаем?
+        </h2>
+        <HowWeWork content={hwwContent} chat={hwwChat} />
+        <h2 className="h-2" ref={services}>
+          Услуги и цены
+        </h2>
+        <ServicesPrices items={servicesPricesCards} />
+        <h2 className="h-3" ref={comments}>
+          Вот, с чем мы уже<br className="d-block d-lg-none"></br> справились
+        </h2>
+        <WeCoped content={sliderContent} cards={sliderCards} />
+        <h2 className="h-4">
+          Как получить<br className="d-block d-lg-none"></br> услугу?
+        </h2>
+        <GetService items={getServiceContent} />
+        <h2 className="h-5">
+          С вами работает&nbsp;<br className="d-block d-lg-none"></br>
+          <Underline img={teamStroke}>команда</Underline>, а не один
+          <br className="d-block d-lg-none"></br>
+          <br className="d-none d-lg-block"></br> риелтор, который
+          <br className="d-block d-lg-none"></br> может заболеть,
+          <br className="d-block d-lg-none"></br>
+          <br className="d-none d-lg-block"></br>
+          уйти в отпуск или<br className="d-block d-lg-none"></br> не брать
+          трубку
+        </h2>
+        <Tickets items={ticketsContent} />
+        <StartWork />
+        <h2 className="h-6" ref={questions}>
+          Остались вопросы?
+        </h2>
+        <Disclosure items={disclosureContent} />
+        <div style={{ width: "2px", height: "2px" }} ref={contancts}></div>
         <Footer />
       </div>
-    </>
+    </Context.Provider>
   );
 }
 

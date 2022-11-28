@@ -10,15 +10,16 @@ export const Index = ({ num, className }) => {
   });
   const point_1 = {
     visible: {
-      backgroundColor: "#577BFA",
       borderRadius: "100%",
-      color: "#FAFAFA",
-      transition: { duration: 1 },
+      transition: { duration: 0.5 },
+      border: "70px solid var(--blue)",
+      color: 'var(--white)'
     },
     hidden: {
       borderRadius: "100%",
       backgroundColor: "#e5ebee",
       color: "#577BFA",
+      border: "6px solid var(--blue)",
     },
   };
 

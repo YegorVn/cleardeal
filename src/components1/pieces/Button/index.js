@@ -1,7 +1,7 @@
 import "./index.css";
 import { BtnSlide, BtnOpen, BtnSwitch, BtnDefault } from "../../buttons/index";
 
-export const index = ({ variant, value, className, onClick, disabled, ...props }) => {
+export const Index = ({ variant, value, className, onClick, disabled, ...props }) => {
   return (
     <>
       {(variant === "slide-right" && (

@@ -1,15 +1,19 @@
 import "./index.css";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import useOnClickOutside from "../../../hooks/useOnClickOutside";
-export const Index = ({ elements, className, changeHandler }) => {
+import { Context } from "../../../Context";
+export const Index = ({ items, className}) => {
+  const [context, setContext] = useContext(Context);
   const [shown, setShown] = useState(false);
-  const [active, setActive] = useState(elements[0]);
+  const [active, setActive] = useState(items[0]);
   const ref = useRef();
 
   const handleSelect = (el) => {
+    console.log(context)
     setActive(el);
-    changeHandler(el);
+    setShown(false)
+    setContext({...context, city: el.val})
   };
 
   useOnClickOutside(ref, () => setShown(false));
@@ -34,7 +38,7 @@ export const Index = ({ elements, className, changeHandler }) => {
             (shown && "select__els_shown") || "select__els_hidden"
           }`}
         >
-          {elements
+          {items
             .filter((el) => JSON.stringify(el) !== JSON.stringify(active))
             .map((el, index) => {
               return (

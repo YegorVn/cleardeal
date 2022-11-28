@@ -1,48 +1,58 @@
-.switch-small__btn{
+.switch-small__btn {
   /* font-size: 1.1rem !important; */
   padding: 0;
   border: none;
   border-radius: 30px;
-
+  color: var(--blue);
 }
 
-.switch-small__btn_inactive{
+.switch-small__btn_inactive {
   border: 2px solid var(--blue);
   background: transparent;
   width: 40px;
   height: 40px;
-  color: var(--blue);
 }
 
-@keyframes switch-small__btn_anim{
-  0%{
+@keyframes switch-small__btn_anim {
+  0% {
+    color: var(--white);
+    background: var(--white);
     flex-grow: 0;
   }
-  100%{
+
+  69%{
+    color: var(--blue);
+  }
+
+  70%{
+    background: var(--blue);
+  }
+
+  100% {
+    background: var(--blue);
+    color: var(--white);
     flex-grow: 0.8;
   }
 }
 
-.switch-small__btn_active{
+.switch-small__btn_active {
   flex-basis: 170px;
-  background: var(--blue);
-  color: var(--white);
   border: 2px solid var(--blue);
   height: 40px;
   animation-name: switch-small__btn_anim;
-  animation-duration: 1s;
+  animation-duration: 0.75s;
   animation-fill-mode: forwards;
 }
 
 /* /////// */
 .switch {
-  width: fit-content;
+  /* width: fit-content; */
 }
 
 .switch__btn {
   border-radius: 40px;
   font-weight: 600;
-  margin-left: 2.5rem;
+  /* margin-left: 2.5rem; */
   position: relative;
   width: 23.75rem;
   padding: 0.75rem 0;
@@ -64,50 +74,56 @@
   }
 }
 
+.switch__btn_inactive {
+  color: #acc0f4 !important;
+}
+
+/* ///switch__animation */
 .switch__svg {
   z-index: -1;
   position: absolute;
-  width: 106%;
-  height: 140%;
-  left: -3%;
-  top: -20%;
+  width: 100.5%;
+  height: 102%;
+  left: -0.25%;
+  top: -1%;
   overflow: visible;
 }
 
 .switch__rect {
-  rx: 40px;
   width: 100%;
   height: 100%;
   fill: transparent;
   stroke-width: 3px;
-  stroke: url(#linear);
+  stroke: var(--blue);
 }
 
-.switch__btn .switch__rect {
+.switch__btn .switch__rect_bg {
   opacity: 0.3;
+}
+
+.switch__rect_anim {
+  opacity: 0;
 }
 
 @keyframes switch__rect_anim {
   0% {
     stroke-dasharray: 0 1000;
   }
-  
   90% {
     stroke-dasharray: 1000 1;
   }
   100% {
     stroke-dasharray: 0 1000;
-    opacity: 1;
   }
 }
 
-.switch__btn_active{
+.switch__btn_active {
   background: var(--blue);
   color: var(--white);
   transition: 0.5s;
 }
 
-.switch__btn_active .switch__rect {
+.switch__btn_active .switch__rect_anim {
   opacity: 1;
   stroke-dashoffset: 0;
   animation-name: switch__rect_anim;
@@ -119,6 +135,3 @@
 .switch__btn:first-child {
   margin-left: 0;
 }
-
-
-

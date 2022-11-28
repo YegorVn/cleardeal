@@ -30,14 +30,14 @@ export const Index = ({ content, cards, className }) => {
           currentIdx={currentIdx}
           cards={cards}
         />
-        <div className="we-coped__block mt-xl-3 mt-5 pt-sm-3">
+        <div className="we-coped__block ">
           {content.map((block, index) => {
             return (
               <React.Fragment key={index}>
                 {currentIdx === index && (
-                  <div className="we-coped__text ">
-                    <div className="we-coped__title bold ">{block.header}</div>
-                    <div className="text-l mt-4 mt-sm-5 text-left col-sm-11 pr-0 pl-0">
+                  <div className="we-coped__text">
+                    <div className="we-coped__title bold text-l">{block.header}</div>
+                    <div className="we-coped__annotation text-m mt-4 mt-sm-4 text-left px-0">
                       {block.annotation}
                     </div>
                   </div>

@@ -4,14 +4,17 @@ import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {Button} from '../../../components1/pieces'
+import { useContext } from 'react';
+import { Context } from '../../../Context';
 export const Index = ({ card, className, animDuration }) => {
+  const [context, ] = useContext(Context)
   const control = useAnimation();
   const [ref, inView] = useInView();
   const header = {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: (animDuration + 1) * 1 },
+      transition: { duration: animDuration },
     },
     hidden: { opacity: 0, scale: 1 },
   };
@@ -20,7 +23,7 @@ export const Index = ({ card, className, animDuration }) => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: (animDuration + 1) * 0.5 },
+      transition: { duration: 0 },
     },
     hidden: { opacity: 0, scale: 1 },
   };
@@ -53,22 +56,17 @@ export const Index = ({ card, className, animDuration }) => {
         variants={header}
         initial="hidden"
         animate={control}
-        className="card__header color-blue bold "
+        className="card__header text-l color-blue bold "
       >
-        {card.header.split(" ").map((word, index) => {
-          return (
-            <>
-              <p key={index}>{word}</p>
-            </>
-          );
-        })}
+        {card.header}
+        
       </motion.div>
       <motion.div
         ref={ref}
         variants={text}
         initial="hidden"
         animate={control}
-        className="card__text text-l pt-3 mb-5"
+        className="card__text text-xs pt-3 mb-5"
       >
         {card.text}
       </motion.div>
@@ -85,22 +83,22 @@ export const Index = ({ card, className, animDuration }) => {
             (closed ? "btn-show__icon_closed" : "btn-show__icon_shown")
           }
         ></div>
-        <div className="btn-show__text ml-3 text-l color-blue">Подробнее</div>
+        <div className="btn-show__text ml-3 text-m color-blue card__show">Подробнее</div>
       </div>
       {!closed && (
         <div
           className={
-            "card__annotation text-xs mt-3 mb-3 " +
+            "card__annotation text-xxs mt-3 mb-3 " +
             (closed ? "card__annotation_closed" : " card__annotation_shown")
           }
         >
           {card.annotation}
         </div>
       )}
-      <div className="card__price color-blue text-xl bolder mb-4 mt-3 mb-sm-5 mt-sm-4">
-        {card.price}
+      <div className="card__price color-blue text-xxl bolder mb-4 mt-3 mb-sm-5 mt-sm-4">
+        {card[context.city]}
       </div>
-      <Button variant="white" className="text-m">Оставить заявку</Button>
+      <Button variant="white" className="text-m card__button">Оставить заявку</Button>
     </div>
   );
 };

@@ -1,12 +1,33 @@
 import "./index.css";
 
 import logo from "../../assets/images/Global/logo.png";
-import { Select } from "../../components1/pieces";
+import { Button, Select } from "../../components1/pieces";
 import { useState } from "react";
-import { index as Burger } from "./Burger";
+import { Index as Burger } from "./Burger";
 
 export const Index = ({ links }) => {
   const [burger, setBurger] = useState(false);
+
+  const ConfirmCity = () => {
+    const [shown, setShown] = useState();
+
+    const handleClose = () => {
+        setShown(true);
+    };
+
+    return (
+      <div className={`confirm-city align-items-center ${!shown ? "d-xl-flex" : "d-none"}`}>
+        <div className="confirm-city__text">Ваш город Москва?</div>
+        <Button variant="blue" className="ml-3 text-xxxs pt-1 pb-1 px-3" onClick={handleClose}>
+          Да
+        </Button>
+        <Button variant="white" className="ml-2 text-xxxs pt-1 pb-1 px-3" onClick={handleClose}>
+          Изменить
+        </Button>
+      </div>
+    );
+  };
+
   return (
     <>
       <header className="header">
@@ -26,7 +47,7 @@ export const Index = ({ links }) => {
               {links.map((link, index) => {
                 return (
                   <div
-                    className="mt-3 text-m header-small__link font-inter"
+                    className="mt-3 header-small__link font-inter"
                     onClick={() =>
                       link.ref.current.scrollIntoView({
                         block: "start",
@@ -41,9 +62,9 @@ export const Index = ({ links }) => {
               })}
               <Select
                 className="text-s mt-3"
-                elements={[
-                  { text: "Красноярск", val: "Krasnoyarsk" },
-                  { text: "Кемерово", val: "Kemerovo" },
+                items={[
+                  { text: "Москва", val: "moscow" },
+                  { text: "Кемерово", val: "kemerovo" },
                 ]}
               />
             </div>
@@ -87,7 +108,7 @@ export const Index = ({ links }) => {
               {links.map((link, index) => {
                 return (
                   <div
-                    className="ml-lg-4 mt-3 mt-lg-0 bold text-s header__link header-big__link"
+                    className="ml-lg-4 mt-3 mt-lg-0 bold text-xxs header__link header-big__link"
                     onClick={() =>
                       link.ref.current.scrollIntoView({
                         block: "start",
@@ -104,14 +125,17 @@ export const Index = ({ links }) => {
             <div className="d-flex mt-sm-5 mb-sm-5 mt-xl-0 mb-xl-0 mt-xl-0 mx-auto ml-xl-5 align-items-center">
               <Select
                 className="text-s"
-                elements={[
-                  { text: "Красноярск", val: "Krasnoyarsk" },
-                  { text: "Кемерово", val: "Kemerovo" },
+                items={[
+                  { text: "Москва", val: "moscow" },
+                  { text: "Кемерово", val: "kemerovo" },
                 ]}
               />
-              <div className="header__phone ml-5"></div>
+              <div className="header__phone ml-5 d-flex text-s align-items-center justify-content-center">
+                +7 (900) 555 55 55
+              </div>
             </div>
           </div>
+          <ConfirmCity />
         </div>
       </header>
     </>

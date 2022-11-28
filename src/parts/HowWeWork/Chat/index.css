@@ -1,0 +1,24 @@
+@media screen and (max-width: 576px) {
+  /* @keyframes become_invisible {
+    0% {
+      opacity: 1;
+    }
+
+    99%{
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  } */
+
+  .chat__bubble {
+    position: absolute !important;
+    bottom: 2rem;
+  }
+
+  .bubble_right_small {
+    right: 1rem;
+  }
+}

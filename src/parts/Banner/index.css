@@ -1,33 +1,3 @@
-.kek{
-}
-
-.banner {
-  margin-top: 15rem;
-}
-
-.banner__annotation {
-  font-size: 1.5rem;
-}
-
-.banner__stroke {
-  display: inline-block;
-  position: relative;
-}
-
-.banner__highlight{
-  margin-top: -0.3rem;
-  vertical-align: middle;
-  padding: 0.8rem 0.6rem 0.7rem 0.6rem;
-  font-size: 0.9rem !important;
-  font-weight: 800;
-  border: 2px solid var(--blue);
-  border-radius: 8px;
-}
-
-.banner__highlight div{
-  margin-bottom: -0.2rem;
-}
-
 @keyframes banner__stroke_anim {
   0% {
     width: 0px;
@@ -37,13 +7,18 @@
   }
 }
 
+.banner__stroke {
+  display: inline-block;
+  position: relative;
+}
+
 .banner__stroke::after {
   animation-name: banner__stroke_anim;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   content: "";
   position: absolute;
-  background-image: url("../../assets/images/banner/bannerStorke.svg");
+  /* background-image: url("../../assets/images/banner/bannerStorke.svg"); */
   height: 6px;
   background-size: cover;
   background-position: center;
@@ -52,9 +27,27 @@
   bottom: -5px;
 }
 
-@media screen and (max-width: 1200px) {
-  .banner__text div{
-  }
+.banner__highlight{
+  vertical-align: middle;
+  padding: 0.8rem 0.6rem 0.7rem 0.6rem;
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  width: fit-content;
+  margin: 8rem auto 2rem auto;
+  font-size: 1rem;
+  color: var(--blue);
+}
+
+.banner {
+  margin-top: 16.5rem;
+}
+
+.banner__title{
+  white-space: nowrap;
+}
+
+.banner__annotation {
+  margin-top: 4rem;
 }
 
 @media screen and (max-width: 1200px) and (min-width: 992px) {
@@ -70,29 +63,11 @@
 }
 
 @media screen and (max-width: 576px) {
-  @keyframes banner__stroke_anim {
-    0% {
-      width: 0px;
-    }
-    100% {
-      width: 150px;
-    }
-  }
-
   .banner {
-    margin-top: 12rem;
-  }
-
-  .banner__annotation {
-    font-size: 1.15rem !important;
+    margin-top: 0rem;
   }
 
   .banner__text {
-    font-weight: 700 !important;
     text-transform: uppercase !important;
-  }
-
-  .banner__stroke::after {
-    left: calc(50% - 75px);
   }
 }

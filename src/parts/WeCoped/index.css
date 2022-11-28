@@ -1,4 +1,5 @@
-.we-coped {
+.we-coped__body {
+  position: relative;
 }
 
 @keyframes we-coped__text_animation {
@@ -12,7 +13,7 @@
 
 .we-coped__block {
   width: 50%;
-  height: fit-content;
+  height: 100%;
   position: absolute;
   left: calc(52% + 4rem);
 }
@@ -22,10 +23,18 @@
   animation-duration: 2s;
   animation-fill-mode: forwards;
   opacity: 0;
+  height: 88%;
+  margin-top: 5% !important;
+  position: relative;
+}
+
+.we-coped__annotation{
+  /* position: absolute; */
+  /* top: 40%; */
 }
 
 .we-coped__title {
-  font-size: 2rem;
+  max-width: 607px;
 }
 
 .we-coped__body {
@@ -45,6 +54,7 @@
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    left: 0;
   }
 }
 

@@ -1,6 +1,123 @@
-@media (min-width: 1200px)and (max-width: 1500px) {
+
+.point{
+  margin-top: 19rem;
+  width: fit-content;
+  position: relative;
+}
+
+.point:first-child{
+  margin-top: 0;
+}
+
+.point:nth-child(3){
+  margin-top: 13rem;
+}
+
+.point__right{
+  margin-left: auto;
+}
+
+.point__text{
+  margin-top: -0.5rem;
+  margin-left: 2.2rem;
+}
+
+.point__annotation{
+  margin-top: 1.5rem;
+  line-height: 1.3em;
+}
+
+@media screen and (max-width: 992px) {
+  .point__text{
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+
+  .point{
+    margin: 4rem auto 0 auto !important;
+  }
+
+  .point::before, .point::after{
+    display: none;
+  }
+
+  .point__header{
+    margin-top: 2rem;
+  }
+
+  .point__annotation{
+    white-space: nowrap !important;
+  }
+}
+
+.point::before, .point::after{
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.point:nth-child(1)::after{
+  background-image: url("../../assets/images/getService/manHand.svg");
+  width: 348px;
+  height: 488px;
+  left: 100%;
+  top: -50%;
+}
+
+.point:nth-child(1)::before{
+  background-image: url("../../assets/images/getService/arrowLong.svg");
+  top: 125%;
+  width: 105%;
+  height: 23rem;
+  left: 10%;
+}
+
+.point:nth-child(3)::after{
+  background-image: url("../../assets/images/getService/handShake.svg");
+  width: 600px;
+  height: 295px;
+  left: 100%;
+  bottom: 0;
+}
+
+.point:nth-child(3)::before{
+  background-image: url("../../assets/images/getService/arrowDotted.svg");
+  bottom: 47%;
+  left: 10%;
+  width: 110%;
+  height: 25rem;
+}
+
+@media screen and (max-width: 1550px){
+  .point:nth-child(1)::after{
+    background-image: url("../../assets/images/getService/manHand.svg");
+    width: 20rem;
+    height: 40rem;
+    left: 100%;
+  }
+
+  .point:nth-child(1)::before{
+    background-image: url("../../assets/images/getService/arrowLong.svg");
+    top: 125%;
+    width: 105%;
+    height: 23rem;
+    left: 0%;
+  }
+
+  .point:nth-child(3)::before{
+    background-image: url("../../assets/images/getService/arrowDotted.svg");
+    bottom: 47%;
+    left: 0%;
+    width: 110%;
+    height: 25rem;
+  }
+}
+
+
+
+/* @media (min-width: 1200px)and (max-width: 1500px) {
   .service__block_second{
-    margin-left: -8rem !important;
   }
 }
 
@@ -9,7 +126,6 @@
   overflow-x: hidden;
 }
 
-/* ///// */
 .service__title {
   margin-top: -0.2em;
 }
@@ -20,7 +136,6 @@
 
 .man-hand {
   margin-top: -5%;
-  /* margin-left: -2%; */
 }
 
 .arrow-long {
@@ -48,10 +163,10 @@
 }
 
 .service__block_third {
-  margin-top: -75px;
+  margin-top: -75px !important;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1400px) {
   .arrow-long {
     width: 500px;
     height: 325px;
@@ -91,23 +206,26 @@
 @media screen and (max-width: 992px) {
   .service__block_second,
   .service__block_third {
-    margin-top: unset;
-    margin-right: unset;
+    margin-top: 2rem !important;
+    margin-right: unset !important;
   }
 }
 
 @media screen and (max-width: 576px) {
   .service__title {
-    /* font-size: 2.2rem; */
   }
 
   .service__annotation {
-    /* font-size: 1.5rem; */
   }
 
   .service__text {
     width: 100%;
   }
+
+  .service__block_second,
+  .service__block_third {
+    margin-top: 2rem !important;
+  }
 }
 
-
+ */

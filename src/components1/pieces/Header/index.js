@@ -1,5 +1,5 @@
 import './index.css'
 
-export const index = () => {
+export const Index = () => {
     return <></>
 }

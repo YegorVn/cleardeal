@@ -1,54 +1,5 @@
-.phone-img,
-.girl-img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+.tickets {
+  width: 100%;
 }
 
-.cross {
-  position: absolute;
-  right: 10%;
-  bottom: 15%;
-}
 
-.phone-img {
-  width: 340px;
-}
-
-.girl-img {
-  width: 340px;
-  height: 350px;
-}
-
-.ticket__text {
-  font-weight: 500 !important;
-}
-
-@media screen and (max-width: 1200px) {
-  .phone-img {
-    width: 300px;
-  }
-  .girl-img {
-    height: 275px;
-    width: 250px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .phone-img,
-  .girl-img {
-    position: relative;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .ticket {
-    border-radius: 30px !important;
-  }
-
-  .girl-img {
-    width: 340px;
-    height: 300px;
-  }
-}
