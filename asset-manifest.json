@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/cleardeal/static/css/main.09c32097.css",
-    "main.js": "/cleardeal/static/js/main.0ffb568d.js",
+    "main.css": "/cleardeal/static/css/main.32611ac1.css",
+    "main.js": "/cleardeal/static/js/main.71fabdfd.js",
     "static/media/logoWhite.svg": "/cleardeal/static/media/logoWhite.bfdf3e24ad7bc9a72624ddea3a56ff31.svg",
     "static/media/sign.svg": "/cleardeal/static/media/sign.529c3bc131225140e4fdb82a16f7b109.svg",
     "static/media/girl.svg": "/cleardeal/static/media/girl.30109a60e268d90220c831f4c5c33193.svg",
     "static/media/manHand.svg": "/cleardeal/static/media/manHand.00ea3a715c8fd68448bc6dbd0249a6e3.svg",
     "static/media/startWork.svg": "/cleardeal/static/media/startWork.57ce57081ad6c2940c3d93e3b555979e.svg",
     "static/media/handShake.svg": "/cleardeal/static/media/handShake.852274cb7e9543c9dcd8450bce59b0e9.svg",
-    "static/media/phone.png": "/cleardeal/static/media/phone.23a55dd44399b8cbdd66.png",
+    "static/media/phone.svg": "/cleardeal/static/media/phone.27cdd67113337cf6e2b3.svg",
     "static/media/person.png": "/cleardeal/static/media/person.5a936075b40eaa34fb50.png",
     "static/media/person2.png": "/cleardeal/static/media/person2.f226a557ebe2b990572b.png",
     "static/media/person1.png": "/cleardeal/static/media/person1.9f925230c95688184121.png",
     "static/media/person4.png": "/cleardeal/static/media/person4.9db9d578deb2ef5c1bff.png",
     "static/media/person3.png": "/cleardeal/static/media/person3.0dedb5da581a7365f8d8.png",
-    "static/media/shield.svg": "/cleardeal/static/media/shield.4cb564ed88f9a2194ac9240ed3fba7dd.svg",
+    "static/media/shield.svg": "/cleardeal/static/media/shield.89466390942b627a8cbe48816fcccb4e.svg",
+    "static/media/cloud.svg": "/cleardeal/static/media/cloud.e35d6e06b2cfb1a3d7ccfe795738347d.svg",
     "static/media/arrowDotted.svg": "/cleardeal/static/media/arrowDotted.76c9f59f55ce7e92daa1.svg",
     "static/media/bg.svg": "/cleardeal/static/media/bg.049db4c37bfc92ca7701.svg",
     "static/media/border.svg": "/cleardeal/static/media/border.6c838bfed93ed21b8601.svg",
     "static/media/zero.svg": "/cleardeal/static/media/zero.582c25730c3141399fd5944c9d48a84a.svg",
-    "static/media/phone.svg": "/cleardeal/static/media/phone.27cdd67113337cf6e2b3.svg",
     "static/media/circles.svg": "/cleardeal/static/media/circles.9603c702eef90534f837b703d601abbb.svg",
     "static/media/arrowLong.svg": "/cleardeal/static/media/arrowLong.4c3301848d6f45a022fb.svg",
     "static/media/wa.svg": "/cleardeal/static/media/wa.8916770bf9aff8a32d1809a2d0add19c.svg",
@@ -43,19 +43,20 @@
     "static/media/mark2.svg": "/cleardeal/static/media/mark2.293c2f0248b7976be847.svg",
     "static/media/mark4.svg": "/cleardeal/static/media/mark4.544048546c64316e079d.svg",
     "static/media/hww.svg": "/cleardeal/static/media/hww.c6d070c1ed95e6b68286.svg",
-    "static/media/teamStroke.svg": "/cleardeal/static/media/teamStroke.c6d070c1ed95e6b68286faff8047c1e1.svg",
+    "static/media/teamStroke.svg": "/cleardeal/static/media/teamStroke.c31dba6e9224bc03b6246be145f26541.svg",
     "static/media/string1.svg": "/cleardeal/static/media/string1.79d2b546c0bcb37d7b2f.svg",
     "static/media/string2.svg": "/cleardeal/static/media/string2.55f8b2e44a6aa6902493.svg",
     "static/media/string3.svg": "/cleardeal/static/media/string3.48001ebbf8e765eb57c6.svg",
     "static/media/tailLeft.svg": "/cleardeal/static/media/tailLeft.65bf3244c7cfbf232ad7.svg",
+    "static/media/underline.svg": "/cleardeal/static/media/underline.3fa12b06168764291d03.svg",
     "static/media/arrowRight.svg": "/cleardeal/static/media/arrowRight.24337debc5abb8afa5e9.svg",
     "static/media/arrowLeft.svg": "/cleardeal/static/media/arrowLeft.ad09b0696cd27bc603dd.svg",
     "static/media/bannerStroke.svg": "/cleardeal/static/media/bannerStroke.a40c34a44a1b838194c6c39d26bbcb88.svg",
-    "main.09c32097.css.map": "/cleardeal/static/css/main.09c32097.css.map",
-    "main.0ffb568d.js.map": "/cleardeal/static/js/main.0ffb568d.js.map"
+    "main.32611ac1.css.map": "/cleardeal/static/css/main.32611ac1.css.map",
+    "main.71fabdfd.js.map": "/cleardeal/static/js/main.71fabdfd.js.map"
   },
   "entrypoints": [
-    "static/css/main.09c32097.css",
-    "static/js/main.0ffb568d.js"
+    "static/css/main.32611ac1.css",
+    "static/js/main.71fabdfd.js"
   ]
 }
