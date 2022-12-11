@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cleardeal/static/css/main.32611ac1.css",
-    "main.js": "/cleardeal/static/js/main.71fabdfd.js",
+    "main.css": "/cleardeal/static/css/main.7d6cd717.css",
+    "main.js": "/cleardeal/static/js/main.2faa0c6a.js",
     "static/media/logoWhite.svg": "/cleardeal/static/media/logoWhite.bfdf3e24ad7bc9a72624ddea3a56ff31.svg",
     "static/media/sign.svg": "/cleardeal/static/media/sign.529c3bc131225140e4fdb82a16f7b109.svg",
     "static/media/girl.svg": "/cleardeal/static/media/girl.30109a60e268d90220c831f4c5c33193.svg",
@@ -52,11 +52,11 @@
     "static/media/arrowRight.svg": "/cleardeal/static/media/arrowRight.24337debc5abb8afa5e9.svg",
     "static/media/arrowLeft.svg": "/cleardeal/static/media/arrowLeft.ad09b0696cd27bc603dd.svg",
     "static/media/bannerStroke.svg": "/cleardeal/static/media/bannerStroke.a40c34a44a1b838194c6c39d26bbcb88.svg",
-    "main.32611ac1.css.map": "/cleardeal/static/css/main.32611ac1.css.map",
-    "main.71fabdfd.js.map": "/cleardeal/static/js/main.71fabdfd.js.map"
+    "main.7d6cd717.css.map": "/cleardeal/static/css/main.7d6cd717.css.map",
+    "main.2faa0c6a.js.map": "/cleardeal/static/js/main.2faa0c6a.js.map"
   },
   "entrypoints": [
-    "static/css/main.32611ac1.css",
-    "static/js/main.71fabdfd.js"
+    "static/css/main.7d6cd717.css",
+    "static/js/main.2faa0c6a.js"
   ]
 }
